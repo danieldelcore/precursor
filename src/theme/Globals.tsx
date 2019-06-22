@@ -44,7 +44,7 @@ const Globals: FC<{}> = () => {
             clearStyles();
             clearTypog();
         },
-        [clearStyles, clearTypog],
+        [],
     );
 
     return null;
