@@ -10,20 +10,21 @@
         "lib"
     ],
     "scripts": {
-        "pre-push": "npm run lint && npm run test",
+        "start": "npm run dev",
         "dev": "start-storybook -p 9000 -c .storybook -s ./assets",
-        "predeploy-storybook": "build-storybook -s assets",
-        "deploy-storybook": "storybook-to-ghpages",
         "build": "tsc",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
         "lint": "eslint ./src/ ./.storybook/ --config .eslintrc.js --ext tsx,ts",
         "lint:fix": "npm run lint -- --fix",
+        "predeploy-storybook": "build-storybook -s assets",
+        "deploy-storybook": "storybook-to-ghpages",
         "preversion": "npm run lint && npm run test",
         "version": "npm run build",
         "postversion": "git push && git push --tags",
-        "postpublish": "npm run deploy-storybook"
+        "postpublish": "npm run deploy-storybook",
+        "pre-push": "npm run lint && npm run test"
     },
     "homepage": "https://github.com/zeropoly/geometric#readme",
     "repository": {
