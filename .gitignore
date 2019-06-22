@@ -6,3 +6,6 @@ dist
 .site
 .DS_Store
 storybook-static
+
+yalc
+yalc.lock

@@ -1,7 +1,7 @@
 {
-    "name": "geometric",
+    "name": "@zeropoly/geometric",
     "version": "0.1.0",
-    "description": "geometric!",
+    "description": "A minimal UI library and place for all of the components I've written a hundred times.",
     "main": "lib/index.js",
     "author": "ZeroPoly",
     "license": "MIT",
