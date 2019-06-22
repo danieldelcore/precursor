@@ -21,6 +21,10 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 sapien aliquam, eget tincidunt leo consequat. Aenean sodales ex
                 ut tellus accumsan, eu condimentum elit pharetra.
             </p>
+            <Lib.Blockquote cite="https://zeropoly.github.io/geometric">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                volutpat, odio vitae tempus interdum, sem erat scelerisque
+            </Lib.Blockquote>
             <h2>Code blocks</h2>
             <Lib.Code inline>
                 {`.some-class { background-color: red; }`}
