@@ -28,7 +28,12 @@ const Avatar: FC<Props> = props => {
     const classNames = useTrousers(styles, props);
 
     return (
-        <a className={classNames} href={props.href} target="_blank">
+        <a
+            className={classNames}
+            href={props.href}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <Image src={props.src} alt={props.alt} />
         </a>
     );
