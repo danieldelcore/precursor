@@ -26,7 +26,9 @@ const typography = css<Theme>`
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5,
+    h6 {
         font-family: ${({ fonts }) => fonts.headings};
         font-weight: ${({ fontWeight }) => fontWeight[0]};
         color: ${({ colors }) => colors.headings};

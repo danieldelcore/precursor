@@ -25,8 +25,8 @@ const theme: Theme = {
         base: '#f9f8f9', // Base font colour
         headings: '#f9f8f9', // Heading font colour
         alt: '#000', // Alternate font colour
-        background: '#181719',
-        backgroundAlt: '#29272c',
+        background: '#282a36',
+        backgroundAlt: '#333543',
     },
     space: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256],
     radii: ['2px', '4px', '8px'],
