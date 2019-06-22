@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { trousers, useTrousers } from 'trousers';
 
 import { Theme } from '../theme';
 
 export interface Props {
-    children: string;
+    children: ReactNode;
     inline?: boolean;
 }
 
@@ -14,6 +14,8 @@ const preStyles = trousers<{}, {}, Theme>('Pre').element`
         padding: 1rem 1.5rem;
         white-space: pre;
         color: ${({ colors }) => colors.base};
+        max-width: 100%;
+        overflow-y: auto;
     }
 `;
 
@@ -31,9 +33,7 @@ const Code: FC<Props> = props => {
     const preClassNames = useTrousers(preStyles);
     const codeClassNames = useTrousers(codeStyles);
 
-    const codeBlock = (
-        <code className={codeClassNames}>{props.children.trim()}</code>
-    );
+    const codeBlock = <code className={codeClassNames}>{props.children}</code>;
 
     return props.inline ? (
         codeBlock
