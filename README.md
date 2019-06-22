@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo-large-alt.png" alt="Geometric Logo" />
+</p>
+
 # Geometric
 
 A minimal UI library and place for all of the components I've written a hundred times.
