@@ -42,6 +42,7 @@
     "bugs": {
         "url": "https://github.com/zeropoly/geometric/issues"
     },
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
     "dependencies": {
         "trousers": "^1.2.0"
     },
