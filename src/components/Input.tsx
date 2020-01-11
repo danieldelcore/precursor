@@ -21,7 +21,7 @@ const styles = trousers<{}, {}, Theme>('Input').element`
     padding: 6px 10px;
     background-color: ${({ colors }) => colors.backgroundAlt};
     border-radius: ${({ radii }) => radii[0]};
-    border: 1px solid #313131;
+    border: 1px solid ${({ colors }) => colors.backgroundAlt};
     box-shadow: none;
     appearance: none;
     width: 100%;

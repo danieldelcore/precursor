@@ -9,7 +9,7 @@ export interface Props {
 
 const styles = trousers<Props, {}, Theme>('Panel').element`
     border-radius: ${({ radii }) => radii[1]};
-    border: 1px solid #313131;
+    border: 1px solid ${({ colors }) => colors.backgroundAlt};
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: ${({ shadows }) => shadows.small}

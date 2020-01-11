@@ -16,7 +16,7 @@ export interface Props {
 
 const styles = trousers<{}, {}, Theme>('TextArea').element`
     padding: 6px 10px;
-    border: 1px solid #313131;
+    border: 1px solid ${({ colors }) => colors.backgroundAlt};
     background-color: ${({ colors }) => colors.backgroundAlt};
     border-radius: ${({ radii }) => radii[0]};
     box-shadow: none;
