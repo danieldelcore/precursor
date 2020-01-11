@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { css, useGlobal } from 'trousers';
+import { css, useGlobals } from 'trousers';
 
 import { Theme } from './';
 
@@ -44,17 +44,9 @@ const typography = css<Theme>`
     }
 `;
 
-const Globals: FC<{}> = () => {
-    const [clearStyles] = useGlobal<Theme>(reset);
-    const [clearTypog] = useGlobal<Theme>(typography);
-
-    useEffect(
-        () => () => {
-            clearStyles();
-            clearTypog();
-        },
-        [],
-    );
+const Globals: FC = () => {
+    useGlobals<Theme>(reset);
+    useGlobals<Theme>(typography);
 
     return null;
 };

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, ReactNode, FC } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { useStyles, styleCollector } from 'trousers';
 
 import { Theme } from '../theme';
 
@@ -13,7 +13,7 @@ export interface Props {
     value?: string;
 }
 
-const styles = trousers<{}, {}, Theme>('Select').element`
+const styles = styleCollector<{}, {}, Theme>('Select').element`
     height: 38px;
     padding: 6px 10px;
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
@@ -31,7 +31,7 @@ const styles = trousers<{}, {}, Theme>('Select').element`
 `;
 
 const Select: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <select

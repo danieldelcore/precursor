@@ -1,5 +1,5 @@
 import React, { FC, ChangeEvent } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 import { Theme } from '../theme';
 
@@ -14,7 +14,7 @@ export interface Props {
     onChange?(event: ChangeEvent): void;
 }
 
-const styles = trousers<{}, {}, Theme>('TextArea').element`
+const styles = styleCollector<{}, {}, Theme>('TextArea').element`
     padding: 6px 10px;
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
     background-color: ${({ colors }) => colors.backgroundAlt};
@@ -34,7 +34,7 @@ const styles = trousers<{}, {}, Theme>('TextArea').element`
 `;
 
 const TextArea: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <textarea

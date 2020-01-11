@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { useTrousers, trousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 export interface Props {
     children: ReactNode;
@@ -7,7 +7,7 @@ export interface Props {
     primary?: boolean;
 }
 
-const styles = trousers<Props, {}, {}>('Button').element`
+const styles = styleCollector<Props, {}, {}>('Button').element`
         display: inline-block;
         height: 38px;
         padding: 0 30px;
@@ -46,7 +46,7 @@ const styles = trousers<Props, {}, {}>('Button').element`
     `;
 
 const Button: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <button type={props.type} className={classNames}>

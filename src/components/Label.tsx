@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 export interface Props {
     children: ReactNode;
@@ -7,7 +7,7 @@ export interface Props {
     className?: string;
 }
 
-const styles = trousers('Label').element`
+const styles = styleCollector('Label').element`
     display: block;
     margin-bottom: .5rem;
     font-weight: 600;
@@ -15,7 +15,7 @@ const styles = trousers('Label').element`
 `;
 
 const Label: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <label className={classNames} htmlFor={props.htmlFor}>

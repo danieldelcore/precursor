@@ -1,18 +1,17 @@
 import React, { FC } from 'react';
-
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 export interface Props {
     src: string;
     alt?: string;
 }
 
-const styles = trousers('Image').element`
+const styles = styleCollector('Image').element`
     width: 100%;
 `;
 
 const Image: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return <img alt={props.alt} src={props.src} className={classNames} />;
 };

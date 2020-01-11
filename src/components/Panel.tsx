@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { useStyles, styleCollector } from 'trousers';
 
 import { Theme } from '../';
 
@@ -7,7 +7,7 @@ export interface Props {
     children: ReactNode;
 }
 
-const styles = trousers<Props, {}, Theme>('Panel').element`
+const styles = styleCollector<Props, {}, Theme>('Panel').element`
     border-radius: ${({ radii }) => radii[1]};
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
     padding: 1.5rem;
@@ -16,7 +16,7 @@ const styles = trousers<Props, {}, Theme>('Panel').element`
 `;
 
 const Panel: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return <div className={classNames}>{props.children}</div>;
 };

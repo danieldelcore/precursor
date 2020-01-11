@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 import { Theme } from '../theme';
 
@@ -8,7 +8,7 @@ export interface Props {
     inline?: boolean;
 }
 
-const preStyles = trousers<{}, {}, Theme>('Pre').element`
+const preStyles = styleCollector<{}, {}, Theme>('Pre').element`
     & > code {
         display: block;
         padding: 1rem 1.5rem;
@@ -19,7 +19,7 @@ const preStyles = trousers<{}, {}, Theme>('Pre').element`
     }
 `;
 
-const codeStyles = trousers<{}, {}, Theme>('Code').element`
+const codeStyles = styleCollector<{}, {}, Theme>('Code').element`
     padding: .2rem .5rem;
     margin: 0 .2rem;
     font-size: 90%;
@@ -30,8 +30,8 @@ const codeStyles = trousers<{}, {}, Theme>('Code').element`
 `;
 
 const Code: FC<Props> = props => {
-    const preClassNames = useTrousers(preStyles);
-    const codeClassNames = useTrousers(codeStyles);
+    const preClassNames = useStyles(preStyles);
+    const codeClassNames = useStyles(codeStyles);
 
     const codeBlock = <code className={codeClassNames}>{props.children}</code>;
 

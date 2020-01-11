@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 import { Image, ImageProps } from '../';
 
@@ -7,7 +7,7 @@ export interface Props extends ImageProps {
     href: string;
 }
 
-const styles = trousers('Avatar').element`
+const styles = styleCollector('Avatar').element`
     display: inline-block;
     position: relative;
     outline: 0px;
@@ -25,7 +25,7 @@ const styles = trousers('Avatar').element`
 `;
 
 const Avatar: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <a

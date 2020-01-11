@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { useStyles, styleCollector } from 'trousers';
 
 import { Input, InputProps, Label } from './';
 
@@ -7,7 +7,7 @@ export interface Props extends InputProps {
     label: string;
 }
 
-const styles = trousers('Radio').element`
+const styles = styleCollector('Radio').element`
     height: auto;
     width: auto;
     appearance: radio;
@@ -15,7 +15,7 @@ const styles = trousers('Radio').element`
 `;
 
 const Radio: FC<Props> = props => {
-    const classNames = useTrousers(styles, props);
+    const classNames = useStyles(styles, props);
 
     return (
         <Label htmlFor={props.id}>

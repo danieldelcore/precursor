@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { trousers, useTrousers } from 'trousers';
+import { styleCollector, useStyles } from 'trousers';
 
 import { Theme } from '../theme';
 
@@ -8,7 +8,7 @@ export interface Props {
     cite?: string;
 }
 
-const styles = trousers<{}, {}, Theme>('Blockquote').element`
+const styles = styleCollector<{}, {}, Theme>('Blockquote').element`
     padding: .2rem .5rem;
     margin: 0 .2rem;
     color: ${({ colors }) => colors.base};
@@ -18,7 +18,7 @@ const styles = trousers<{}, {}, Theme>('Blockquote').element`
 `;
 
 const Blockquote: FC<Props> = ({ cite, children }) => {
-    const classNames = useTrousers(styles);
+    const classNames = useStyles(styles);
 
     return (
         <blockquote className={classNames} cite={cite}>

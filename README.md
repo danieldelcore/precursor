@@ -11,13 +11,11 @@ A minimal UI library and home to all of the components I've written a hundred ti
 ## Component Roadmap
 
 -   Date picker
--   Ranger picker
+-   Range picker
 -   Progress bar
 -   Modal
 -   Alert / toaster
 -   Lozenge
--   Block Quote
--   Container
 
 ## Themes
 
