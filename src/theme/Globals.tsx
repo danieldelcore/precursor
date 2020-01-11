@@ -30,8 +30,17 @@ const typography = css<Theme>`
     h5,
     h6 {
         font-family: ${({ fonts }) => fonts.headings};
-        font-weight: ${({ fontWeight }) => fontWeight[1]};
+        font-weight: ${({ fontWeight }) => fontWeight[2]};
         color: ${({ colors }) => colors.headings};
+    }
+
+    h1 {
+        font-size: ${({ fontSizes }) => fontSizes[6]}px;
+    }
+
+    h2 {
+        font-size: ${({ fontSizes }) => fontSizes[4]}px;
+        font-weight: ${({ fontWeight }) => fontWeight[1]};
     }
 `;
 
