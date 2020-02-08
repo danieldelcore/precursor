@@ -8,9 +8,13 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
         <Geo.ThemeProvider theme={Geo.theme}>
             <Geo.Heading weight="h1">Geometric ⬢ Scratch Pad</Geo.Heading>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Typography</Geo.Heading>
+                <Geo.Heading weight="h2" id="typography">
+                    Typography
+                </Geo.Heading>
                 <Geo.Heading weight="h1">Heading One</Geo.Heading>
-                <Geo.Heading weight="h2">Heading Two</Geo.Heading>
+                <Geo.Heading weight="h2" id="heading-two">
+                    Heading Two
+                </Geo.Heading>
                 <Geo.Heading weight="h3">Heading Three</Geo.Heading>
                 <Geo.Heading weight="h4">Heading Four</Geo.Heading>
                 <p>
@@ -33,7 +37,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 </Geo.Blockquote>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Code blocks</Geo.Heading>
+                <Geo.Heading weight="h2" id="code-blocks">
+                    Code blocks
+                </Geo.Heading>
                 <Geo.Code inline>
                     {`.some-class { background-color: red; }`}
                 </Geo.Code>
@@ -48,7 +54,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 <Geo.Code>{`.some-class { background-color: red; }`}</Geo.Code>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Avatar</Geo.Heading>
+                <Geo.Heading weight="h2" id="avatar">
+                    Avatar
+                </Geo.Heading>
                 <Geo.Avatar
                     src="https://avatars3.githubusercontent.com/u/3030010?s=400&u=36ccfde6e6ed4b6398bb3c79b596636ee25586ec&v=4"
                     alt="Daniel"
@@ -56,11 +64,15 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 />
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Panels</Geo.Heading>
+                <Geo.Heading weight="h2" id="panels">
+                    Panels
+                </Geo.Heading>
                 <Geo.Panel>Hello world</Geo.Panel>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Form building blocks</Geo.Heading>
+                <Geo.Heading weight="h2" id="form-elements">
+                    Form building blocks
+                </Geo.Heading>
                 <Geo.Label htmlFor="test">Hello</Geo.Label>
                 <Geo.Input
                     id="test"
@@ -110,7 +122,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 </Geo.Select>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2">Buttons</Geo.Heading>
+                <Geo.Heading weight="h2" id="buttons">
+                    Buttons
+                </Geo.Heading>
                 <Geo.ButtonGroup>
                     <Geo.Button>Base</Geo.Button>
                     <Geo.Button primary>Primary</Geo.Button>
