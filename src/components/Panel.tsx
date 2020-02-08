@@ -17,6 +17,10 @@ const styles = styleCollector<Props, {}, Theme>('Panel').element`
     & > *:first-child {
         margin-top: 0px;
     }
+
+    & > *:last-child {
+        margin-bottom: 0px;
+    }
 `;
 
 const Panel: FC<Props> = props => {

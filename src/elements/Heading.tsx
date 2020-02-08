@@ -7,7 +7,7 @@ import { Theme } from '../theme';
 export interface Props {
     children: ReactNode;
     id?: string;
-    weight: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    weight?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 const styles = styleCollector<Props, {}, Theme>('heading').element`
@@ -58,7 +58,7 @@ const Heading: FC<Props> = props => {
     }
 
     const Heading = React.createElement(
-        props.weight,
+        props.weight!,
         {
             className: classNames,
             id: props.id,

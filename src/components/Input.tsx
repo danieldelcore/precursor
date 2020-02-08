@@ -16,7 +16,7 @@ export interface Props {
     onChange?(event: ChangeEvent): void;
 }
 
-const styles = styleCollector<{}, {}, Theme>('Input').element`
+const styles = styleCollector<Props, {}, Theme>('Input').element`
     height: 38px;
     padding: 6px 10px;
     background-color: ${({ colors }) => colors.backgroundAlt};
@@ -31,6 +31,8 @@ const styles = styleCollector<{}, {}, Theme>('Input').element`
         border: 1px solid #33C3F0;
         outline: 0;
     }
+`.modifier(props => !!props!.disabled)`
+    cursor: not-allowed;
 `;
 
 const Input: FC<Props> = props => {

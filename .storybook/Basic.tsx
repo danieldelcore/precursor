@@ -8,13 +8,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
         <Geo.ThemeProvider theme={Geo.theme}>
             <Geo.Heading weight="h1">Geometric ⬢ Scratch Pad</Geo.Heading>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="typography">
-                    Typography
-                </Geo.Heading>
+                <Geo.Heading id="typography">Typography</Geo.Heading>
                 <Geo.Heading weight="h1">Heading One</Geo.Heading>
-                <Geo.Heading weight="h2" id="heading-two">
-                    Heading Two
-                </Geo.Heading>
+                <Geo.Heading>Heading Two</Geo.Heading>
                 <Geo.Heading weight="h3">Heading Three</Geo.Heading>
                 <Geo.Heading weight="h4">Heading Four</Geo.Heading>
                 <p>
@@ -37,9 +33,7 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 </Geo.Blockquote>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="code-blocks">
-                    Code blocks
-                </Geo.Heading>
+                <Geo.Heading id="code-blocks">Code blocks</Geo.Heading>
                 <Geo.Code inline>
                     {`.some-class { background-color: red; }`}
                 </Geo.Code>
@@ -54,9 +48,7 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 <Geo.Code>{`.some-class { background-color: red; }`}</Geo.Code>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="avatar">
-                    Avatar
-                </Geo.Heading>
+                <Geo.Heading id="avatar">Avatar</Geo.Heading>
                 <Geo.Avatar
                     src="https://avatars3.githubusercontent.com/u/3030010?s=400&u=36ccfde6e6ed4b6398bb3c79b596636ee25586ec&v=4"
                     alt="Daniel"
@@ -64,16 +56,14 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                 />
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="panels">
-                    Panels
-                </Geo.Heading>
-                <Geo.Panel>Hello world</Geo.Panel>
+                <Geo.Heading id="panels">Panels</Geo.Heading>
+                <Geo.Panel>
+                    <p>Hello world 👋</p>
+                </Geo.Panel>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="form-elements">
-                    Form building blocks
-                </Geo.Heading>
-                <Geo.Label htmlFor="test">Hello</Geo.Label>
+                <Geo.Heading id="input">Input</Geo.Heading>
+                <Geo.Label htmlFor="test">Input field</Geo.Label>
                 <Geo.Input
                     id="test"
                     name="test"
@@ -81,6 +71,67 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                     onChange={() => console.log('onChange')}
                     value=""
                 />
+                <Geo.Label htmlFor="testdisabled">
+                    Input field (disabled)
+                </Geo.Label>
+                <Geo.Input
+                    id="testdisabled"
+                    name="testdisabled"
+                    placeholder="hello world"
+                    onChange={() => console.log('onChange')}
+                    value=""
+                    disabled
+                />
+            </Geo.Panel>
+            <Geo.Panel>
+                <Geo.Label htmlFor="textareatest">Text area</Geo.Label>
+                <Geo.TextArea
+                    id="textareatest"
+                    name="textarea"
+                    placeholder="hello world"
+                    onChange={() => console.log('onChange')}
+                    value=""
+                />
+                <Geo.Label htmlFor="textareatestdisabled">
+                    Text area (disabled)
+                </Geo.Label>
+                <Geo.TextArea
+                    id="textareatestdisabled"
+                    name="textareadisabled"
+                    placeholder="hello world"
+                    onChange={() => console.log('onChange')}
+                    value=""
+                    disabled
+                />
+            </Geo.Panel>
+            <Geo.Panel>
+                <Geo.Heading id="select">Select</Geo.Heading>
+                <Geo.Label htmlFor="selecttest">Select</Geo.Label>
+                <Geo.Select
+                    id="select"
+                    name="select"
+                    value="world"
+                    onChange={() => console.log('onChange')}
+                >
+                    <option value="hello">Hello</option>
+                    <option value="world">world</option>
+                </Geo.Select>
+                <Geo.Label htmlFor="selecttestdisabled">
+                    Select (disabled)
+                </Geo.Label>
+                <Geo.Select
+                    id="selecttestdisabled"
+                    name="selecttestdisabled"
+                    value="world"
+                    onChange={() => console.log('onChange')}
+                    disabled
+                >
+                    <option value="hello">Hello</option>
+                    <option value="world">world</option>
+                </Geo.Select>
+            </Geo.Panel>
+            <Geo.Panel>
+                <Geo.Heading id="checkbox">Checkboxes</Geo.Heading>
                 <Geo.Checkbox
                     id="test2"
                     name="test2"
@@ -89,6 +140,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                     onChange={() => console.log('onChange')}
                     label="My checkbox"
                 />
+            </Geo.Panel>
+            <Geo.Panel>
+                <Geo.Heading id="radio">Radios</Geo.Heading>
                 <Geo.Radio
                     id="test3post"
                     name="test3"
@@ -104,27 +158,9 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                     onChange={() => console.log('onChange')}
                     checked
                 />
-                <Geo.TextArea
-                    id="test"
-                    name="test"
-                    placeholder="hello world"
-                    onChange={() => console.log('onChange')}
-                    value=""
-                />
-                <Geo.Select
-                    id="testselect"
-                    name="testselect"
-                    value="world"
-                    onChange={() => console.log('onChange')}
-                >
-                    <option value="hello">Hello</option>
-                    <option value="world">world</option>
-                </Geo.Select>
             </Geo.Panel>
             <Geo.Panel>
-                <Geo.Heading weight="h2" id="buttons">
-                    Buttons
-                </Geo.Heading>
+                <Geo.Heading id="buttons">Buttons</Geo.Heading>
                 <Geo.ButtonGroup>
                     <Geo.Button>Base</Geo.Button>
                     <Geo.Button primary>Primary</Geo.Button>
@@ -136,6 +172,10 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
                         Disabled Primary
                     </Geo.Button>
                 </Geo.ButtonGroup>
+            </Geo.Panel>
+            <Geo.Panel>
+                <Geo.Heading id="modals">Modals</Geo.Heading>
+                <Geo.Button primary>Open modal</Geo.Button>
             </Geo.Panel>
         </Geo.ThemeProvider>
     );

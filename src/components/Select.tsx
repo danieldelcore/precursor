@@ -13,7 +13,7 @@ export interface Props {
     value?: string;
 }
 
-const styles = styleCollector<{}, {}, Theme>('Select').element`
+const styles = styleCollector<Props, {}, Theme>('Select').element`
     height: 38px;
     padding: 6px 10px;
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
@@ -28,6 +28,8 @@ const styles = styleCollector<{}, {}, Theme>('Select').element`
         border: 1px solid #33C3F0;
         outline: 0;
     }
+`.modifier(props => !!props!.disabled)`
+    cursor: not-allowed;
 `;
 
 const Select: FC<Props> = props => {

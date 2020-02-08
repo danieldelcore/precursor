@@ -16,6 +16,9 @@ A minimal UI library and home to all of the components I've written a hundred ti
 -   Modal
 -   Alert / toaster
 -   Lozenge
+-   Range picker
+-   Tooltip
+-   Tab
 
 ## Themes
 

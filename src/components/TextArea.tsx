@@ -14,23 +14,26 @@ export interface Props {
     onChange?(event: ChangeEvent): void;
 }
 
-const styles = styleCollector<{}, {}, Theme>('TextArea').element`
-    padding: 6px 10px;
-    border: 1px solid ${({ colors }) => colors.backgroundAlt};
+const styles = styleCollector<Props, {}, Theme>('TextArea').element`
+    appearance: none;
     background-color: ${({ colors }) => colors.backgroundAlt};
     border-radius: ${({ radii }) => radii[0]};
+    border: 1px solid ${({ colors }) => colors.backgroundAlt};
     box-shadow: none;
-    appearance: none;
-    min-height: 165px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    width: 100%;
     margin-bottom: ${({ space }) => space[1]}em;
+    max-width: 100%;
+    min-height: 165px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding: 6px 10px;
+    width: 100%;
 
     &:focus {
         border: 1px solid #33C3F0;
         outline: 0;
     }
+`.modifier(props => !!props!.disabled)`
+    cursor: not-allowed;
 `;
 
 const TextArea: FC<Props> = props => {
