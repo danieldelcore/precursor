@@ -6,6 +6,7 @@ export interface Props {
     type?: 'button' | 'submit' | 'reset';
     primary?: boolean;
     disabled?: boolean;
+    onClick?: React.MouseEventHandler;
 }
 
 const styles = styleCollector<Props, {}, {}>('Button').element`
@@ -61,7 +62,11 @@ const Button: FC<Props> = props => {
     const classNames = useStyles(styles, props);
 
     return (
-        <button type={props.type} className={classNames}>
+        <button
+            type={props.type}
+            className={classNames}
+            onClick={props.onClick}
+        >
             {props.children}
         </button>
     );

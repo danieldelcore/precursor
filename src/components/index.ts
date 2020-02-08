@@ -14,3 +14,9 @@ export { default as Panel, Props as PanelProps } from './Panel';
 export { default as Radio, Props as RadioProps } from './Radio';
 export { default as Select, Props as SelectProps } from './Select';
 export { default as TextArea, Props as TextAreaProps } from './TextArea';
+export {
+    default as Modal,
+    ModalProps,
+    ModalBody,
+    ModalBodyProps,
+} from './Modal';

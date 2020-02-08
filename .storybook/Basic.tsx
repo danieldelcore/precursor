@@ -175,6 +175,23 @@ storiesOf('Basic', module).add('Scratch Pad', () => {
             </Geo.Panel>
             <Geo.Panel>
                 <Geo.Heading id="modals">Modals</Geo.Heading>
+                <Geo.Modal active onClickOutside={close} onEscKeyPress={close}>
+                    <Geo.ModalBody>
+                        <Geo.Heading>Modal heading</Geo.Heading>
+                        <p>Some content contained within the Modal.</p>
+                    </Geo.ModalBody>
+                    <Geo.ButtonGroup>
+                        <Geo.Button onClick={() => console.log('CLOSE')}>
+                            Cancel
+                        </Geo.Button>
+                        <Geo.Button
+                            onClick={() => console.log('CLOSE')}
+                            primary
+                        >
+                            Submit
+                        </Geo.Button>
+                    </Geo.ButtonGroup>
+                </Geo.Modal>
                 <Geo.Button primary>Open modal</Geo.Button>
             </Geo.Panel>
         </Geo.ThemeProvider>
