@@ -12,6 +12,7 @@ const styles = styleCollector('Radio').element`
     width: auto;
     appearance: radio;
     display: inline;
+    cursor: pointer;
 `;
 
 const Radio: FC<Props> = props => {

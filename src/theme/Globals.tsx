@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { css, useGlobals } from 'trousers';
 
 import { Theme } from './';
@@ -21,26 +21,6 @@ const typography = css<Theme>`
         font-family: ${({ fonts }) => fonts.base};
         font-size: ${({ fontSizes }) => fontSizes[1]}px;
         color: ${({ colors }) => colors.base};
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: ${({ fonts }) => fonts.headings};
-        font-weight: ${({ fontWeight }) => fontWeight[2]};
-        color: ${({ colors }) => colors.headings};
-    }
-
-    h1 {
-        font-size: ${({ fontSizes }) => fontSizes[6]}px;
-    }
-
-    h2 {
-        font-size: ${({ fontSizes }) => fontSizes[4]}px;
-        font-weight: ${({ fontWeight }) => fontWeight[1]};
     }
 `;
 

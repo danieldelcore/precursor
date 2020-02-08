@@ -5,6 +5,7 @@ export interface Props {
     children: ReactNode;
     type?: 'button' | 'submit' | 'reset';
     primary?: boolean;
+    disabled?: boolean;
 }
 
 const styles = styleCollector<Props, {}, {}>('Button').element`
@@ -20,7 +21,7 @@ const styles = styleCollector<Props, {}, {}>('Button').element`
         text-transform: uppercase;
         text-decoration: none;
         white-space: nowrap;
-        background-color: transparent;
+        background-color: #fff;
         border-radius: 4px;
         border: 1px solid #bbb;
         cursor: pointer;
@@ -34,14 +35,25 @@ const styles = styleCollector<Props, {}, {}>('Button').element`
         }
     `.modifier(props => !!props!.primary)`
         color: #FFF;
-        background-color: #33C3F0;
-        border-color: #33C3F0;
+        background-color: #000;
+        border-color: #000;
 
         &:focus,
         &:hover {
             color: #FFF;
-            background-color: #1EAEDB;
-            border-color: #1EAEDB;
+            background-color: #000;
+            border-color: #000;
+        }
+    `.modifier(props => !!props!.disabled)`
+        filter: grayscale(1);
+        cursor: disabled;
+        color: #888;
+
+        &:focus,
+        &:hover {
+            color: #888;
+            background-color: #000;
+            border-color: #000;
         }
     `;
 

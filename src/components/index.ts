@@ -1,6 +1,10 @@
 export { default as Avatar, Props as AvatarProps } from './Avatar';
 export { default as Blockquote, Props as BlockquoteProps } from './Blockquote';
 export { default as Button, Props as ButtonProps } from './Button';
+export {
+    default as ButtonGroup,
+    Props as ButtonGroupProps,
+} from './ButtonGroup';
 export { default as Checkbox, Props as CheckboxProps } from './Checkbox';
 export { default as Code, Props as CodeProps } from './Code';
 export { default as Image, Props as ImageProps } from './Image';

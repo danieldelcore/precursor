@@ -12,6 +12,7 @@ const styles = styleCollector('Checkbox').element`
     width: auto;
     appearance: checkbox;
     display: inline;
+    cursor: pointer;
 `;
 
 const Checkbox: FC<Props> = props => {

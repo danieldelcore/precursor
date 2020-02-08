@@ -12,7 +12,11 @@ const styles = styleCollector<Props, {}, Theme>('Panel').element`
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: ${({ shadows }) => shadows.small}
+    box-shadow: ${({ shadows }) => shadows.small};
+
+    & > *:first-child {
+        margin-top: 0px;
+    }
 `;
 
 const Panel: FC<Props> = props => {
