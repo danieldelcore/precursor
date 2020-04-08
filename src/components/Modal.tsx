@@ -5,7 +5,7 @@ import { useStyles, styleCollector } from 'trousers';
 import { Theme } from '../';
 
 export interface ModalProps {
-    active: boolean;
+    open?: boolean;
     onClickOutside: React.MouseEventHandler;
     onEscKeyPress: React.KeyboardEventHandler;
     children: ReactNode;
@@ -29,6 +29,10 @@ const Modal: FC<ModalProps> = props => {
     // close on escape
     // focus capture
     // return focus
+
+    if (!props.open) {
+        return null;
+    }
 
     return ReactDOM.createPortal(
         <Overlay>

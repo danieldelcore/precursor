@@ -13,10 +13,8 @@ A minimal UI library and home to all of the components I've written a hundred ti
 -   Date picker
 -   Range picker
 -   Progress bar
--   Modal
 -   Alert / toaster
 -   Lozenge
--   Range picker
 -   Tooltip
 -   Tab
 
