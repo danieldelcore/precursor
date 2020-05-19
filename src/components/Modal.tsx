@@ -1,17 +1,18 @@
 import React, { FC, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
-import { useStyles, styleCollector } from 'trousers';
+import { useStyles, css } from '@trousers/core';
+import collector from '@trousers/collector';
 
-import { Theme } from '../';
+import { Theme, Overlay } from '../';
 
-export interface ModalProps {
+export interface Props {
     open?: boolean;
     onClickOutside: React.MouseEventHandler;
     onEscKeyPress: React.KeyboardEventHandler;
     children: ReactNode;
 }
 
-const modalStyles = styleCollector<ModalProps, {}, Theme>('Modal').element`
+const modalStyles = collector<Theme>('Modal').element`
     max-width: 520px;
     min-height: 320px;
     width: 100%;
@@ -22,8 +23,8 @@ const modalStyles = styleCollector<ModalProps, {}, Theme>('Modal').element`
     transform: translate3d(0px, 0%, 0px);
 `;
 
-const Modal: FC<ModalProps> = props => {
-    const classNames = useStyles(modalStyles, props);
+const Modal: FC<Props> = props => {
+    const classNames = useStyles(modalStyles);
 
     // todo:
     // close on escape
@@ -48,37 +49,14 @@ export interface ModalBodyProps {
     children: ReactNode;
 }
 
-const modalBodyStyles = styleCollector<ModalBodyProps, {}, Theme>('ModalBody')
-    .element`
-    padding: 1rem;
-`;
-
 export const ModalBody: FC<ModalBodyProps> = props => {
-    const classNames = useStyles(modalBodyStyles, props);
-
-    return <div className={classNames}>{props.children}</div>;
-};
-
-export interface OverlayProps {
-    children: ReactNode;
-}
-
-const overlayStyles = styleCollector('Overlay').element`
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0, 0.6);
-`;
-
-const Overlay: FC<OverlayProps> = props => {
-    const classNames = useStyles(overlayStyles, props);
-
-    return <div className={classNames}>{props.children}</div>;
+    return (
+        <div
+            css={css`
+                padding: 1rem;
+            `}
+        >
+            {props.children}
+        </div>
+    );
 };

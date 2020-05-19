@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { ThemeProvider as CoreThemeProvider } from 'trousers';
+import { ThemeProvider as CoreThemeProvider } from '@trousers/theme';
 
 import { theme as defaultTheme, Theme, Globals } from './';
 

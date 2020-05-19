@@ -1,9 +1,10 @@
 import React, { ChangeEvent, ReactNode, FC } from 'react';
-import { useStyles, styleCollector } from 'trousers';
+import { useStyles } from '@trousers/core';
+import collector from '@trousers/collector';
 
 import { Theme } from '../theme';
 
-export interface Props {
+export interface SelectProps {
     children: ReactNode | string;
     className?: string;
     disabled?: boolean;
@@ -13,7 +14,7 @@ export interface Props {
     value?: string;
 }
 
-const styles = styleCollector<Props, {}, Theme>('Select').element`
+const styles = (props: SelectProps) => collector<Theme>('Select').element`
     height: 38px;
     padding: 6px 10px;
     border: 1px solid ${({ colors }) => colors.backgroundAlt};
@@ -28,12 +29,12 @@ const styles = styleCollector<Props, {}, Theme>('Select').element`
         border: 1px solid #33C3F0;
         outline: 0;
     }
-`.modifier(props => !!props!.disabled)`
+`.modifier(props.disabled)`
     cursor: not-allowed;
 `;
 
-const Select: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
+const Select: FC<SelectProps> = props => {
+    const classNames = useStyles(styles(props));
 
     return (
         <select

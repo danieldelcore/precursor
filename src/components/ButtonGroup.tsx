@@ -1,26 +1,30 @@
-import React, { FC, ReactNode } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+/** @jsx jsx */
+import { FC, ReactNode } from 'react';
+import { css, jsx } from '@trousers/core';
 
-export interface Props {
+export interface ButtonGroupProps {
     children: ReactNode;
 }
 
-const styles = styleCollector('ButtonGroup').element`
-        display: inline-block;
+// TODO this should just be a stack
+const ButtonGroup: FC<ButtonGroupProps> = props => {
+    return (
+        <div
+            css={css`
+                display: inline-block;
 
-        button {
-            margin-right: 1em;
-        }
+                button {
+                    margin-right: 1em;
+                }
 
-        button:last-child {
-            margin-right: 0;
-        }
-    `;
-
-const ButtonGroup: FC<Props> = props => {
-    const classNames = useStyles(styles);
-
-    return <div className={classNames}>{props.children}</div>;
+                button:last-child {
+                    margin-right: 0;
+                }
+            `}
+        >
+            {props.children}
+        </div>
+    );
 };
 
 export default ButtonGroup;

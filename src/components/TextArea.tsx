@@ -1,9 +1,10 @@
 import React, { FC, ChangeEvent } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+import { useStyles } from '@trousers/core';
+import collector from '@trousers/collector';
 
 import { Theme } from '../theme';
 
-export interface Props {
+export interface TextAreaProps {
     className?: string;
     disabled?: boolean;
     id: string;
@@ -14,7 +15,7 @@ export interface Props {
     onChange?(event: ChangeEvent): void;
 }
 
-const styles = styleCollector<Props, {}, Theme>('TextArea').element`
+const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     appearance: none;
     background-color: ${({ colors }) => colors.backgroundAlt};
     border-radius: ${({ radii }) => radii[0]};
@@ -32,12 +33,12 @@ const styles = styleCollector<Props, {}, Theme>('TextArea').element`
         border: 1px solid #33C3F0;
         outline: 0;
     }
-`.modifier(props => !!props!.disabled)`
+`.modifier(props.disabled)`
     cursor: not-allowed;
 `;
 
-const TextArea: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
+const TextArea: FC<TextAreaProps> = props => {
+    const classNames = useStyles(styles(props));
 
     return (
         <textarea

@@ -1,7 +1,9 @@
-import React, { FC, ReactNode } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+/** @jsx jsx */
+import { FC, ReactNode } from 'react';
+import { jsx } from '@trousers/core';
+import collector from '@trousers/collector';
 
-export interface Props {
+export interface ButtonProps {
     children: ReactNode;
     type?: 'button' | 'submit' | 'reset';
     primary?: boolean;
@@ -9,7 +11,7 @@ export interface Props {
     onClick?: React.MouseEventHandler;
 }
 
-const styles = styleCollector<Props, {}, {}>('Button').element`
+const styles = (props: ButtonProps) => collector('Button').element`
         display: inline-block;
         height: 38px;
         padding: 0 30px;
@@ -34,7 +36,7 @@ const styles = styleCollector<Props, {}, {}>('Button').element`
             border-color: #888;
             outline: 0;
         }
-    `.modifier(props => !!props!.primary)`
+    `.modifier(props.primary)`
         color: #FFF;
         background-color: #000;
         border-color: #000;
@@ -45,7 +47,7 @@ const styles = styleCollector<Props, {}, {}>('Button').element`
             background-color: #000;
             border-color: #000;
         }
-    `.modifier(props => !!props!.disabled)`
+    `.modifier(props.disabled)`
         filter: grayscale(1);
         cursor: disabled;
         color: #888;
@@ -58,19 +60,11 @@ const styles = styleCollector<Props, {}, {}>('Button').element`
         }
     `;
 
-const Button: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
-
-    return (
-        <button
-            type={props.type}
-            className={classNames}
-            onClick={props.onClick}
-        >
-            {props.children}
-        </button>
-    );
-};
+const Button: FC<ButtonProps> = props => (
+    <button css={styles(props)} type={props.type} onClick={props.onClick}>
+        {props.children}
+    </button>
+);
 
 Button.defaultProps = {
     type: 'button',

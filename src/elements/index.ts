@@ -1,1 +1,2 @@
-export { default as Heading, Props as HeadingProps } from './Heading';
+export { default as Heading, HeadingProps } from './Heading';
+export { default as Emoji, EmojiProps } from './Emoji';

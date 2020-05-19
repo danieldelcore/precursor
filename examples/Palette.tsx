@@ -44,6 +44,29 @@ const BasicExample = () => {
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque
                     </Geo.Blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris volutpat, odio vitae tempus interdum, sem erat
+                        scelerisque justo.
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                        </ul>
+                        <ol>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                            <li>Item</li>
+                        </ol>
+                    </p>
                 </Geo.Panel>
                 <Geo.Panel>
                     <Geo.Heading id="code-blocks">Code blocks</Geo.Heading>
@@ -97,6 +120,7 @@ const BasicExample = () => {
                     />
                 </Geo.Panel>
                 <Geo.Panel>
+                    <Geo.Heading id="textarea">Text Area</Geo.Heading>
                     <Geo.Label htmlFor="textareatest">Text area</Geo.Label>
                     <Geo.TextArea
                         id="textareatest"
@@ -209,7 +233,7 @@ const BasicExample = () => {
                             <Geo.Button onClick={() => closeModal()}>
                                 Cancel
                             </Geo.Button>
-                            <Geo.Button onClick={() => closeModal()} primary>
+                            <Geo.Button primary onClick={() => closeModal()}>
                                 Submit
                             </Geo.Button>
                         </Geo.ButtonGroup>
@@ -223,4 +247,4 @@ const BasicExample = () => {
     );
 };
 
-storiesOf('Basic', module).add('Scratch Pad', () => <BasicExample />);
+storiesOf('Palette', module).add('Component Palette', () => <BasicExample />);

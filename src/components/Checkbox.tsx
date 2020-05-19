@@ -1,13 +1,16 @@
-import React, { FC } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx } from '@trousers/core';
+import collector from '@trousers/collector';
 
-import { Input, InputProps, Label } from './';
+import Input, { InputProps } from './Input';
+import Label from './Label';
 
-export interface Props extends InputProps {
+export interface CheckboxProps extends InputProps {
     label: string;
 }
 
-const styles = styleCollector('Checkbox').element`
+const styles = collector('Checkbox').element`
     height: auto;
     width: auto;
     appearance: checkbox;
@@ -15,13 +18,11 @@ const styles = styleCollector('Checkbox').element`
     cursor: pointer;
 `;
 
-const Checkbox: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
-
+const Checkbox: FC<CheckboxProps> = props => {
     return (
         <Label htmlFor={props.id}>
             <Input
-                className={classNames}
+                css={styles}
                 disabled={props.disabled}
                 id={props.id}
                 name={props.name}

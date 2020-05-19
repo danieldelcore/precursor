@@ -1,42 +1,38 @@
-import React, { FC } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, css } from '@trousers/core';
 
 import { Image, ImageProps } from '../';
 
-export interface Props extends ImageProps {
+export interface AvatarProps extends ImageProps {
     href: string;
 }
 
-const styles = styleCollector('Avatar').element`
-    display: inline-block;
-    position: relative;
-    outline: 0px;
-    height: 64px;
-    width: 64px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid #D1D1D1;
+const Avatar: FC<AvatarProps> = ({ href, src, alt }) => (
+    <a
+        css={css`
+            display: inline-block;
+            position: relative;
+            outline: 0px;
+            height: 64px;
+            width: 64px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 3px solid #d1d1d1;
+            transition: border 200ms;
 
-    &:focus,
-    &:hover {
-        border: 1px solid #33C3F0;
-        outline: 0;
-    }
-`;
-
-const Avatar: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
-
-    return (
-        <a
-            className={classNames}
-            href={props.href}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <Image src={props.src} alt={props.alt} />
-        </a>
-    );
-};
+            &:focus,
+            &:hover {
+                border: 3px solid #33c3f0;
+                outline: 0;
+            }
+        `}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image src={src} alt={alt} />
+    </a>
+);
 
 export default Avatar;

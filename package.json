@@ -46,7 +46,9 @@
         "registry": "https://npm.pkg.github.com/"
     },
     "dependencies": {
-        "trousers": "^2.1.1"
+        "@trousers/core": "^3.0.0",
+        "@trousers/collector": "^3.0.0",
+        "@trousers/theme": "^3.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.7.5",

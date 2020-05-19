@@ -1,10 +1,11 @@
 import React, { FC, ChangeEvent } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+import { useStyles } from '@trousers/core';
+import collector from '@trousers/collector';
 
 import { Theme } from '../theme';
 import { InputTypes } from '../types';
 
-export interface Props {
+export interface InputProps {
     className?: string;
     disabled?: boolean;
     id: string;
@@ -16,7 +17,7 @@ export interface Props {
     onChange?(event: ChangeEvent): void;
 }
 
-const styles = styleCollector<Props, {}, Theme>('Input').element`
+const styles = (props: InputProps) => collector<Theme>('Input').element`
     height: 38px;
     padding: 6px 10px;
     background-color: ${({ colors }) => colors.backgroundAlt};
@@ -31,12 +32,12 @@ const styles = styleCollector<Props, {}, Theme>('Input').element`
         border: 1px solid #33C3F0;
         outline: 0;
     }
-`.modifier(props => !!props!.disabled)`
+`.modifier(!!props!.disabled)`
     cursor: not-allowed;
 `;
 
-const Input: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
+const Input: FC<InputProps> = props => {
+    const classNames = useStyles(styles(props));
 
     return (
         <input

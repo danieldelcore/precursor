@@ -1,11 +1,9 @@
 import { FC } from 'react';
-import { css, useGlobals } from 'trousers';
+import { css, useGlobals } from '@trousers/core';
 
 import { Theme } from './';
 
 const reset = css`
-    @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
-
     * {
         box-sizing: border-box;
     }

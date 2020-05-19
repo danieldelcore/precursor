@@ -30,7 +30,7 @@ const theme: Theme = {
     },
     space: [0, 1, 2, 4, 8, 16, 32, 64, 128, 256],
     radii: ['2px', '4px', '8px'],
-    fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+    fontSizes: [14, 16, 20, 24, 32, 48, 64],
     fontWeight: [100, 400, 700],
     fonts: {
         base:

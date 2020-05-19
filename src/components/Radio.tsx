@@ -1,27 +1,24 @@
-import React, { FC } from 'react';
-import { useStyles, styleCollector } from 'trousers';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, css } from '@trousers/core';
 
 import { Input, InputProps, Label } from './';
 
-export interface Props extends InputProps {
+export interface RadioProps extends InputProps {
     label: string;
 }
 
-const styles = styleCollector('Radio').element`
-    height: auto;
-    width: auto;
-    appearance: radio;
-    display: inline;
-    cursor: pointer;
-`;
-
-const Radio: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
-
+const Radio: FC<RadioProps> = props => {
     return (
         <Label htmlFor={props.id}>
             <Input
-                className={classNames}
+                css={css`
+                    height: auto;
+                    width: auto;
+                    appearance: radio;
+                    display: inline;
+                    cursor: pointer;
+                `}
                 disabled={props.disabled}
                 id={props.id}
                 name={props.name}

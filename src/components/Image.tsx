@@ -1,19 +1,20 @@
-import React, { FC } from 'react';
-import { styleCollector, useStyles } from 'trousers';
+/** @jsx jsx */
+import { FC } from 'react';
+import { css, jsx } from '@trousers/core';
 
-export interface Props {
+export interface ImageProps {
     src: string;
     alt?: string;
 }
 
-const styles = styleCollector('Image').element`
-    width: 100%;
-`;
-
-const Image: FC<Props> = props => {
-    const classNames = useStyles(styles, props);
-
-    return <img alt={props.alt} src={props.src} className={classNames} />;
-};
+const Image: FC<ImageProps> = props => (
+    <img
+        css={css`
+            width: 100%;
+        `}
+        alt={props.alt}
+        src={props.src}
+    />
+);
 
 export default Image;
