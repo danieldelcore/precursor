@@ -1,7 +1,20 @@
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 
-import * as Geo from '../src';
+import Avatar from '@geometric/avatar';
+import Blockquote from '@geometric/blockquote';
+import Button from '@geometric/button';
+import Checkbox from '@geometric/checkbox';
+import Code from '@geometric/code';
+import Heading from '@geometric/heading';
+import Input from '@geometric/input';
+import Label from '@geometric/label';
+import Modal, { ModalBody } from '@geometric/modal';
+import Panel from '@geometric/panel';
+import Radio from '@geometric/radio';
+import Select from '@geometric/select';
+import TextArea from '@geometric/textarea';
+import { theme, ThemeProvider } from '@geometric/theme';
 
 const BasicExample = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +23,7 @@ const BasicExample = () => {
     const openModal = () => setIsModalOpen(true);
 
     return (
-        <Geo.ThemeProvider theme={Geo.theme}>
+        <ThemeProvider theme={theme}>
             <div
                 style={{
                     maxWidth: '1000px',
@@ -19,13 +32,13 @@ const BasicExample = () => {
                     padding: '40px',
                 }}
             >
-                <Geo.Heading weight="h1">Geometric ⬢</Geo.Heading>
-                <Geo.Panel>
-                    <Geo.Heading id="typography">Typography</Geo.Heading>
-                    <Geo.Heading weight="h1">Heading One</Geo.Heading>
-                    <Geo.Heading>Heading Two</Geo.Heading>
-                    <Geo.Heading weight="h3">Heading Three</Geo.Heading>
-                    <Geo.Heading weight="h4">Heading Four</Geo.Heading>
+                <Heading weight="h1">Geometric ⬢</Heading>
+                <Panel>
+                    <Heading id="typography">Typography</Heading>
+                    <Heading weight="h1">Heading One</Heading>
+                    <Heading>Heading Two</Heading>
+                    <Heading weight="h3">Heading Three</Heading>
+                    <Heading weight="h4">Heading Four</Heading>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
@@ -39,78 +52,74 @@ const BasicExample = () => {
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
                     </p>
-                    <Geo.Blockquote cite="https://zeropoly.github.io/geometric">
+                    <Blockquote cite="https://zeropoly.github.io/geometric">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque
-                    </Geo.Blockquote>
+                    </Blockquote>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
                     </p>
-                    <p>
-                        <ul>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                        <ol>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ol>
-                    </p>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="code-blocks">Code blocks</Geo.Heading>
-                    <Geo.Code inline>
+                    <ul>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ul>
+                    <ol>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ol>
+                </Panel>
+                <Panel>
+                    <Heading id="code-blocks">Code blocks</Heading>
+                    <Code inline>
                         {`.some-class { background-color: red; }`}
-                    </Geo.Code>
+                    </Code>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat,
-                        <Geo.Code inline>
+                        <Code inline>
                             {`.some-class { background-color: red; }`}
-                        </Geo.Code>{' '}
+                        </Code>{' '}
                         odio vitae tempus interdum, sem erat scelerisque justo.
                     </p>
-                    <Geo.Code>{`.some-class { background-color: red; }`}</Geo.Code>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="avatar">Avatar</Geo.Heading>
-                    <Geo.Avatar
+                    <Code>{`.some-class { background-color: red; }`}</Code>
+                </Panel>
+                <Panel>
+                    <Heading id="avatar">Avatar</Heading>
+                    <Avatar
                         src="https://avatars3.githubusercontent.com/u/3030010?s=400&u=36ccfde6e6ed4b6398bb3c79b596636ee25586ec&v=4"
                         alt="Daniel"
                         href="https://github.com/danieldelcore"
                     />
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="panels">Panels</Geo.Heading>
-                    <Geo.Panel>
+                </Panel>
+                <Panel>
+                    <Heading id="panels">Panels</Heading>
+                    <Panel>
                         <p>Hello world 👋</p>
-                    </Geo.Panel>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="input">Input</Geo.Heading>
-                    <Geo.Label htmlFor="test">Input field</Geo.Label>
-                    <Geo.Input
+                    </Panel>
+                </Panel>
+                <Panel>
+                    <Heading id="input">Input</Heading>
+                    <Label htmlFor="test">Input field</Label>
+                    <Input
                         id="test"
                         name="test"
                         placeholder="hello world"
                         onChange={() => console.log('onChange')}
                         value=""
                     />
-                    <Geo.Label htmlFor="testdisabled">
-                        Input field (disabled)
-                    </Geo.Label>
-                    <Geo.Input
+                    <Label htmlFor="testdisabled">Input field (disabled)</Label>
+                    <Input
                         id="testdisabled"
                         name="testdisabled"
                         placeholder="hello world"
@@ -118,21 +127,21 @@ const BasicExample = () => {
                         value=""
                         disabled
                     />
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="textarea">Text Area</Geo.Heading>
-                    <Geo.Label htmlFor="textareatest">Text area</Geo.Label>
-                    <Geo.TextArea
+                </Panel>
+                <Panel>
+                    <Heading id="textarea">Text Area</Heading>
+                    <Label htmlFor="textareatest">Text area</Label>
+                    <TextArea
                         id="textareatest"
                         name="textarea"
                         placeholder="hello world"
                         onChange={() => console.log('onChange')}
                         value=""
                     />
-                    <Geo.Label htmlFor="textareatestdisabled">
+                    <Label htmlFor="textareatestdisabled">
                         Text area (disabled)
-                    </Geo.Label>
-                    <Geo.TextArea
+                    </Label>
+                    <TextArea
                         id="textareatestdisabled"
                         name="textareadisabled"
                         placeholder="hello world"
@@ -140,11 +149,11 @@ const BasicExample = () => {
                         value=""
                         disabled
                     />
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="select">Select</Geo.Heading>
-                    <Geo.Label htmlFor="selecttest">Select</Geo.Label>
-                    <Geo.Select
+                </Panel>
+                <Panel>
+                    <Heading id="select">Select</Heading>
+                    <Label htmlFor="selecttest">Select</Label>
+                    <Select
                         id="select"
                         name="select"
                         value="world"
@@ -152,11 +161,11 @@ const BasicExample = () => {
                     >
                         <option value="hello">Hello</option>
                         <option value="world">world</option>
-                    </Geo.Select>
-                    <Geo.Label htmlFor="selecttestdisabled">
+                    </Select>
+                    <Label htmlFor="selecttestdisabled">
                         Select (disabled)
-                    </Geo.Label>
-                    <Geo.Select
+                    </Label>
+                    <Select
                         id="selecttestdisabled"
                         name="selecttestdisabled"
                         value="world"
@@ -165,11 +174,11 @@ const BasicExample = () => {
                     >
                         <option value="hello">Hello</option>
                         <option value="world">world</option>
-                    </Geo.Select>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="checkbox">Checkboxes</Geo.Heading>
-                    <Geo.Checkbox
+                    </Select>
+                </Panel>
+                <Panel>
+                    <Heading id="checkbox">Checkboxes</Heading>
+                    <Checkbox
                         id="test2"
                         name="test2"
                         value="isChecked"
@@ -177,17 +186,17 @@ const BasicExample = () => {
                         onChange={() => console.log('onChange')}
                         label="My checkbox"
                     />
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="radio">Radios</Geo.Heading>
-                    <Geo.Radio
+                </Panel>
+                <Panel>
+                    <Heading id="radio">Radios</Heading>
+                    <Radio
                         id="test3post"
                         name="test3"
                         value="post"
                         label="post"
                         onChange={() => console.log('onChange')}
                     />
-                    <Geo.Radio
+                    <Radio
                         id="test3email"
                         name="test3"
                         value="email"
@@ -195,55 +204,47 @@ const BasicExample = () => {
                         onChange={() => console.log('onChange')}
                         checked
                     />
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="range">Range</Geo.Heading>
+                </Panel>
+                <Panel>
+                    <Heading id="range">Range</Heading>
                     <p>TODO</p>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="toggle">Toggle</Geo.Heading>
+                </Panel>
+                <Panel>
+                    <Heading id="toggle">Toggle</Heading>
                     <p>TODO</p>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="buttons">Buttons</Geo.Heading>
-                    <Geo.ButtonGroup>
-                        <Geo.Button>Base</Geo.Button>
-                        <Geo.Button primary>Primary</Geo.Button>
-                    </Geo.ButtonGroup>
-                    <Geo.Heading weight="h3">Disabled</Geo.Heading>
-                    <Geo.ButtonGroup>
-                        <Geo.Button disabled>Disabled Base</Geo.Button>
-                        <Geo.Button disabled primary>
-                            Disabled Primary
-                        </Geo.Button>
-                    </Geo.ButtonGroup>
-                </Geo.Panel>
-                <Geo.Panel>
-                    <Geo.Heading id="modals">Modals</Geo.Heading>
-                    <Geo.Modal
+                </Panel>
+                <Panel>
+                    <Heading id="buttons">Buttons</Heading>
+                    <Button>Base</Button>
+                    <Button primary>Primary</Button>
+                    <Heading weight="h3">Disabled</Heading>
+                    <Button disabled>Disabled Base</Button>
+                    <Button disabled primary>
+                        Disabled Primary
+                    </Button>
+                </Panel>
+                <Panel>
+                    <Heading id="modals">Modals</Heading>
+                    <Modal
                         open={isModalOpen}
                         onClickOutside={() => closeModal()}
                         onEscKeyPress={() => closeModal()}
                     >
-                        <Geo.ModalBody>
-                            <Geo.Heading>Modal heading</Geo.Heading>
+                        <ModalBody>
+                            <Heading>Modal heading</Heading>
                             <p>Some content contained within the Modal.</p>
-                        </Geo.ModalBody>
-                        <Geo.ButtonGroup>
-                            <Geo.Button onClick={() => closeModal()}>
-                                Cancel
-                            </Geo.Button>
-                            <Geo.Button primary onClick={() => closeModal()}>
-                                Submit
-                            </Geo.Button>
-                        </Geo.ButtonGroup>
-                    </Geo.Modal>
-                    <Geo.Button primary onClick={() => openModal()}>
+                        </ModalBody>
+                        <Button onClick={() => closeModal()}>Cancel</Button>
+                        <Button primary onClick={() => closeModal()}>
+                            Submit
+                        </Button>
+                    </Modal>
+                    <Button primary onClick={() => openModal()}>
                         Open modal
-                    </Geo.Button>
-                </Geo.Panel>
+                    </Button>
+                </Panel>
             </div>
-        </Geo.ThemeProvider>
+        </ThemeProvider>
     );
 };
 

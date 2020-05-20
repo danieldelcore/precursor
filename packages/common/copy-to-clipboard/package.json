@@ -1,0 +1,12 @@
+{
+    "name": "@geometric/copy-to-clipboard",
+    "version": "0.1.0",
+    "description": "Copy to clipboard utility",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/common/copy-to-clipboard"
+}

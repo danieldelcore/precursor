@@ -1,0 +1,17 @@
+{
+    "name": "@geometric/emoji",
+    "version": "0.1.0",
+    "description": "Emoji component",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "react": "^16.8.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/elements/emoji"
+}

@@ -1,0 +1,13 @@
+{
+    "include": ["src"],
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src",
+        "baseUrl": "src"
+    },
+    "references": [
+        { "path": "../../theming/theme" },
+        { "path": "../../common/copy-to-clipboard" }
+    ]
+}

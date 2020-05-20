@@ -20,9 +20,11 @@ A minimal UI library and home to all of the components I've written a hundred ti
 
 ## Themes
 
-Theme schemas are heavily influenced by: https://system-ui.com/theme
+Theme schema, heavily influenced by: https://system-ui.com/theme
 
 ## Inspired by
 
 -   https://zeit.co/design/
 -   https://primer.style/components
+-   https://seek-oss.github.io/braid-design-system
+-   https://react-ui.dev

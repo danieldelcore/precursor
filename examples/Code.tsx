@@ -1,7 +1,8 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { ThemeProvider, theme, Code } from '../src';
+import Code from '@geometric/code';
+import { ThemeProvider, theme } from '@geometric/theme';
 
 storiesOf('Code', module)
     .add('Inline', () => (
