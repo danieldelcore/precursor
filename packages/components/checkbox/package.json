@@ -1,14 +1,14 @@
 {
     "name": "@precursor/checkbox",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Checkbox component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/input": "^0.1.0",
-        "@precursor/label": "^0.1.0",
+        "@precursor/input": "^0.1.1",
+        "@precursor/label": "^0.1.1",
         "@trousers/collector": "^3.0.0",
         "@trousers/core": "^3.0.0"
     },
