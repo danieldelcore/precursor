@@ -6,8 +6,6 @@
 
 A minimal UI library and home to all of the components I've written a hundred times.
 
-> **Geometry** (from the Ancient Greek: γεωμετρία; geo- "earth", -metron "measurement") is a branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space
-
 ## Component Roadmap
 
 -   Date picker
