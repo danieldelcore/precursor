@@ -1,6 +1,6 @@
 {
     "name": "@precursor/button",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "button component",
     "main": "dist/index.js",
     "module": "dist/index.js",
