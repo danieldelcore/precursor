@@ -21,7 +21,13 @@
         "sourceMap": true,
         "downlevelIteration": true,
         "paths": {
-            "@geometric/*": ["packages/**/*/"],
+            "@geometric/*": [
+                "packages/common/*",
+                "packages/components/*",
+                "packages/elements/*",
+                "packages/layout/*",
+                "packages/theming/*"
+            ],
             "@emotion/core": ["typings/emotion.d.ts"]
         }
     },
