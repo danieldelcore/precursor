@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/label",
+    "name": "@precursor/label",
     "version": "0.1.0",
     "description": "label component",
     "main": "dist/index.js",
@@ -15,5 +15,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/components/label"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/components/label"
 }

@@ -2,7 +2,7 @@ import React, { FC, ChangeEvent } from 'react';
 import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import { Theme } from '@geometric/theme';
+import { Theme } from '@precursor/theme';
 import { InputTypes } from '../types';
 
 export interface InputProps {

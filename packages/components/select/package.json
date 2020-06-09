@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/select",
+    "name": "@precursor/select",
     "version": "0.1.0",
     "description": "select component",
     "main": "dist/index.js",
@@ -16,5 +16,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/components/select"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/components/select"
 }

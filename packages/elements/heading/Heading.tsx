@@ -2,8 +2,8 @@ import React, { FC, ReactNode, useState } from 'react';
 import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import copyToClipboard from '@geometric/copy-to-clipboard';
-import { Theme } from '@geometric/theme';
+import copyToClipboard from '@precursor/copy-to-clipboard';
+import { Theme } from '@precursor/theme';
 
 export interface HeadingProps {
     children: ReactNode;

@@ -2,8 +2,8 @@
 import { FC } from 'react';
 import { jsx, css } from '@trousers/core';
 
-import Input, { InputProps } from '@geometric/input';
-import Label from '@geometric/label';
+import Input, { InputProps } from '@precursor/input';
+import Label from '@precursor/label';
 
 export interface RadioProps extends InputProps {
     label: string;

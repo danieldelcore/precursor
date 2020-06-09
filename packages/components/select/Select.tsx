@@ -2,7 +2,7 @@ import React, { ChangeEvent, ReactNode, FC } from 'react';
 import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import { Theme } from '@geometric/theme';
+import { Theme } from '@precursor/theme';
 
 export interface SelectProps {
     children: ReactNode | string;

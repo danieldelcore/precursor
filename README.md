@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/logo-large-alt.png" alt="Geometric Logo" />
+  <img src="assets/logo-large-alt.png" alt="precursor Logo" />
 </p>
 
-# Geometric
+# precursor
 
 A minimal UI library and home to all of the components I've written a hundred times.
 

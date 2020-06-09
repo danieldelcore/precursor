@@ -21,7 +21,7 @@
         "sourceMap": true,
         "downlevelIteration": true,
         "paths": {
-            "@geometric/*": [
+            "@precursor/*": [
                 "packages/common/*",
                 "packages/components/*",
                 "packages/elements/*",

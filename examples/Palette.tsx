@@ -1,20 +1,20 @@
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 
-import Avatar from '@geometric/avatar';
-import Blockquote from '@geometric/blockquote';
-import Button from '@geometric/button';
-import Checkbox from '@geometric/checkbox';
-import Code from '@geometric/code';
-import Heading from '@geometric/heading';
-import Input from '@geometric/input';
-import Label from '@geometric/label';
-import Modal, { ModalBody } from '@geometric/modal';
-import Panel from '@geometric/panel';
-import Radio from '@geometric/radio';
-import Select from '@geometric/select';
-import TextArea from '@geometric/textarea';
-import { theme, ThemeProvider } from '@geometric/theme';
+import Avatar from '@precursor/avatar';
+import Blockquote from '@precursor/blockquote';
+import Button from '@precursor/button';
+import Checkbox from '@precursor/checkbox';
+import Code from '@precursor/code';
+import Heading from '@precursor/heading';
+import Input from '@precursor/input';
+import Label from '@precursor/label';
+import Modal, { ModalBody } from '@precursor/modal';
+import Panel from '@precursor/panel';
+import Radio from '@precursor/radio';
+import Select from '@precursor/select';
+import TextArea from '@precursor/textarea';
+import { theme, ThemeProvider } from '@precursor/theme';
 
 const BasicExample = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +32,7 @@ const BasicExample = () => {
                     padding: '40px',
                 }}
             >
-                <Heading weight="h1">Geometric ⬢</Heading>
+                <Heading weight="h1">Precursor ⬢</Heading>
                 <Panel>
                     <Heading id="typography">Typography</Heading>
                     <Heading weight="h1">Heading One</Heading>
@@ -52,7 +52,7 @@ const BasicExample = () => {
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
                     </p>
-                    <Blockquote cite="https://zeropoly.github.io/geometric">
+                    <Blockquote cite="https://zeropoly.github.io/precursor">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque

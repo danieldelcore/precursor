@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { useStyles, css } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import Theme from '@geometric/theme';
-import Overlay from '@geometric/overlay';
+import Theme from '@precursor/theme';
+import Overlay from '@precursor/overlay';
 
 export interface ModalProps {
     open?: boolean;

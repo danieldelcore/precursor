@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { jsx, css } from '@trousers/core';
 
-import Image, { ImageProps } from '@geometric/image';
+import Image, { ImageProps } from '@precursor/image';
 
 export interface AvatarProps extends ImageProps {
     href: string;
@@ -18,7 +18,7 @@ const Avatar: FC<AvatarProps> = ({ href, src, alt }) => (
             width: 64px;
             overflow: hidden;
             border-radius: 50%;
-            border: 3px solid #d1d1d1;
+            border: 3px solid white;
             transition: border 200ms;
 
             &:focus,

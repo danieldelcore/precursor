@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { css, jsx } from '@trousers/core';
 
-import { Theme } from '@geometric/theme';
+import { Theme } from '@precursor/theme';
 
 export interface BlockquoteProps {
     children: string;

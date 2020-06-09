@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/types",
+    "name": "@precursor/types",
     "version": "0.1.0",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -7,5 +7,5 @@
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {},
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/common/types"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/common/types"
 }

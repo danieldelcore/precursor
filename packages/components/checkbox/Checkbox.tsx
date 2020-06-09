@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { jsx } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import Label from '@geometric/label';
-import Input, { InputProps } from '@geometric/input';
+import Label from '@precursor/label';
+import Input, { InputProps } from '@precursor/input';
 
 export interface CheckboxProps extends InputProps {
     label: string;

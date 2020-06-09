@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/image",
+    "name": "@precursor/image",
     "version": "0.1.0",
     "description": "image component",
     "main": "dist/index.js",
@@ -15,5 +15,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/components/image"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/components/image"
 }

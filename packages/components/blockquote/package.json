@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/blockquote",
+    "name": "@precursor/blockquote",
     "version": "0.1.0",
     "description": "blockquote component",
     "main": "dist/index.js",
@@ -7,7 +7,7 @@
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@geometric/theme": "^0.1.0",
+        "@precursor/theme": "^0.1.0",
         "@trousers/collector": "^3.0.0",
         "@trousers/core": "^3.0.0"
     },
@@ -17,5 +17,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/components/blockquote"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/components/blockquote"
 }

@@ -1,5 +1,5 @@
 {
-    "name": "@geometric/theme",
+    "name": "@precursor/theme",
     "version": "0.1.0",
     "description": "Theme component",
     "main": "dist/index.js",
@@ -16,5 +16,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/geometric/tree/master/packages/theming/theme"
+    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/theming/theme"
 }

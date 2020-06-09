@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import { Theme } from '@geometric/theme';
+import { Theme } from '@precursor/theme';
 
 export interface CodeProps {
     children: ReactNode;
