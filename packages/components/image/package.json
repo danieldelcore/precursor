@@ -15,5 +15,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/zeropoly/precursor/tree/master/packages/components/image"
+    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/components/image"
 }
