@@ -1,10 +1,9 @@
 {
     "name": "precursor",
     "version": "0.1.0",
-    "main": "lib/index.js",
     "license": "MIT",
     "private": true,
-    "repository": "https://github.com/zeropoly/precursor",
+    "repository": "https://github.com/danieldelcore/precursor",
     "workspaces": [
         "packages/components/*",
         "packages/elements/*",

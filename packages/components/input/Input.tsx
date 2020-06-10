@@ -3,7 +3,7 @@ import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
 import { Theme } from '@precursor/theme';
-import { InputTypes } from '../types';
+import { InputTypes } from '@precursor/types';
 
 export interface InputProps {
     className?: string;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useStyles, css } from '@trousers/core';
 import collector from '@trousers/collector';
 
-import Theme from '@precursor/theme';
+import { Theme } from '@precursor/theme';
 import Overlay from '@precursor/overlay';
 
 export interface ModalProps {

@@ -22,11 +22,11 @@
         "downlevelIteration": true,
         "paths": {
             "@precursor/*": [
-                "packages/common/*",
-                "packages/components/*",
-                "packages/elements/*",
-                "packages/layout/*",
-                "packages/theming/*"
+                "packages/common/*/",
+                "packages/components/*/",
+                "packages/elements/*/",
+                "packages/layout/*/",
+                "packages/theming/*/"
             ],
             "@emotion/core": ["typings/emotion.d.ts"]
         }

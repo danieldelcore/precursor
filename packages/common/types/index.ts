@@ -1,1 +1,1 @@
-export { default } from './input-types';
+export { default as InputTypes } from './input-types';
