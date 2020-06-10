@@ -1,13 +1,13 @@
 {
     "name": "@precursor/blockquote",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "blockquote component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/theme": "^0.1.1",
+        "@precursor/theme": "^0.1.2",
         "@trousers/collector": "^3.0.0",
         "@trousers/core": "^3.0.0"
     },

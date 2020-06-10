@@ -1,6 +1,6 @@
 {
     "name": "@precursor/badge",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Badge component",
     "main": "dist/index.js",
     "module": "dist/index.js",
