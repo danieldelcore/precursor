@@ -35,6 +35,7 @@ const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     }
 `.modifier(props.disabled)`
     cursor: not-allowed;
+    background-color: ${({ colors }) => colors.backgroundAlt};
 `;
 
 const TextArea: FC<TextAreaProps> = props => {

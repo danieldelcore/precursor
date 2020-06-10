@@ -9,6 +9,7 @@ import Checkbox from '@precursor/checkbox';
 import Code from '@precursor/code';
 import Heading from '@precursor/heading';
 import Input from '@precursor/input';
+import Image from '@precursor/image';
 import Label from '@precursor/label';
 import Modal, { ModalBody } from '@precursor/modal';
 import Panel from '@precursor/panel';
@@ -16,6 +17,8 @@ import Radio from '@precursor/radio';
 import Select from '@precursor/select';
 import TextArea from '@precursor/textarea';
 import Emoji from '@precursor/emoji';
+import Keyboard from '@precursor/keyboard';
+import List, { ListItem } from '@precursor/list';
 import { theme, ThemeProvider } from '@precursor/theme';
 
 const BasicExample = () => {
@@ -53,7 +56,8 @@ const BasicExample = () => {
                         <Text as="strong">
                             Strong text <Emoji label="gorilla">🦍</Emoji> Lorem
                             ipsum dolor sit amet, consectetur adipiscing elit.
-                            Mauris volutpat, odio vitae tempus interdum, sem
+                            Mauris volutpat,{' '}
+                            <Text as="em">odio vitae tempus interdum, sem</Text>
                             erat scelerisque justo.
                         </Text>
                     </Text>
@@ -61,8 +65,8 @@ const BasicExample = () => {
                         <Text as="small">
                             Small text <Emoji label="mouse">🐁</Emoji> Lorem
                             ipsum dolor sit amet, consectetur adipiscing elit.
-                            Mauris volutpat, odio vitae tempus interdum, sem
-                            erat scelerisque justo.
+                            <Text as="del">Mauris volutpat, odio</Text> vitae
+                            tempus interdum, sem erat scelerisque justo.
                         </Text>
                     </Text>
                     <Blockquote cite="https://zeropoly.github.io/precursor">
@@ -75,36 +79,55 @@ const BasicExample = () => {
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
                     </Text>
-                    <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                    </ul>
-                    <ol>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                    </ol>
+                    <List>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                    </List>
+                    <List type="ol">
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                        <ListItem>Item</ListItem>
+                    </List>
+                </Panel>
+                <Panel>
+                    <Heading id="images">Images</Heading>
+                    <Image src="logo-large-alt.png" />
+                </Panel>
+                <Panel>
+                    <Heading id="keyboard">Key combos</Heading>
+                    <Text>
+                        Common Mac modifiers <Keyboard command />
+                        <Keyboard shift />
+                        <Keyboard option />
+                        <Keyboard ctrl />
+                    </Text>
+                    <Text>
+                        keyboard combinations <Keyboard command>t</Keyboard>
+                        <Keyboard shift>Hello</Keyboard>
+                        <Keyboard option command></Keyboard>
+                        <Keyboard ctrl>c</Keyboard>
+                    </Text>
                 </Panel>
                 <Panel>
                     <Heading id="code-blocks">Code blocks</Heading>
                     <Code inline>
                         {`.some-class { background-color: red; }`}
                     </Code>
-                    <p>
+                    <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat,
                         <Code inline>
                             {`.some-class { background-color: red; }`}
                         </Code>{' '}
                         odio vitae tempus interdum, sem erat scelerisque justo.
-                    </p>
+                    </Text>
                     <Code>{`.some-class { background-color: red; }`}</Code>
                 </Panel>
                 <Panel>
@@ -118,7 +141,9 @@ const BasicExample = () => {
                 <Panel>
                     <Heading id="panels">Panels</Heading>
                     <Panel>
-                        <p>Hello world 👋</p>
+                        <Text>
+                            Hello world <Emoji label="wave">👋</Emoji>
+                        </Text>
                     </Panel>
                 </Panel>
                 <Panel>
@@ -220,11 +245,11 @@ const BasicExample = () => {
                 </Panel>
                 <Panel>
                     <Heading id="range">Range</Heading>
-                    <p>TODO</p>
+                    <Text>TODO</Text>
                 </Panel>
                 <Panel>
                     <Heading id="toggle">Toggle</Heading>
-                    <p>TODO</p>
+                    <Text>TODO</Text>
                 </Panel>
                 <Panel>
                     <Heading id="buttons">Buttons</Heading>
@@ -245,7 +270,9 @@ const BasicExample = () => {
                     >
                         <ModalBody>
                             <Heading>Modal heading</Heading>
-                            <p>Some content contained within the Modal.</p>
+                            <Text>
+                                Some content contained within the Modal.
+                            </Text>
                         </ModalBody>
                         <Button onClick={() => closeModal()}>Cancel</Button>
                         <Button primary onClick={() => closeModal()}>

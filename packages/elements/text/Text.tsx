@@ -17,10 +17,10 @@ export type Modifier =
 
 export interface TextProps {
     children: ReactNode;
-    as: Modifier;
+    as?: Modifier;
 }
 
-const Text: FC<TextProps> = ({ as: modifier, children }) =>
-    React.createElement(modifier || 'p', {}, children);
+const Text: FC<TextProps> = ({ as: modifier = 'p', children }) =>
+    React.createElement(modifier, {}, children);
 
 export default Text;

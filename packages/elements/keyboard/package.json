@@ -1,7 +1,7 @@
 {
-    "name": "@precursor/button",
-    "version": "0.1.3",
-    "description": "button component",
+    "name": "@precursor/keyboard",
+    "version": "0.1.0",
+    "description": "keyboard combo component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -17,5 +17,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/components/button"
+    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/elements/keyboard"
 }

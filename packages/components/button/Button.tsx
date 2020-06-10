@@ -19,13 +19,13 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         padding: 0 22px;
         color: #555;
         text-align: center;
-        font-size: 11px;
-        font-weight: 600;
+        font-size: ${({ fontSizes }) => fontSizes[1]};
+        font-weight: ${({ fontWeight }) => fontWeight[1]};
         line-height: 30px;
         letter-spacing: .1rem;
         text-decoration: none;
         white-space: nowrap;
-        background-color: #fff;
+        background-color: ${({ colors }) => colors.background};
         border-radius: ${({ radii }) => radii[1]};
         border: ${({ borders }) => borders.base};
         cursor: pointer;
@@ -49,9 +49,9 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
             border-color: #000;
         }
     `.modifier(props.disabled)`
-        filter: grayscale(1);
         cursor: disabled;
-        color: #888;
+        color: #888
+        background-color: ${({ colors }: any) => colors.backgroundAlt}
 
         &:focus,
         &:hover {

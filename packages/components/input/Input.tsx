@@ -19,7 +19,7 @@ export interface InputProps {
 
 const styles = (props: InputProps) => collector<Theme>('Input').element`
     height: 38px;
-    padding: 6px 10px;
+    padding: 0 10px;
     background-color: ${({ colors }) => colors.background};
     border-radius: ${({ radii }) => radii[0]};
     border: ${({ borders }) => borders.base};
@@ -34,6 +34,7 @@ const styles = (props: InputProps) => collector<Theme>('Input').element`
     }
 `.modifier(!!props!.disabled)`
     cursor: not-allowed;
+    background-color: ${({ colors }) => colors.backgroundAlt};
 `;
 
 const Input: FC<InputProps> = props => {

@@ -62,6 +62,8 @@
         { "path": "packages/elements/emoji" },
         { "path": "packages/elements/heading" },
         { "path": "packages/elements/text" },
+        { "path": "packages/elements/list" },
+        { "path": "packages/elements/keyboard" },
         { "path": "packages/theming/theme" }
     ]
 }
