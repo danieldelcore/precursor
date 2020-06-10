@@ -1,5 +1,13 @@
 # @precursor/code
 
+## 0.1.3
+
+### Patch Changes
+
+-   3a90fc2: Style updates
+-   Updated dependencies [3a90fc2]
+    -   @precursor/theme@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
