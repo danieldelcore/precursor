@@ -1,6 +1,6 @@
 {
     "name": "@precursor/theme",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Theme component",
     "main": "dist/index.js",
     "module": "dist/index.js",
