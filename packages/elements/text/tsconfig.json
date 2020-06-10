@@ -6,5 +6,8 @@
         "rootDir": ".",
         "baseUrl": "."
     },
-    "references": [{ "path": "../../theming/theme" }]
+    "references": [
+        { "path": "../../theming/theme" },
+        { "path": "../../common/copy-to-clipboard" }
+    ]
 }

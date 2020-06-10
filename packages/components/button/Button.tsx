@@ -3,6 +3,8 @@ import { FC, ReactNode } from 'react';
 import { jsx } from '@trousers/core';
 import collector from '@trousers/collector';
 
+import { Theme } from '@precursor/theme';
+
 export interface ButtonProps {
     children: ReactNode;
     type?: 'button' | 'submit' | 'reset';
@@ -11,29 +13,28 @@ export interface ButtonProps {
     onClick?: React.MouseEventHandler;
 }
 
-const styles = (props: ButtonProps) => collector('Button').element`
+const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         display: inline-block;
-        height: 38px;
-        padding: 0 30px;
+        height: 30px;
+        padding: 0 22px;
         color: #555;
         text-align: center;
         font-size: 11px;
         font-weight: 600;
-        line-height: 38px;
+        line-height: 30px;
         letter-spacing: .1rem;
-        text-transform: uppercase;
         text-decoration: none;
         white-space: nowrap;
         background-color: #fff;
-        border-radius: 4px;
-        border: 1px solid #bbb;
+        border-radius: ${({ radii }) => radii[1]};
+        border: ${({ borders }) => borders.base};
         cursor: pointer;
         margin-bottom: 1rem;
 
         &:focus,
         &:hover {
             color: #333;
-            border-color: #888;
+            border: ${({ borders }) => borders.focus};
             outline: 0;
         }
     `.modifier(props.primary)`

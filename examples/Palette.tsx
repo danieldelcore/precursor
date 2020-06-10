@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Avatar from '@precursor/avatar';
 import Blockquote from '@precursor/blockquote';
+import Text from '@precursor/text';
 import Button from '@precursor/button';
 import Checkbox from '@precursor/checkbox';
 import Code from '@precursor/code';
@@ -14,6 +15,7 @@ import Panel from '@precursor/panel';
 import Radio from '@precursor/radio';
 import Select from '@precursor/select';
 import TextArea from '@precursor/textarea';
+import Emoji from '@precursor/emoji';
 import { theme, ThemeProvider } from '@precursor/theme';
 
 const BasicExample = () => {
@@ -39,29 +41,40 @@ const BasicExample = () => {
                     <Heading>Heading Two</Heading>
                     <Heading weight="h3">Heading Three</Heading>
                     <Heading weight="h4">Heading Four</Heading>
-                    <p>
+                    <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo, at pulvinar nunc quam id sapien. Nam
                         semper elit at sapien aliquam, eget tincidunt leo
                         consequat. Aenean sodales ex ut tellus accumsan, eu
                         condimentum elit pharetra.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris volutpat, odio vitae tempus interdum, sem erat
-                        scelerisque justo.
-                    </p>
+                    </Text>
+                    <Text>
+                        <Text as="strong">
+                            Strong text <Emoji label="gorilla">🦍</Emoji> Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris volutpat, odio vitae tempus interdum, sem
+                            erat scelerisque justo.
+                        </Text>
+                    </Text>
+                    <Text>
+                        <Text as="small">
+                            Small text <Emoji label="mouse">🐁</Emoji> Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris volutpat, odio vitae tempus interdum, sem
+                            erat scelerisque justo.
+                        </Text>
+                    </Text>
                     <Blockquote cite="https://zeropoly.github.io/precursor">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque
                     </Blockquote>
-                    <p>
+                    <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
-                    </p>
+                    </Text>
                     <ul>
                         <li>Item</li>
                         <li>Item</li>

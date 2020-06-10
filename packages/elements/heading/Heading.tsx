@@ -11,15 +11,12 @@ export interface HeadingProps {
     weight?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-const styles = (props: HeadingProps) => collector<Theme>('heading').element`
+const styles = () => collector<Theme>('heading').element`
     font-family: ${({ fonts }) => fonts.headings};
     font-weight: ${({ fontWeight }) => fontWeight[2]};
     color: ${({ colors }) => colors.headings};
-`.modifier('primary', props!.weight === 'h1')`
-    font-size: ${({ fontSizes }) => fontSizes[6]}px;
-`.modifier('secondary', props!.weight === 'h2')`
-    font-size: ${({ fontSizes }: Theme) => fontSizes[4]}px;
-    font-weight: ${({ fontWeight }: Theme) => fontWeight[1]};`;
+    margin-top: 0;
+`;
 
 const linkStyles = (isHovered: boolean) => collector('Link').element`
     display: block;
@@ -49,7 +46,7 @@ const linkStyles = (isHovered: boolean) => collector('Link').element`
 
 const Heading: FC<HeadingProps> = props => {
     const [isHovered, setIsHovered] = useState(false);
-    const classNames = useStyles(styles(props));
+    const classNames = useStyles(styles());
     const linkClassNames = useStyles(linkStyles(isHovered));
 
     function onClick() {

@@ -20,16 +20,16 @@ export interface InputProps {
 const styles = (props: InputProps) => collector<Theme>('Input').element`
     height: 38px;
     padding: 6px 10px;
-    background-color: ${({ colors }) => colors.backgroundAlt};
+    background-color: ${({ colors }) => colors.background};
     border-radius: ${({ radii }) => radii[0]};
-    border: 1px solid ${({ colors }) => colors.backgroundAlt};
+    border: ${({ borders }) => borders.base};
     box-shadow: none;
     appearance: none;
     width: 100%;
     margin-bottom: ${({ space }) => space[1]}em;
 
     &:focus {
-        border: 1px solid #33C3F0;
+        border: ${({ borders }) => borders.focus};
         outline: 0;
     }
 `.modifier(!!props!.disabled)`

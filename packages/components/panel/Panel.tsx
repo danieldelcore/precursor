@@ -10,10 +10,9 @@ export interface PanelProps {
 
 const styles = collector<Theme>('Panel').element`
     border-radius: ${({ radii }) => radii[1]};
-    border: 1px solid ${({ colors }) => colors.backgroundAlt};
+    border: ${({ borders }) => borders.base};
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: ${({ shadows }) => shadows.small};
 
     & > *:first-child {
         margin-top: 0px;

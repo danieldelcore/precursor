@@ -1,0 +1,20 @@
+{
+    "name": "@precursor/text",
+    "version": "0.1.0",
+    "description": "text component",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "dependencies": {
+        "@trousers/collector": "^3.0.0",
+        "@trousers/core": "^3.0.0"
+    },
+    "devDependencies": {
+        "react": "^16.8.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/elements/text"
+}

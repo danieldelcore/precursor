@@ -17,9 +17,9 @@ export interface TextAreaProps {
 
 const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     appearance: none;
-    background-color: ${({ colors }) => colors.backgroundAlt};
+    background-color: ${({ colors }) => colors.background};
     border-radius: ${({ radii }) => radii[0]};
-    border: 1px solid ${({ colors }) => colors.backgroundAlt};
+    border: ${({ borders }) => borders.base};
     box-shadow: none;
     margin-bottom: ${({ space }) => space[1]}em;
     max-width: 100%;
@@ -30,7 +30,7 @@ const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     width: 100%;
 
     &:focus {
-        border: 1px solid #33C3F0;
+        border: ${({ borders }) => borders.focus};
         outline: 0;
     }
 `.modifier(props.disabled)`

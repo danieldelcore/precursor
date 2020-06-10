@@ -12,7 +12,7 @@
         "packages/common/*"
     ],
     "scripts": {
-        "start": "yarn build && nodemon --exec \"start-storybook -p 9000 -s assets\" --watch packages/**/**/ -e tsx",
+        "start": "yarn build && nodemon --exec \"start-storybook -p 9000 -s assets\" --watch packages/**/*/ -e tsx",
         "clean": "rm -rf node_modules/.cache && rimraf packages/**/**/{tsconfig.tsbuildinfo,lib,dist}",
         "validate": "yarn build && yarn lint && yarn monorepo:check",
         "postinstall": "yarn monorepo:check",

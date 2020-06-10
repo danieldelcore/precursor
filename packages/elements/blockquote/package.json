@@ -17,5 +17,5 @@
     "peerDependencies": {
         "react": ">=16.8.0"
     },
-    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/components/blockquote"
+    "repository": "https://github.com/danieldelcore/precursor/tree/master/packages/elements/blockquote"
 }

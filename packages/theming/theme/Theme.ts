@@ -10,12 +10,14 @@ export interface Theme {
     fonts: Record<string, string>;
     // lineHeights:;
     // letterSpacings:;
-    // borders:;
+    borders: Record<string, string>; // todo provide better types here
     zIndices: number[];
 }
 
 const breakpoints = ['320px', '768px', '1000px', '1280px'];
 
+/** todo: should the properties be plural? if so make them consistent*/
+/** todo: should theme be renamed to tokens? A new theme could be created which is how those tokens are applied to every component? */
 const theme: Theme = {
     colors: {
         primary: '#000', // Primary brand colour
@@ -41,6 +43,10 @@ const theme: Theme = {
     shadows: {
         small: '0 4px 8px rgba(0, 0, 0, .125)',
         large: '0 6px 14px rgba(0, 0, 0, .125)',
+    },
+    borders: {
+        base: '1px solid #eaeaea',
+        focus: '1px solid #33C3F0',
     },
     breakpoints,
     mediaQueries: {

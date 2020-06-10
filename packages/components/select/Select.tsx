@@ -17,8 +17,8 @@ export interface SelectProps {
 const styles = (props: SelectProps) => collector<Theme>('Select').element`
     height: 38px;
     padding: 6px 10px;
-    border: 1px solid ${({ colors }) => colors.backgroundAlt};
-    background-color: ${({ colors }) => colors.backgroundAlt};
+    border: ${({ borders }) => borders.base};
+    background-color: ${({ colors }) => colors.background};
     border-radius: ${({ radii }) => radii[0]};
     box-shadow: none;
     appearance: none;
@@ -26,7 +26,7 @@ const styles = (props: SelectProps) => collector<Theme>('Select').element`
     margin-bottom: ${({ space }) => space[1]}em;
 
     &:focus {
-        border: 1px solid #33C3F0;
+        border: ${({ borders }) => borders.focus};
         outline: 0;
     }
 `.modifier(props.disabled)`
