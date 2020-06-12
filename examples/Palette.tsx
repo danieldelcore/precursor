@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import { storiesOf } from '@storybook/react';
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import { jsx } from '@trousers/core';
 import Avatar from '@precursor/avatar';
 import Blockquote from '@precursor/blockquote';
 import Text from '@precursor/text';
@@ -18,8 +19,22 @@ import Select from '@precursor/select';
 import TextArea from '@precursor/textarea';
 import Emoji from '@precursor/emoji';
 import Keyboard from '@precursor/keyboard';
+import Stack from '@precursor/stack';
+import Grid from '@precursor/grid';
 import List, { ListItem } from '@precursor/list';
 import { theme, ThemeProvider } from '@precursor/theme';
+
+const Box = () => (
+    <div
+        css={{
+            display: 'block',
+            minHeight: '40px',
+            minWidth: '40px',
+            backgroundColor: '#eaeaea',
+            borderRadius: '3px',
+        }}
+    />
+);
 
 const BasicExample = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -282,6 +297,23 @@ const BasicExample = () => {
                     <Button primary onClick={() => openModal()}>
                         Open modal
                     </Button>
+                </Panel>
+                <Panel>
+                    <Heading id="layout">Layout</Heading>
+                    <Heading weight="h3">Grid</Heading>
+                    <Grid>
+                        <Box />
+                        <Box />
+                        <Box />
+                        <Box />
+                    </Grid>
+                    <Heading weight="h3">Stack</Heading>
+                    <Stack>
+                        <Box />
+                        <Box />
+                        <Box />
+                        <Box />
+                    </Stack>
                 </Panel>
             </div>
         </ThemeProvider>

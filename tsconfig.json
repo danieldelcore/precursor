@@ -64,6 +64,8 @@
         { "path": "packages/elements/text" },
         { "path": "packages/elements/list" },
         { "path": "packages/elements/keyboard" },
+        { "path": "packages/layout/grid" },
+        { "path": "packages/layout/stack" },
         { "path": "packages/theming/theme" }
     ]
 }
