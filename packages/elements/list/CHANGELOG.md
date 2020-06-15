@@ -1,5 +1,11 @@
 # @precursor/list
 
+## 0.1.2
+
+### Patch Changes
+
+-   498bc93: Type is now optional with a default value
+
 ## 0.1.1
 
 ### Patch Changes
