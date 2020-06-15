@@ -11,7 +11,7 @@ export const ListItem: FC<ListItemProps> = ({ children }) => (
 
 export interface ListProps {
     children: ReactNode;
-    type: 'ol' | 'ul';
+    type?: 'ol' | 'ul';
 }
 
 const List: FC<ListProps> = ({ type = 'ul', children }) => {
