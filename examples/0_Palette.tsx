@@ -6,6 +6,7 @@ import Avatar from '@precursor/avatar';
 import Blockquote from '@precursor/blockquote';
 import Text from '@precursor/text';
 import Button from '@precursor/button';
+import Badge from '@precursor/badge';
 import Checkbox from '@precursor/checkbox';
 import Code from '@precursor/code';
 import Heading from '@precursor/heading';
@@ -94,33 +95,27 @@ const BasicExample = () => {
                         Mauris volutpat, odio vitae tempus interdum, sem erat
                         scelerisque justo.
                     </Text>
-                    <List>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                    </List>
-                    <List type="ol">
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                        <ListItem>Item</ListItem>
-                    </List>
+                    <Grid>
+                        <List>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                        </List>
+                        <List type="ol">
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                            <ListItem>Item</ListItem>
+                        </List>
+                    </Grid>
                 </Panel>
                 <Panel>
-                    <Heading id="layout">Layout</Heading>
-                    <Heading weight="h3">Grid</Heading>
-                    <Grid>
-                        <Box />
-                        <Box />
-                        <Box />
-                        <Box />
-                    </Grid>
-                    <Heading weight="h3">Stack</Heading>
+                    <Heading id="Stack">Stack</Heading>
                     <Stack>
                         <Box />
                         <Box />
@@ -129,19 +124,34 @@ const BasicExample = () => {
                     </Stack>
                 </Panel>
                 <Panel>
+                    <Heading id="Grid">Grid</Heading>
+                    <Grid>
+                        <Box />
+                        <Box />
+                        <Box />
+                        <Box />
+                    </Grid>
+                </Panel>
+                <Panel>
                     <Heading id="images">Images</Heading>
-                    <Image src="logo-large-alt.png" />
+                    <Stack>
+                        <Image src="logo-large-alt.png" />
+                        <Grid columns={2}>
+                            <Image src="logo-large-alt.png" />
+                            <Image src="logo-large-alt.png" />
+                        </Grid>
+                    </Stack>
                 </Panel>
                 <Panel>
                     <Heading id="keyboard">Key combos</Heading>
                     <Text>
-                        Common Mac modifiers <Keyboard command />
+                        Mac modifiers <Keyboard command />
                         <Keyboard shift />
                         <Keyboard option />
                         <Keyboard ctrl />
                     </Text>
                     <Text>
-                        keyboard combinations <Keyboard command>t</Keyboard>
+                        Key combinations <Keyboard command>t</Keyboard>
                         <Keyboard shift>Hello</Keyboard>
                         <Keyboard option command></Keyboard>
                         <Keyboard ctrl>c</Keyboard>
@@ -169,6 +179,15 @@ const BasicExample = () => {
                         alt="Daniel"
                         href="https://github.com/danieldelcore"
                     />
+                </Panel>
+                <Panel>
+                    <Heading id="badge">Badges</Heading>
+                    <Badge>100</Badge>
+                    <Badge>+50%</Badge>
+                    <Badge>-50%</Badge>
+                    <Badge>
+                        <Emoji label="trophy">🏆</Emoji>
+                    </Badge>
                 </Panel>
                 <Panel>
                     <Heading id="panels">Panels</Heading>
@@ -285,13 +304,17 @@ const BasicExample = () => {
                 </Panel>
                 <Panel>
                     <Heading id="buttons">Buttons</Heading>
-                    <Button>Base</Button>
-                    <Button primary>Primary</Button>
+                    <Grid>
+                        <Button>Base</Button>
+                        <Button primary>Primary</Button>
+                    </Grid>
                     <Heading weight="h3">Disabled</Heading>
-                    <Button disabled>Disabled Base</Button>
-                    <Button disabled primary>
-                        Disabled Primary
-                    </Button>
+                    <Grid>
+                        <Button disabled>Disabled Base</Button>
+                        <Button disabled primary>
+                            Disabled Primary
+                        </Button>
+                    </Grid>
                 </Panel>
                 <Panel>
                     <Heading id="modals">Modals</Heading>

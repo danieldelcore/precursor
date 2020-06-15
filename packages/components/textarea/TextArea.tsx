@@ -23,11 +23,12 @@ const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     box-shadow: none;
     margin-bottom: ${({ space }) => space[1]}em;
     max-width: 100%;
-    min-height: 165px;
+    min-height: 100px;
     padding-bottom: 6px;
     padding-top: 6px;
     padding: 6px 10px;
     width: 100%;
+    font-family: ${({ fonts }) => fonts.base};
 
     &:focus {
         border: ${({ borders }) => borders.focus};

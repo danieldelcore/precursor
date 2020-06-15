@@ -16,6 +16,10 @@ const Stack: FC<StackProps> = ({ children }) => (
             > * {
                 margin-bottom: 1.5rem;
             }
+
+            > :last-child {
+                margin-bottom: 0;
+            }
         `}
     >
         {children}

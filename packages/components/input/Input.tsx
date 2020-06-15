@@ -27,6 +27,7 @@ const styles = (props: InputProps) => collector<Theme>('Input').element`
     appearance: none;
     width: 100%;
     margin-bottom: ${({ space }) => space[1]}em;
+    font-family: ${({ fonts }) => fonts.base};
 
     &:focus {
         border: ${({ borders }) => borders.focus};
