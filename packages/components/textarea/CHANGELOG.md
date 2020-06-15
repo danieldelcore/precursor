@@ -1,5 +1,11 @@
 # @precursor/textarea
 
+## 0.1.4
+
+### Patch Changes
+
+-   e2d4271: Various style changes and refactoring
+
 ## 0.1.3
 
 ### Patch Changes

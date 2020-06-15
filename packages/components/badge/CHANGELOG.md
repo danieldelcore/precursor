@@ -1,5 +1,11 @@
 # @precursor/badge
 
+## 0.1.3
+
+### Patch Changes
+
+-   e2d4271: Various style changes and refactoring
+
 ## 0.1.2
 
 ### Patch Changes
