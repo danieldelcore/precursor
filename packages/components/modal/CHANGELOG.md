@@ -1,5 +1,11 @@
 # @precursor/modal
 
+## 0.1.3
+
+### Patch Changes
+
+-   498b184: Updated styling
+
 ## 0.1.2
 
 ### Patch Changes
