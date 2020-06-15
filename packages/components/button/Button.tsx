@@ -29,7 +29,6 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         border-radius: ${({ radii }) => radii[1]};
         border: ${({ borders }) => borders.base};
         cursor: pointer;
-        margin-bottom: 1rem;
 
         &:focus,
         &:hover {

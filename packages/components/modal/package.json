@@ -7,6 +7,7 @@
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
+        "@precursor/heading": "^0.1.2",
         "@precursor/overlay": "^0.1.2",
         "@precursor/theme": "^0.1.2",
         "@trousers/collector": "^3.0.0",

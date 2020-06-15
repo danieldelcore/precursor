@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
-import { useStyles, css } from '@trousers/core';
+import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
 import { Theme } from '@precursor/theme';
@@ -22,6 +22,9 @@ const modalStyles = collector<Theme>('Modal').element`
     background-color: #fff;
     display: block;
     transform: translate3d(0px, 0%, 0px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
 `;
 
 const Modal: FC<ModalProps> = props => {
@@ -31,6 +34,8 @@ const Modal: FC<ModalProps> = props => {
     // close on escape
     // focus capture
     // return focus
+    // A11y
+    // ensure IDs are unique
 
     if (!props.open) {
         return null;
@@ -38,26 +43,20 @@ const Modal: FC<ModalProps> = props => {
 
     return ReactDOM.createPortal(
         <Overlay>
-            <div className={classNames}>{props.children}</div>
+            <section
+                role="dialog"
+                aria-modal="true"
+                tab-index="-1"
+                id="modal"
+                aria-describedby="modal-body"
+                aria-labelledby="modal-header"
+                className={classNames}
+            >
+                {props.children}
+            </section>
         </Overlay>,
         document.body,
     );
 };
 
 export default Modal;
-
-export interface ModalBodyProps {
-    children: ReactNode;
-}
-
-export const ModalBody: FC<ModalBodyProps> = props => {
-    return (
-        <div
-            css={css`
-                padding: 1rem;
-            `}
-        >
-            {props.children}
-        </div>
-    );
-};

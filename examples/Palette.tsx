@@ -12,7 +12,7 @@ import Heading from '@precursor/heading';
 import Input from '@precursor/input';
 import Image from '@precursor/image';
 import Label from '@precursor/label';
-import Modal, { ModalBody } from '@precursor/modal';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from '@precursor/modal';
 import Panel from '@precursor/panel';
 import Radio from '@precursor/radio';
 import Select from '@precursor/select';
@@ -110,6 +110,23 @@ const BasicExample = () => {
                         <ListItem>Item</ListItem>
                         <ListItem>Item</ListItem>
                     </List>
+                </Panel>
+                <Panel>
+                    <Heading id="layout">Layout</Heading>
+                    <Heading weight="h3">Grid</Heading>
+                    <Grid>
+                        <Box />
+                        <Box />
+                        <Box />
+                        <Box />
+                    </Grid>
+                    <Heading weight="h3">Stack</Heading>
+                    <Stack>
+                        <Box />
+                        <Box />
+                        <Box />
+                        <Box />
+                    </Stack>
                 </Panel>
                 <Panel>
                     <Heading id="images">Images</Heading>
@@ -283,37 +300,26 @@ const BasicExample = () => {
                         onClickOutside={() => closeModal()}
                         onEscKeyPress={() => closeModal()}
                     >
+                        <ModalHeader>Modal heading</ModalHeader>
                         <ModalBody>
-                            <Heading>Modal heading</Heading>
                             <Text>
                                 Some content contained within the Modal.
                             </Text>
                         </ModalBody>
-                        <Button onClick={() => closeModal()}>Cancel</Button>
-                        <Button primary onClick={() => closeModal()}>
-                            Submit
-                        </Button>
+                        <ModalFooter>
+                            <Grid>
+                                <Button onClick={() => closeModal()}>
+                                    Cancel
+                                </Button>
+                                <Button primary onClick={() => closeModal()}>
+                                    Submit
+                                </Button>
+                            </Grid>
+                        </ModalFooter>
                     </Modal>
                     <Button primary onClick={() => openModal()}>
                         Open modal
                     </Button>
-                </Panel>
-                <Panel>
-                    <Heading id="layout">Layout</Heading>
-                    <Heading weight="h3">Grid</Heading>
-                    <Grid>
-                        <Box />
-                        <Box />
-                        <Box />
-                        <Box />
-                    </Grid>
-                    <Heading weight="h3">Stack</Heading>
-                    <Stack>
-                        <Box />
-                        <Box />
-                        <Box />
-                        <Box />
-                    </Stack>
                 </Panel>
             </div>
         </ThemeProvider>

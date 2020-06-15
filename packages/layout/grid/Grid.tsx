@@ -15,7 +15,7 @@ const Grid: FC<GridProps> = ({ columns = 3, children }) => (
             display: grid;
             grid-template-columns: repeat(${columns}, 1fr);
             gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            width: 100%;
         `}
     >
         {children}

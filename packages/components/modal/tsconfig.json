@@ -12,6 +12,9 @@
         },
         {
             "path": "../overlay"
+        },
+        {
+            "path": "../../elements/heading"
         }
     ]
 }
