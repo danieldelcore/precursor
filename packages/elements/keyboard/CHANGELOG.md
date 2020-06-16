@@ -1,5 +1,14 @@
 # @precursor/keyboard
 
+## 0.1.2
+
+### Patch Changes
+
+-   5141ce5: Bump trousers
+-   Updated dependencies [5141ce5]
+-   Updated dependencies [fe2987e]
+    -   @precursor/theme@0.1.4
+
 ## 0.1.1
 
 ### Patch Changes

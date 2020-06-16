@@ -1,5 +1,13 @@
 # @precursor/avatar
 
+## 0.1.3
+
+### Patch Changes
+
+-   5141ce5: Bump trousers
+-   Updated dependencies [5141ce5]
+    -   @precursor/image@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,14 +1,14 @@
 {
     "name": "@precursor/radio",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "radio component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/input": "^0.1.2",
-        "@precursor/label": "^0.1.2",
+        "@precursor/input": "^0.1.5",
+        "@precursor/label": "^0.1.4",
         "@trousers/collector": "^3.0.2",
         "@trousers/core": "^3.0.2"
     },

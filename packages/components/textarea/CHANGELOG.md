@@ -1,5 +1,11 @@
 # @precursor/textarea
 
+## 0.1.5
+
+### Patch Changes
+
+-   5141ce5: Bump trousers
+
 ## 0.1.4
 
 ### Patch Changes
