@@ -1,5 +1,11 @@
 # @precursor/list
 
+## 0.1.3
+
+### Patch Changes
+
+-   5141ce5: Bump trousers
+
 ## 0.1.2
 
 ### Patch Changes
