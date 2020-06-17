@@ -1,5 +1,6 @@
-import React, { FC, ReactNode, useState } from 'react';
-import { useStyles } from '@trousers/core';
+/** @jsx jsx */
+import React, { FC, ReactNode, Fragment } from 'react';
+import { useStyles, css, jsx } from '@trousers/core';
 import collector from '@trousers/collector';
 
 import copyToClipboard from '@precursor/copy-to-clipboard';
@@ -11,73 +12,63 @@ export interface HeadingProps {
     weight?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-const styles = () => collector<Theme>('heading').element`
-    font-family: ${({ fonts }) => fonts.headings};
+const styles = collector<Theme>('heading').element`
+    font-family: ${({ font }) => font.headings};
     font-weight: ${({ fontWeight }) => fontWeight[2]};
-    color: ${({ colors }) => colors.headings};
+    color: ${({ color }) => color.headings};
     margin-top: 0;
-`;
 
-const linkStyles = (isHovered: boolean) => collector('Link').element`
-    display: block;
-    text-decoration: none;
-
-    h1, h2, h3, h4, h5, h6 {
-        display: inline-block;
-    }
-
-    :after {
-        content: '🔗';
-        display: none;
-        padding-left: 1rem;
-    }
-
-    :focus,
-    :hover {
-        &:after {
-            display: inline-block;
-        }
-    }
-`.modifier(isHovered)`
-    :after {
-        display: inline-block;
+    &:hover > a {
+        opacity: 1;
     }
 `;
 
-const Heading: FC<HeadingProps> = props => {
-    const [isHovered, setIsHovered] = useState(false);
-    const classNames = useStyles(styles());
-    const linkClassNames = useStyles(linkStyles(isHovered));
+const Heading: FC<HeadingProps> = ({ children, weight = 'h2', id }) => {
+    const className = useStyles(styles);
 
     function onClick() {
-        if (window && props.id) {
+        if (window && id) {
             copyToClipboard(window.location.href);
         }
     }
 
-    const Heading = React.createElement(
-        props.weight!,
+    return React.createElement(
+        weight!,
         {
-            className: classNames,
-            id: props.id,
-            onClick: () => onClick(),
-            onMouseOver: () => setIsHovered(true),
-            onMouseOut: () => setIsHovered(false),
+            className,
+            id,
+            onClick,
         },
-        props.children,
-    );
+        <Fragment>
+            {children}
+            {id && (
+                <a
+                    css={css<Theme>`
+                        text-decoration: none;
+                        padding: 0 0.5rem;
+                        color: ${({ color }) => color.link};
+                        opacity: 0;
+                        border-radius: ${({ radius }) => radius[1]};
+                        border: ${({ border }) =>
+                            `${border.size[0]} solid transparent`};
 
-    return props.id ? (
-        <a className={linkClassNames} href={`#${props.id}`} onClick={onClick}>
-            {Heading}
-        </a>
-    ) : (
-        Heading
+                        :focus,
+                        :hover {
+                            opacity: 1;
+                            outline: none;
+                            border: ${({ border }) =>
+                                `${border.size[0]} solid ${border.color.focus}`};
+                        }
+                    `}
+                    href={`#${id}`}
+                    onClick={onClick}
+                    aria-label="anchor"
+                >
+                    #
+                </a>
+            )}
+        </Fragment>,
     );
-};
-
-Heading.defaultProps = {
-    weight: 'h2',
 };
 
 export default Heading;

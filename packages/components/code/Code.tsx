@@ -14,7 +14,7 @@ const preStyles = collector<Theme>('Pre').element`
         display: block;
         padding: 1rem 1.5rem;
         white-space: pre;
-        color: ${({ colors }) => colors.base};
+        color: ${({ color }) => color.base};
         max-width: 100%;
         overflow-y: auto;
     }
@@ -23,9 +23,9 @@ const preStyles = collector<Theme>('Pre').element`
 const codeStyles = collector<Theme>('Code').element`
     padding: .2rem .5rem;
     font-size: 90%;
-    border-radius: ${({ radii }) => radii[0]};
-    background-color: ${({ colors }) => colors.backgroundAlt};
-    color: ${({ colors }) => colors.base};
+    border-radius: ${({ radius }) => radius[0]};
+    background-color: ${({ color }) => color.backgroundAlt};
+    color: ${({ color }) => color.base};
 `;
 
 const Code: FC<CodeProps> = props => {

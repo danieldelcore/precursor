@@ -54,12 +54,14 @@ const BasicExample = () => {
                 }}
             >
                 <Heading weight="h1">Precursor ⬢</Heading>
+                <Heading id="typography">Typography</Heading>
                 <Panel>
-                    <Heading id="typography">Typography</Heading>
                     <Heading weight="h1">Heading One</Heading>
                     <Heading>Heading Two</Heading>
                     <Heading weight="h3">Heading Three</Heading>
                     <Heading weight="h4">Heading Four</Heading>
+                    <Heading weight="h5">Heading Five</Heading>
+                    <Heading weight="h6">Heading Six</Heading>
                     <Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris volutpat, odio vitae tempus interdum, sem erat
@@ -114,8 +116,8 @@ const BasicExample = () => {
                         </List>
                     </Grid>
                 </Panel>
+                <Heading id="Stack">Stack</Heading>
                 <Panel>
-                    <Heading id="Stack">Stack</Heading>
                     <Stack>
                         <Box />
                         <Box />
@@ -123,8 +125,8 @@ const BasicExample = () => {
                         <Box />
                     </Stack>
                 </Panel>
+                <Heading id="Grid">Grid</Heading>
                 <Panel>
-                    <Heading id="Grid">Grid</Heading>
                     <Grid>
                         <Box />
                         <Box />
@@ -132,8 +134,8 @@ const BasicExample = () => {
                         <Box />
                     </Grid>
                 </Panel>
+                <Heading id="images">Images</Heading>
                 <Panel>
-                    <Heading id="images">Images</Heading>
                     <Stack>
                         <Image src="logo-large-alt.png" />
                         <Grid columns={2}>
@@ -142,8 +144,8 @@ const BasicExample = () => {
                         </Grid>
                     </Stack>
                 </Panel>
+                <Heading id="keyboard">Key combos</Heading>
                 <Panel>
-                    <Heading id="keyboard">Key combos</Heading>
                     <Text>
                         Mac modifiers <Keyboard command />
                         <Keyboard shift />
@@ -157,8 +159,8 @@ const BasicExample = () => {
                         <Keyboard ctrl>c</Keyboard>
                     </Text>
                 </Panel>
+                <Heading id="code-blocks">Code blocks</Heading>
                 <Panel>
-                    <Heading id="code-blocks">Code blocks</Heading>
                     <Code inline>
                         {`.some-class { background-color: red; }`}
                     </Code>
@@ -172,16 +174,16 @@ const BasicExample = () => {
                     </Text>
                     <Code>{`.some-class { background-color: red; }`}</Code>
                 </Panel>
+                <Heading id="avatar">Avatar</Heading>
                 <Panel>
-                    <Heading id="avatar">Avatar</Heading>
                     <Avatar
                         src="https://avatars3.githubusercontent.com/u/3030010?s=400&u=36ccfde6e6ed4b6398bb3c79b596636ee25586ec&v=4"
                         alt="Daniel"
                         href="https://github.com/danieldelcore"
                     />
                 </Panel>
+                <Heading id="badge">Badges</Heading>
                 <Panel>
-                    <Heading id="badge">Badges</Heading>
                     <Badge>100</Badge>
                     <Badge>+50%</Badge>
                     <Badge>-50%</Badge>
@@ -189,16 +191,16 @@ const BasicExample = () => {
                         <Emoji label="trophy">🏆</Emoji>
                     </Badge>
                 </Panel>
+                <Heading id="panels">Panels</Heading>
                 <Panel>
-                    <Heading id="panels">Panels</Heading>
                     <Panel>
                         <Text>
                             Hello world <Emoji label="wave">👋</Emoji>
                         </Text>
                     </Panel>
                 </Panel>
+                <Heading id="input">Input</Heading>
                 <Panel>
-                    <Heading id="input">Input</Heading>
                     <Label htmlFor="test">Input field</Label>
                     <Input
                         id="test"
@@ -217,8 +219,8 @@ const BasicExample = () => {
                         disabled
                     />
                 </Panel>
+                <Heading id="textarea">Text Area</Heading>
                 <Panel>
-                    <Heading id="textarea">Text Area</Heading>
                     <Label htmlFor="textareatest">Text area</Label>
                     <TextArea
                         id="textareatest"
@@ -239,8 +241,8 @@ const BasicExample = () => {
                         disabled
                     />
                 </Panel>
+                <Heading id="select">Select</Heading>
                 <Panel>
-                    <Heading id="select">Select</Heading>
                     <Label htmlFor="selecttest">Select</Label>
                     <Select
                         id="select"
@@ -265,8 +267,8 @@ const BasicExample = () => {
                         <option value="world">world</option>
                     </Select>
                 </Panel>
+                <Heading id="checkbox">Checkboxes</Heading>
                 <Panel>
-                    <Heading id="checkbox">Checkboxes</Heading>
                     <Checkbox
                         id="test2"
                         name="test2"
@@ -276,8 +278,8 @@ const BasicExample = () => {
                         label="My checkbox"
                     />
                 </Panel>
+                <Heading id="radio">Radios</Heading>
                 <Panel>
-                    <Heading id="radio">Radios</Heading>
                     <Radio
                         id="test3post"
                         name="test3"
@@ -294,16 +296,16 @@ const BasicExample = () => {
                         checked
                     />
                 </Panel>
+                <Heading id="range">Range</Heading>
                 <Panel>
-                    <Heading id="range">Range</Heading>
                     <Text>TODO</Text>
                 </Panel>
+                <Heading id="toggle">Toggle</Heading>
                 <Panel>
-                    <Heading id="toggle">Toggle</Heading>
                     <Text>TODO</Text>
                 </Panel>
+                <Heading id="buttons">Buttons</Heading>
                 <Panel>
-                    <Heading id="buttons">Buttons</Heading>
                     <Grid>
                         <Button>Base</Button>
                         <Button primary>Primary</Button>
@@ -316,8 +318,8 @@ const BasicExample = () => {
                         </Button>
                     </Grid>
                 </Panel>
+                <Heading id="modals">Modals</Heading>
                 <Panel>
-                    <Heading id="modals">Modals</Heading>
                     <Modal
                         open={isModalOpen}
                         onClickOutside={() => closeModal()}

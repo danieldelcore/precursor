@@ -18,12 +18,13 @@ const Avatar: FC<AvatarProps> = ({ href, src, alt }) => (
             width: 64px;
             overflow: hidden;
             border-radius: 50%;
-            border: 3px solid white;
+            border: ${({ border }) => `${border.size[2]} solid  white`};
             transition: border 200ms;
 
             &:focus,
             &:hover {
-                border: 3px solid #33c3f0;
+                border: ${({ border }) =>
+                    `${border.size[2]} solid ${border.color.focus}`}
                 outline: 0;
             }
         `}

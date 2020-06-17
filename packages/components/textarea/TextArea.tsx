@@ -17,9 +17,10 @@ export interface TextAreaProps {
 
 const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     appearance: none;
-    background-color: ${({ colors }) => colors.background};
-    border-radius: ${({ radii }) => radii[0]};
-    border: ${({ borders }) => borders.base};
+    background-color: ${({ color }) => color.background};
+    border-radius: ${({ radius }) => radius[0]};
+    border: border: ${({ border }) =>
+        `${border.size[0]} solid ${border.color.base}`};
     box-shadow: none;
     margin-bottom: ${({ space }) => space[1]}em;
     max-width: 100%;
@@ -28,15 +29,16 @@ const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     padding-top: 6px;
     padding: 6px 10px;
     width: 100%;
-    font-family: ${({ fonts }) => fonts.base};
+    font-family: ${({ font }) => font.base};
 
     &:focus {
-        border: ${({ borders }) => borders.focus};
+        border: border: ${({ border }) =>
+            `${border.size[0]} solid ${border.color.focus}`};
         outline: 0;
     }
 `.modifier(props.disabled)`
     cursor: not-allowed;
-    background-color: ${({ colors }) => colors.backgroundAlt};
+    background-color: ${({ color }) => color.backgroundAlt};
 `;
 
 const TextArea: FC<TextAreaProps> = props => {

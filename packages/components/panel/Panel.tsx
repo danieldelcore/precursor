@@ -9,8 +9,8 @@ export interface PanelProps {
 }
 
 const styles = collector<Theme>('Panel').element`
-    border-radius: ${({ radii }) => radii[1]};
-    border: ${({ borders }) => borders.base};
+    border-radius: ${({ radius }) => radius[1]};
+    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
     padding: 1.5rem;
     margin-bottom: 2rem;
 

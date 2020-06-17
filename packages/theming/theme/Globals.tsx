@@ -11,9 +11,9 @@ const reset = css`
 
 const typography = css<Theme>`
     body {
-        font-family: ${({ fonts }) => fonts.base};
-        font-size: ${({ fontSizes }) => fontSizes[1]}px;
-        color: ${({ colors }) => colors.base};
+        font-family: ${({ font }) => font.base};
+        font-size: ${({ fontSize }) => fontSize[1]}px;
+        color: ${({ color }) => color.base};
     }
 `;
 

@@ -13,9 +13,9 @@ export interface KeyboardProps {
 
 const styles = css<Theme>`
     padding: 0 10px;
-    background-color: ${({ colors }) => colors.background};
-    border-radius: ${({ radii }) => radii[0]};
-    border: ${({ borders }) => borders.base};
+    background-color: ${({ color }) => color.background};
+    border-radius: ${({ radius }) => radius[0]};
+    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
     margin-right: 4px;
 `;
 

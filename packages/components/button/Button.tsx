@@ -19,15 +19,16 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         padding: 0 22px;
         color: #555;
         text-align: center;
-        font-size: ${({ fontSizes }) => fontSizes[1]};
+        font-size: ${({ fontSize }) => fontSize[1]};
         font-weight: ${({ fontWeight }) => fontWeight[1]};
         line-height: 30px;
         letter-spacing: .1rem;
         text-decoration: none;
         white-space: nowrap;
-        background-color: ${({ colors }) => colors.background};
-        border-radius: ${({ radii }) => radii[1]};
-        border: ${({ borders }) => borders.base};
+        background-color: ${({ color }) => color.background};
+        border-radius: ${({ radius }) => radius[1]};
+        border: ${({ border }) =>
+            `${border.size[0]} solid ${border.color.base}`};
         cursor: pointer;
 
         > * {
@@ -37,7 +38,8 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         &:focus,
         &:hover {
             color: #333;
-            border: ${({ borders }) => borders.focus};
+            border: ${({ border }) =>
+                `${border.size[0]} solid ${border.color.focus}`};
             outline: 0;
         }
     `.modifier(props.primary)`
@@ -54,7 +56,7 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
     `.modifier(props.disabled)`
         cursor: disabled;
         color: #888
-        background-color: ${({ colors }: any) => colors.backgroundAlt}
+        background-color: ${({ color }: any) => color.backgroundAlt}
 
         &:focus,
         &:hover {

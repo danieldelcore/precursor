@@ -20,22 +20,23 @@ export interface InputProps {
 const styles = (props: InputProps) => collector<Theme>('Input').element`
     height: 38px;
     padding: 0 10px;
-    background-color: ${({ colors }) => colors.background};
-    border-radius: ${({ radii }) => radii[0]};
-    border: ${({ borders }) => borders.base};
+    background-color: ${({ color }) => color.background};
+    border-radius: ${({ radius }) => radius[0]};
+    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
     box-shadow: none;
     appearance: none;
     width: 100%;
     margin-bottom: ${({ space }) => space[1]}em;
-    font-family: ${({ fonts }) => fonts.base};
+    font-family: ${({ font }) => font.base};
 
     &:focus {
-        border: ${({ borders }) => borders.focus};
+        border: ${({ border }) =>
+            `${border.size[0]} solid ${border.color.focus}`};
         outline: 0;
     }
 `.modifier(!!props!.disabled)`
     cursor: not-allowed;
-    background-color: ${({ colors }) => colors.backgroundAlt};
+    background-color: ${({ color }) => color.backgroundAlt};
 `;
 
 const Input: FC<InputProps> = props => {

@@ -13,7 +13,8 @@ const ModalFooter: FC<ModalFooterProps> = ({ children }) => (
             display: flex;
             justify-content: flex-end;
             padding: 1rem;
-            border-top: ${({ borders }) => borders.base};
+            border-top: ${({ border }) =>
+                `${border.size[0]} solid ${border.color.base}`};
         `}
     >
         {children}

@@ -17,16 +17,17 @@ export interface SelectProps {
 const styles = (props: SelectProps) => collector<Theme>('Select').element`
     height: 38px;
     padding: 6px 10px;
-    border: ${({ borders }) => borders.base};
-    background-color: ${({ colors }) => colors.background};
-    border-radius: ${({ radii }) => radii[0]};
+    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
+    background-color: ${({ color }) => color.background};
+    border-radius: ${({ radius }) => radius[0]};
     box-shadow: none;
     appearance: none;
     width: 100%;
     margin-bottom: ${({ space }) => space[1]}em;
 
     &:focus {
-        border: ${({ borders }) => borders.focus};
+        border: ${({ border }) =>
+            `${border.size[0]} solid ${border.color.focus}`};
         outline: 0;
     }
 `.modifier(props.disabled)`
