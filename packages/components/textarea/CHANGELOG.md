@@ -1,5 +1,11 @@
 # @precursor/textarea
 
+## 0.1.7
+
+### Patch Changes
+
+-   12850c5: Style fixes
+
 ## 0.1.6
 
 ### Patch Changes
