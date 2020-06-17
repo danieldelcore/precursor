@@ -1,5 +1,14 @@
 # @precursor/keyboard
 
+## 0.1.3
+
+### Patch Changes
+
+-   d2c7ea9: Theme properties are no longer pluralised + various UI updates
+-   Updated dependencies [d2c7ea9]
+-   Updated dependencies [d2c7ea9]
+    -   @precursor/theme@0.1.5
+
 ## 0.1.2
 
 ### Patch Changes
