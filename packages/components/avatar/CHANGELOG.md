@@ -1,5 +1,11 @@
 # @precursor/avatar
 
+## 0.1.4
+
+### Patch Changes
+
+-   d2c7ea9: Theme properties are no longer pluralised + various UI updates
+
 ## 0.1.3
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @precursor/button
 
+## 0.1.6
+
+### Patch Changes
+
+-   d2c7ea9: All pointer events on button children are ignored
+-   d2c7ea9: Theme properties are no longer pluralised + various UI updates
+-   Updated dependencies [d2c7ea9]
+-   Updated dependencies [d2c7ea9]
+    -   @precursor/theme@0.1.5
+
 ## 0.1.5
 
 ### Patch Changes
