@@ -30,6 +30,10 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         border: ${({ borders }) => borders.base};
         cursor: pointer;
 
+        > * {
+            pointer-events: none;
+        }
+
         &:focus,
         &:hover {
             color: #333;
