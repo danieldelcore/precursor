@@ -1,13 +1,13 @@
 {
     "name": "@precursor/button",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "button component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/theme": "^0.1.4",
+        "@precursor/theme": "^0.1.5",
         "@trousers/collector": "^3.0.2",
         "@trousers/core": "^3.0.2"
     },
