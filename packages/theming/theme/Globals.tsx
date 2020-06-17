@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { css, useGlobals } from '@trousers/core';
 
-import { Theme } from '.';
+import { Theme } from './Theme';
 
 const reset = css`
     * {

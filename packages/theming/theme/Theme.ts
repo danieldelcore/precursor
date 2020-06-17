@@ -26,6 +26,7 @@ const theme: Theme = {
         error: '#f67280',
         base: '#454f5b', // Base font colour
         headings: '#161d25', // Heading font colour
+        link: '#0070f3',
         alt: '#454f5b', // Alternate font colour
         background: '#fff',
         backgroundAlt: '#eee',

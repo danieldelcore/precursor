@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider as CoreThemeProvider } from '@trousers/theme';
 
-import { theme as defaultTheme, Theme } from './';
+import defaultTheme, { Theme } from './Theme';
 import Globals from './Globals';
 
 export interface Props {
