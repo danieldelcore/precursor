@@ -52,8 +52,7 @@ const Heading: FC<HeadingProps> = ({ children, weight = 'h2', id }) => {
                         border: ${({ border }) =>
                             `${border.size[0]} solid transparent`};
 
-                        :focus,
-                        :hover {
+                        :focus {
                             opacity: 1;
                             outline: none;
                             border: ${({ border }) =>

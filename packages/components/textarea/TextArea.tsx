@@ -19,8 +19,7 @@ const styles = (props: TextAreaProps) => collector<Theme>('TextArea').element`
     appearance: none;
     background-color: ${({ color }) => color.background};
     border-radius: ${({ radius }) => radius[0]};
-    border: border: ${({ border }) =>
-        `${border.size[0]} solid ${border.color.base}`};
+    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
     box-shadow: none;
     margin-bottom: ${({ space }) => space[1]}em;
     max-width: 100%;
