@@ -57,6 +57,7 @@
         { "path": "packages/components/panel" },
         { "path": "packages/components/radio" },
         { "path": "packages/components/select" },
+        { "path": "packages/components/tabs" },
         { "path": "packages/components/textarea" },
         { "path": "packages/elements/blockquote" },
         { "path": "packages/elements/emoji" },

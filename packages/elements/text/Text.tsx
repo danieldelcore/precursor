@@ -12,6 +12,7 @@ export type Modifier =
     | 'mark'
     | 's'
     | 'samp'
+    | 'span'
     | 'sub'
     | 'sup';
 
