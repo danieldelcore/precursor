@@ -2,6 +2,7 @@
 import { storiesOf } from '@storybook/react';
 import { useState } from 'react';
 import { jsx } from '@trousers/core';
+
 import Avatar from '@precursor/avatar';
 import Blockquote from '@precursor/blockquote';
 import Text from '@precursor/text';
@@ -22,6 +23,7 @@ import Emoji from '@precursor/emoji';
 import Keyboard from '@precursor/keyboard';
 import Stack from '@precursor/stack';
 import Grid from '@precursor/grid';
+import { Tabs, Tab, TabList, TabPanel } from '@precursor/tabs';
 import List, { ListItem } from '@precursor/list';
 import { theme, ThemeProvider } from '@precursor/theme';
 
@@ -115,6 +117,46 @@ const BasicExample = () => {
                             <ListItem>Item</ListItem>
                         </List>
                     </Grid>
+                </Panel>
+                <Heading id="tabs">Tabs</Heading>
+                <Panel>
+                    <Tabs defaultActive="Foo">
+                        <TabList label="Entertainment">
+                            <Tab id="Foo">Foo</Tab>
+                            <Tab id="Bar">Bar</Tab>
+                            <Tab id="Baz">Baz</Tab>
+                        </TabList>
+                        <TabPanel id="Foo">
+                            <Text>
+                                Nils Frahm is a German musician, composer and
+                                record producer based in Berlin. He is known for
+                                combining classical and electronic music and for
+                                an unconventional approach to the piano in which
+                                he mixes a grand piano, upright piano, Roland
+                                Juno-60, Rhodes piano, drum machine, and Moog
+                                Taurus.
+                            </Text>
+                        </TabPanel>
+                        <TabPanel id="Bar">
+                            <Text>
+                                Agnes Caroline Thaarup Obel is a Danish
+                                singer/songwriter. Her first album,
+                                Philharmonics, was released by PIAS Recordings
+                                on 4 October 2010 in Europe. Philharmonics was
+                                certified gold in June 2011 by the Belgian
+                                Entertainment Association (BEA) for sales of
+                                10,000 Copies.
+                            </Text>
+                        </TabPanel>
+                        <TabPanel id="Baz">
+                            <Text>
+                                was released by PIAS Recordings on 4 October
+                                2010 in Europe. Philharmonics was certified gold
+                                in June 2011 by the Belgian Entertainment
+                                Association (BEA) for sales of 10,000 Copies.
+                            </Text>
+                        </TabPanel>
+                    </Tabs>
                 </Panel>
                 <Heading id="Stack">Stack</Heading>
                 <Panel>
