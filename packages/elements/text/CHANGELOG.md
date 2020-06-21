@@ -1,5 +1,11 @@
 # @precursor/text
 
+## 0.1.3
+
+### Patch Changes
+
+-   e92cbb4: Tab component
+
 ## 0.1.2
 
 ### Patch Changes
