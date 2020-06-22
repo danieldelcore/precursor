@@ -6,16 +6,6 @@
 
 A minimal UI library and home to all of the components I've written a hundred times.
 
-## Component Roadmap
-
--   Date picker
--   Range picker
--   Progress bar
--   Alert / toaster
--   Lozenge
--   Tooltip
--   Tab
-
 ## Themes
 
 Theme schema, heavily influenced by: https://system-ui.com/theme
