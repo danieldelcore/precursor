@@ -11,6 +11,7 @@ export interface Theme {
     border: {
         color: {
             base: string;
+            hover: string;
             focus: string;
         };
         size: string[];
@@ -53,6 +54,7 @@ const theme: Theme = {
     border: {
         color: {
             base: '#eaeaea',
+            hover: '#454f5b',
             focus: '#0070f3',
         },
         size: ['1px', '2px', '3px'],

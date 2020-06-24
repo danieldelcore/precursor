@@ -15,7 +15,7 @@ const Label: FC<LabelProps> = props => (
             display: block;
             margin-bottom: 0.5rem;
             font-weight: ${({ fontWeight }) => fontWeight[1]};
-            font-size: ${({ fontSize }) => fontSize[0]};
+            font-size: ${({ fontSize }) => fontSize[0]}px;
         `}
         htmlFor={props.htmlFor}
     >

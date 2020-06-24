@@ -19,7 +19,7 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         padding: 0 22px;
         color: #555;
         text-align: center;
-        font-size: ${({ fontSize }) => fontSize[1]};
+        font-size: ${({ fontSize }) => fontSize[1]}px;
         font-weight: ${({ fontWeight }) => fontWeight[1]};
         line-height: 30px;
         letter-spacing: .1rem;
@@ -35,39 +35,54 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
             pointer-events: none;
         }
 
-        &:focus,
-        &:hover {
+        &:focus {
             color: #333;
             border: ${({ border }) =>
                 `${border.size[0]} solid ${border.color.focus}`};
             outline: 0;
+        }
+
+        &:hover {
+            border: ${({ border }) =>
+                `${border.size[0]} solid ${border.color.hover}`};
+        }
+
+        &:active {
+            background-color: ${({ color }) => color.backgroundAlt};
         }
     `.modifier(props.primary)`
         color: #FFF;
         background-color: #000;
         border-color: #000;
 
-        &:focus,
         &:hover {
             color: #FFF;
-            background-color: #000;
-            border-color: #000;
+            border: ${({ border }) =>
+                `${border.size[0]} solid ${border.color.hover}`};
+        }
+
+        &:focus {
+            color: #FFF;
+        }
+
+        &:active {
+            background-color: #444;
         }
     `.modifier(props.disabled)`
-        cursor: disabled;
-        color: #888
-        background-color: ${({ color }: any) => color.backgroundAlt}
-
-        &:focus,
-        &:hover {
-            color: #888;
-            background-color: #000;
-            border-color: #000;
-        }
+        color: #888;
+        background-color: ${({ color }: any) => color.backgroundAlt};
+        pointer-events: none;
+    `.modifier(props.primary && props.disabled)`
+        background-color: #000;
     `;
 
 const Button: FC<ButtonProps> = props => (
-    <button css={styles(props)} type={props.type} onClick={props.onClick}>
+    <button
+        css={styles(props)}
+        type={props.type}
+        onClick={props.onClick}
+        disabled={props.disabled}
+    >
         {props.children}
     </button>
 );
