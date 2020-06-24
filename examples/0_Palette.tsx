@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { storiesOf } from '@storybook/react';
-import { useState } from 'react';
+import { useState, ReactNode, FC } from 'react';
 import { jsx } from '@trousers/core';
 
 import Avatar from '@precursor/avatar';
@@ -22,21 +22,28 @@ import TextArea from '@precursor/textarea';
 import Emoji from '@precursor/emoji';
 import Keyboard from '@precursor/keyboard';
 import Stack from '@precursor/stack';
+import Spinner from '@precursor/spinner';
 import Grid from '@precursor/grid';
 import { Tabs, Tab, TabList, TabPanel } from '@precursor/tabs';
 import List, { ListItem } from '@precursor/list';
 import { theme, ThemeProvider } from '@precursor/theme';
 
-const Box = () => (
+const Box: FC<{ children?: ReactNode; color?: string }> = ({
+    children,
+    color = '#eaeaea',
+}) => (
     <div
         css={{
             display: 'block',
             minHeight: '40px',
             minWidth: '40px',
-            backgroundColor: '#eaeaea',
+            backgroundColor: color,
             borderRadius: '3px',
+            padding: '1rem',
         }}
-    />
+    >
+        {children}
+    </div>
 );
 
 const BasicExample = () => {
@@ -348,16 +355,36 @@ const BasicExample = () => {
                 </Panel>
                 <Heading id="buttons">Buttons</Heading>
                 <Panel>
+                    <Stack>
+                        <Grid>
+                            <Button>Base</Button>
+                            <Button primary>Primary</Button>
+                        </Grid>
+                        <Heading weight="h3">Disabled</Heading>
+                        <Grid>
+                            <Button disabled>Disabled Base</Button>
+                            <Button disabled primary>
+                                Disabled Primary
+                            </Button>
+                        </Grid>
+                        <Heading weight="h3">Loading</Heading>
+                        <Grid>
+                            <Button loading>Loading Base</Button>
+                            <Button loading primary>
+                                Loading Primary
+                            </Button>
+                        </Grid>
+                    </Stack>
+                </Panel>
+                <Heading id="spinner">Spinner</Heading>
+                <Panel>
                     <Grid>
-                        <Button>Base</Button>
-                        <Button primary>Primary</Button>
-                    </Grid>
-                    <Heading weight="h3">Disabled</Heading>
-                    <Grid>
-                        <Button disabled>Disabled Base</Button>
-                        <Button disabled primary>
-                            Disabled Primary
-                        </Button>
+                        <Box>
+                            <Spinner />
+                        </Box>
+                        <Box color="black">
+                            <Spinner color={'white'} />
+                        </Box>
                     </Grid>
                 </Panel>
                 <Heading id="modals">Modals</Heading>

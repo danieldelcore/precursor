@@ -4,19 +4,20 @@ import { jsx } from '@trousers/core';
 import collector from '@trousers/collector';
 
 import { Theme } from '@precursor/theme';
+import Spinner from '@precursor/spinner';
 
 export interface ButtonProps {
     children: ReactNode;
     type?: 'button' | 'submit' | 'reset';
     primary?: boolean;
     disabled?: boolean;
+    loading?: boolean;
     onClick?: React.MouseEventHandler;
 }
 
 const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         display: inline-block;
-        height: 30px;
-        padding: 0 22px;
+        min-height: 30px;
         color: #555;
         text-align: center;
         font-size: ${({ fontSize }) => fontSize[1]}px;
@@ -29,6 +30,7 @@ const styles = (props: ButtonProps) => collector<Theme>('Button').element`
         border-radius: ${({ radius }) => radius[1]};
         border: ${({ border }) =>
             `${border.size[0]} solid ${border.color.base}`};
+        padding: 0.5rem 1rem;
         cursor: pointer;
 
         > * {
@@ -81,9 +83,13 @@ const Button: FC<ButtonProps> = props => (
         css={styles(props)}
         type={props.type}
         onClick={props.onClick}
-        disabled={props.disabled}
+        disabled={props.disabled || props.loading}
     >
-        {props.children}
+        {props.loading ? (
+            <Spinner color={props.primary ? 'white' : 'black'} />
+        ) : (
+            props.children
+        )}
     </button>
 );
 

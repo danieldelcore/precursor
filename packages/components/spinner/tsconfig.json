@@ -6,5 +6,5 @@
         "rootDir": ".",
         "baseUrl": "."
     },
-    "references": [{ "path": "../../theming/theme" }, { "path": "../spinner" }]
+    "references": [{ "path": "../../theming/theme" }]
 }

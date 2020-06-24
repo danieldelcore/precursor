@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { jsx, css } from '@trousers/core';
 
 export interface BadgeProps {
-    children: string;
+    children: ReactNode;
 }
 
 const Badge: FC<BadgeProps> = ({ children }) => (
