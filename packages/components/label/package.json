@@ -1,6 +1,6 @@
 {
     "name": "@precursor/label",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "label component",
     "main": "dist/index.js",
     "module": "dist/index.js",

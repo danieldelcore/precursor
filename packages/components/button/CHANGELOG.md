@@ -1,5 +1,16 @@
 # @precursor/button
 
+## 0.1.7
+
+### Patch Changes
+
+-   f4b3cf0: Button now has a loading state
+-   9bf16ae: Button styling improvements
+-   Updated dependencies [9bf16ae]
+-   Updated dependencies [f4b3cf0]
+    -   @precursor/theme@0.1.6
+    -   @precursor/spinner@0.1.1
+
 ## 0.1.6
 
 ### Patch Changes
