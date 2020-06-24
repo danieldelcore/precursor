@@ -1,5 +1,11 @@
 # @precursor/badge
 
+## 0.1.5
+
+### Patch Changes
+
+-   f4b3cf0: Badge now accepts react nodes (not just strings)
+
 ## 0.1.4
 
 ### Patch Changes

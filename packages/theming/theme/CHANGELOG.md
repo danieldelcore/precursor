@@ -1,5 +1,11 @@
 # @precursor/theme
 
+## 0.1.6
+
+### Patch Changes
+
+-   9bf16ae: Button styling improvements
+
 ## 0.1.5
 
 ### Patch Changes
