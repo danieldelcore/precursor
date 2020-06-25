@@ -23,6 +23,7 @@ import Emoji from '@precursor/emoji';
 import Keyboard from '@precursor/keyboard';
 import Stack from '@precursor/stack';
 import Spinner from '@precursor/spinner';
+import Skeleton from '@precursor/skeleton';
 import Grid from '@precursor/grid';
 import { Tabs, Tab, TabList, TabPanel } from '@precursor/tabs';
 import List, { ListItem } from '@precursor/list';
@@ -386,6 +387,16 @@ const BasicExample = () => {
                             <Spinner color={'white'} />
                         </Box>
                     </Grid>
+                </Panel>
+                <Heading id="skeleton">Skeleton</Heading>
+                <Panel>
+                    <Stack>
+                        <Skeleton />
+                        <Skeleton />
+                        <Skeleton />
+                        <Skeleton as="avatar" />
+                        <Skeleton as="image" />
+                    </Stack>
                 </Panel>
                 <Heading id="modals">Modals</Heading>
                 <Panel>
