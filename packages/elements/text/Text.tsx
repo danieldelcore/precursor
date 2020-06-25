@@ -13,6 +13,8 @@ export type Modifier =
     | 's'
     | 'samp'
     | 'span'
+    | 'small'
+    | 'strong'
     | 'sub'
     | 'sup';
 

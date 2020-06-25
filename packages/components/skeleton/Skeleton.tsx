@@ -5,7 +5,7 @@ import collector from '@trousers/collector';
 import { Theme } from '@precursor/theme';
 
 export interface SkeletonProps {
-    as: 'image' | 'text' | 'avatar';
+    as?: 'image' | 'text' | 'avatar';
     height?: string;
 }
 
