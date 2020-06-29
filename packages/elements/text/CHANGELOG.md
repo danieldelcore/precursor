@@ -1,5 +1,11 @@
 # @precursor/text
 
+## 0.1.4
+
+### Patch Changes
+
+-   17868ab: Fixes to types
+
 ## 0.1.3
 
 ### Patch Changes

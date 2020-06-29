@@ -1,5 +1,11 @@
 # @precursor/skeleton
 
+## 0.1.2
+
+### Patch Changes
+
+-   17868ab: Fixes to types
+
 ## 0.1.1
 
 ### Patch Changes
