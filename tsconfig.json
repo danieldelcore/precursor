@@ -39,7 +39,8 @@
         "__tests__",
         "**/*.test*",
         "**/*.spec*",
-        "examples"
+        "examples",
+        "fixtures"
     ],
     "references": [
         { "path": "packages/common/copy-to-clipboard" },
