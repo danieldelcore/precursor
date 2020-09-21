@@ -58,6 +58,7 @@
         { "path": "packages/components/overlay" },
         { "path": "packages/components/panel" },
         { "path": "packages/components/radio" },
+        { "path": "packages/components/range" },
         { "path": "packages/components/select" },
         { "path": "packages/components/spinner" },
         { "path": "packages/components/tabs" },
