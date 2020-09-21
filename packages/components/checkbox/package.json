@@ -9,6 +9,7 @@
     "dependencies": {
         "@precursor/input": "^0.1.5",
         "@precursor/label": "^0.1.4",
+        "@precursor/theme": "^0.1.6",
         "@trousers/collector": "^3.0.2",
         "@trousers/core": "^3.0.2"
     },

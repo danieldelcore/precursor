@@ -6,5 +6,9 @@
         "rootDir": ".",
         "baseUrl": "."
     },
-    "references": [{ "path": "../input" }, { "path": "../label" }]
+    "references": [
+        { "path": "../../theming/theme" },
+        { "path": "../input" },
+        { "path": "../label" }
+    ]
 }

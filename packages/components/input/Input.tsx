@@ -1,4 +1,4 @@
-import React, { FC, ChangeEvent } from 'react';
+import React, { FC, ChangeEventHandler } from 'react';
 import { useStyles } from '@trousers/core';
 import collector from '@trousers/collector';
 
@@ -8,57 +8,76 @@ import { InputTypes } from '@precursor/types';
 export interface InputProps {
     className?: string;
     disabled?: boolean;
-    id: string;
+    id?: string;
     name: string;
     placeholder?: string;
     type?: InputTypes;
-    value: string;
+    defaultValue?: string;
+    value?: string;
     checked?: boolean;
-    onChange?(event: ChangeEvent): void;
+    state?: 'success' | 'error' | 'warning';
+    size?: 's' | 'm' | 'l';
+    onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-const styles = (props: InputProps) => collector<Theme>('Input').element`
-    height: 38px;
+const styles = ({ size, state, disabled }: InputProps) => collector<Theme>(
+    'Input',
+).element`
+    --input-height: 44px;
+    --input-border-color: #E2E8F0;
+    height: var(--input-height);
     padding: 0 10px;
-    background-color: ${({ color }) => color.background};
-    border-radius: ${({ radius }) => radius[0]};
-    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
+    background-color: ${({ color }) => color.background.base};
+    border-radius: ${({ radius }) => radius.m};
+    border-color: var(--input-border-color);
+    border-style: solid;
+    border-width: 2px;
     box-shadow: none;
     appearance: none;
     width: 100%;
-    margin-bottom: ${({ space }) => space[1]}em;
+    margin: 0;
     font-family: ${({ font }) => font.base};
+    color: ${({ color }) => color.typography.base};
+
+    &::placeholder {
+        color: ${({ color }) => color.typography.placeholder};
+    }
 
     &:focus {
-        border: ${({ border }) =>
-            `${border.size[0]} solid ${border.color.focus}`};
+        box-shadow: var(--input-border-color) 0px 0px 2px 1px;
         outline: 0;
     }
-`.modifier(!!props!.disabled)`
+`.modifier('success', state === 'success')`
+    --input-border-color: #31C48D;
+`.modifier('warning', state === 'warning')`
+    --input-border-color: #FDBA8C;
+`.modifier('error', state === 'error')`
+    --input-border-color: #F98080;
+`.modifier('disabled', disabled)`
     cursor: not-allowed;
-    background-color: ${({ color }) => color.backgroundAlt};
+    background-color: ${({ color }: Theme) => color.background.light};
+`.modifier('small', size === 's')`
+    --input-height: 36px;
+`.modifier('large', size === 'l')`
+    --input-height: 52px;
 `;
 
-const Input: FC<InputProps> = props => {
+const Input: FC<InputProps> = ({ type = 'text', ...props }) => {
     const classNames = useStyles(styles(props));
 
     return (
         <input
-            className={`${classNames} ${props.className}`}
+            className={`${classNames} ${props.className || ''}`}
             disabled={props.disabled}
             id={props.id}
             name={props.name}
             onChange={props.onChange}
             placeholder={props.placeholder}
-            type={props.type}
-            value={props.value}
+            type={type}
+            value={props.value || props.defaultValue}
             checked={props.checked}
         />
     );
-};
-
-Input.defaultProps = {
-    type: 'text',
 };
 
 export default Input;
