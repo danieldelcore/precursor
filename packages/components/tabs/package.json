@@ -1,14 +1,14 @@
 {
     "name": "@precursor/tabs",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "tabs component",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/stack": "^0.1.4",
-        "@precursor/theme": "^0.1.5",
+        "@precursor/stack": "^0.1.5",
+        "@precursor/theme": "^0.1.7",
         "@trousers/collector": "^3.0.2",
         "@trousers/core": "^3.0.2"
     },

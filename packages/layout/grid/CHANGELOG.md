@@ -1,5 +1,13 @@
 # @precursor/grid
 
+## 0.1.4
+
+### Patch Changes
+
+-   2dd87dc: Changes to the overall layout strategy. Includes inline, new grid and minor changes to stack
+-   Updated dependencies [12b0c3e]
+    -   @precursor/theme@0.1.7
+
 ## 0.1.3
 
 ### Patch Changes

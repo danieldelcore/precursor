@@ -1,5 +1,11 @@
 # @precursor/stack
 
+## 0.1.5
+
+### Patch Changes
+
+-   2dd87dc: Changes to the overall layout strategy. Includes inline, new grid and minor changes to stack
+
 ## 0.1.4
 
 ### Patch Changes

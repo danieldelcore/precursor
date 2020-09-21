@@ -1,5 +1,11 @@
 # @precursor/overlay
 
+## 0.1.4
+
+### Patch Changes
+
+-   9502cf1: Integrate new theme schema into components.
+
 ## 0.1.3
 
 ### Patch Changes

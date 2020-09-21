@@ -1,6 +1,6 @@
 {
     "name": "@precursor/button",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "button component",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -8,7 +8,7 @@
     "license": "MIT",
     "dependencies": {
         "@precursor/spinner": "^0.1.1",
-        "@precursor/theme": "^0.1.6",
+        "@precursor/theme": "^0.1.7",
         "@trousers/collector": "^3.0.2",
         "@trousers/core": "^3.0.2"
     },

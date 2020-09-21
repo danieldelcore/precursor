@@ -1,5 +1,11 @@
 # @precursor/select
 
+## 0.1.6
+
+### Patch Changes
+
+-   9502cf1: Integrate new theme schema into components.
+
 ## 0.1.5
 
 ### Patch Changes

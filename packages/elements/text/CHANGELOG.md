@@ -1,5 +1,13 @@
 # @precursor/text
 
+## 0.1.5
+
+### Patch Changes
+
+-   9502cf1: Integrate new theme schema into components.
+-   Updated dependencies [12b0c3e]
+    -   @precursor/theme@0.1.7
+
 ## 0.1.4
 
 ### Patch Changes
