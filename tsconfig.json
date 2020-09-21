@@ -69,6 +69,7 @@
         { "path": "packages/elements/list" },
         { "path": "packages/elements/text" },
         { "path": "packages/layout/grid" },
+        { "path": "packages/layout/inline" },
         { "path": "packages/layout/stack" },
         { "path": "packages/theming/theme" },
         { "path": "packages/theming/tokens" }
