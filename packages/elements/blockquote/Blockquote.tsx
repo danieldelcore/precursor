@@ -14,7 +14,7 @@ const Blockquote: FC<BlockquoteProps> = ({ cite, children }) => (
         css={css<Theme>`
             padding: 0.2rem 0.5rem;
             margin: 0 0.2rem;
-            color: ${({ color }) => color.base};
+            color: ${({ color }) => color.typography.base};
             padding: 0 1em;
             color: #6a737d;
             border-left: 0.25em solid #dfe2e5;

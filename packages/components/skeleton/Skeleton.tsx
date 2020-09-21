@@ -11,7 +11,7 @@ export interface SkeletonProps {
 
 const getStyles = (props: SkeletonProps) =>
     collector<Theme>('skeleton').element`
-    background-color: ${({ color }) => color.backgroundAlt};
+    background-color: ${({ color }) => color.background.light};
     height: 1rem;
     animation: precursor-pulse 1.5s ease-in-out 0.5s infinite;
 
@@ -28,7 +28,7 @@ const getStyles = (props: SkeletonProps) =>
     }
 `.modifier(props.as === 'text')`
     width: 100%;
-    border-radius: ${({ radius }) => radius[0]}
+    border-radius: ${({ radius }) => radius.s}
 `.modifier(props.as === 'image')`
     width: 100%;
     padding-top: ${props.height || '56.25%'};

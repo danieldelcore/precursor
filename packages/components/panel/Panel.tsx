@@ -9,18 +9,9 @@ export interface PanelProps {
 }
 
 const styles = collector<Theme>('Panel').element`
-    border-radius: ${({ radius }) => radius[1]};
+    border-radius: ${({ radius }) => radius.m};
     border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-
-    & > *:first-child {
-        margin-top: 0px;
-    }
-
-    & > *:last-child {
-        margin-bottom: 0px;
-    }
+    padding: ${({ space }) => space.m};
 `;
 
 const Panel: FC<PanelProps> = props => {

@@ -8,7 +8,9 @@
     "license": "MIT",
     "dependencies": {
         "@trousers/collector": "^3.0.2",
-        "@trousers/core": "^3.0.2"
+        "@trousers/core": "^3.0.2",
+        "@trousers/theme": "^3.0.0",
+        "react-feather": "^2.0.8"
     },
     "devDependencies": {
         "react": "^16.8.1"

@@ -37,6 +37,7 @@ const TabList: FC<TabListProps> = ({ label, children }) => {
     return (
         <div
             role="tablist"
+            tabIndex={0}
             aria-label={label}
             onKeyDown={onKeyDown}
             css={css`

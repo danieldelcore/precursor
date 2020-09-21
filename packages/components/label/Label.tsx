@@ -9,17 +9,19 @@ export interface LabelProps {
     className?: string;
 }
 
-const Label: FC<LabelProps> = props => (
+const Label: FC<LabelProps> = ({ htmlFor, children }) => (
     <label
         css={css<Theme>`
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: ${({ fontWeight }) => fontWeight[1]};
-            font-size: ${({ fontSize }) => fontSize[0]}px;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 0;
+            font-weight: ${({ fontWeight }) => fontWeight.label};
+            font-size: ${({ fontSize }) => fontSize.label};
+            cursor: pointer;
         `}
-        htmlFor={props.htmlFor}
+        htmlFor={htmlFor}
     >
-        {props.children}
+        {children}
     </label>
 );
 

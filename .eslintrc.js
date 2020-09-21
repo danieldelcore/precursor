@@ -6,8 +6,9 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'prettier/@typescript-eslint',
         'plugin:prettier/recommended',
+        'plugin:jsx-a11y/recommended',
     ],
-    plugins: ['react-hooks'],
+    plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -25,11 +26,12 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-parameter-properties': 'off'
+        '@typescript-eslint/no-parameter-properties': 'off',
     },
     settings: {
         react: {
             version: 'detect',
         },
     },
+    ignorePatterns: ['dist', 'node_modules'],
 };

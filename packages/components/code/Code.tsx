@@ -10,22 +10,26 @@ export interface CodeProps {
 }
 
 const preStyles = collector<Theme>('Pre').element`
+    margin: 0;
+
     & > code {
         display: block;
         padding: 1rem 1.5rem;
         white-space: pre;
-        color: ${({ color }) => color.base};
         max-width: 100%;
         overflow-y: auto;
+        color: ${({ color }) => color.typography.base};
+        font-family: ${({ font }) => font.code};
     }
 `;
 
 const codeStyles = collector<Theme>('Code').element`
     padding: .2rem .5rem;
     font-size: 90%;
-    border-radius: ${({ radius }) => radius[0]};
-    background-color: ${({ color }) => color.backgroundAlt};
-    color: ${({ color }) => color.base};
+    border-radius: ${({ radius }) => radius.s};
+    background-color: ${({ color }) => color.background.light};
+    color: ${({ color }) => color.typography.base};
+    font-family: ${({ font }) => font.code};
 `;
 
 const Code: FC<CodeProps> = props => {

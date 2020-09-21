@@ -6,6 +6,9 @@ import React, {
     useRef,
     useLayoutEffect,
 } from 'react';
+
+import Stack from '@precursor/stack';
+
 import TabsContext from './TabsContext';
 
 export interface TabsProps {
@@ -33,8 +36,6 @@ const Tabs: FC<TabsProps> = ({
                 React.isValidElement(child) && child.type.name === 'TabPanel'
             );
         }) as React.ReactElement[];
-
-        console.log(tabs.current);
     }, [children]);
 
     const onChange = (id: string) => {
@@ -92,7 +93,7 @@ const Tabs: FC<TabsProps> = ({
                 setPrev,
             }}
         >
-            {children}
+            <Stack>{children}</Stack>
         </TabsContext.Provider>
     );
 };

@@ -7,6 +7,7 @@
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
+        "@precursor/tokens": "^0.1.0",
         "@trousers/core": "^3.0.2",
         "@trousers/theme": "^3.0.0"
     },
