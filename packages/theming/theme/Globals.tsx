@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { css, useGlobals } from '@trousers/core';
 
-import { Theme } from './Theme';
+import { Theme } from './theme';
 
 const reset = css`
     * {
@@ -10,10 +10,18 @@ const reset = css`
 `;
 
 const typography = css<Theme>`
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
     body {
         font-family: ${({ font }) => font.base};
-        font-size: ${({ fontSize }) => fontSize[1]}px;
-        color: ${({ color }) => color.base};
+        font-size: ${({ fontSize }) => fontSize.base};
+        line-height: ${({ lineHeight }) => lineHeight.base};
+        color: ${({ color }) => color.typography.base};
+        background-color: ${({ color }) => color.background.base};
     }
 `;
 
