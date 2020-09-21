@@ -55,6 +55,7 @@
         { "path": "packages/components/keyboard" },
         { "path": "packages/components/label" },
         { "path": "packages/components/lozenge" },
+        { "path": "packages/components/message" },
         { "path": "packages/components/modal" },
         { "path": "packages/components/overlay" },
         { "path": "packages/components/panel" },
