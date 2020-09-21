@@ -62,6 +62,7 @@
         { "path": "packages/components/spinner" },
         { "path": "packages/components/tabs" },
         { "path": "packages/components/textarea" },
+        { "path": "packages/components/toggle" },
         { "path": "packages/elements/blockquote" },
         { "path": "packages/elements/emoji" },
         { "path": "packages/elements/heading" },
