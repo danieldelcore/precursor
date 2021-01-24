@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { FC, ReactNode, CSSProperties } from 'react';
-
-import { jsx } from '@trousers/core';
+import React, { FC, ReactNode, CSSProperties } from 'react';
 
 export interface ColumnProps {
     children: ReactNode;
@@ -13,19 +10,11 @@ export interface ColumnProps {
 const Column: FC<ColumnProps> = ({ span = 1, start, end, children }) => {
     const styles: CSSProperties = {};
 
-    if (start) {
-        styles.gridColumnStart = start;
-    }
+    if (start) styles.gridColumnStart = start;
+    if (end) styles.gridColumnEnd = end;
+    if (span) styles.gridColumnEnd = `span ${span}`;
 
-    if (end) {
-        styles.gridColumnEnd = end;
-    }
-
-    if (span) {
-        styles.gridColumnEnd = `span ${span}`;
-    }
-
-    return <div css={styles}>{children}</div>;
+    return <div style={styles}>{children}</div>;
 };
 
 export default Column;

@@ -7,11 +7,10 @@ import React, {
     MouseEvent,
 } from 'react';
 import { createPortal } from 'react-dom';
-import { useStyles } from '@trousers/core';
-import collector from '@trousers/collector';
 import FocusLock from 'react-focus-lock';
+import { css } from '@trousers/macro';
 
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 import Overlay from '@precursor/overlay';
 
 export interface ModalProps {
@@ -20,24 +19,22 @@ export interface ModalProps {
     children: ReactNode;
 }
 
-const modalStyles = collector<Theme>('Modal').element`
-    max-width: 520px;
-    min-height: 320px;
-    width: 100%;
-    border-radius: 5px;
-    margin: 0.5rem;
-    background-color: #fff;
-    display: block;
-    transform: translate3d(0px, 0%, 0px);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-`;
+const styles = css('Modal', {
+    maxWidth: '520px',
+    minHeight: '320px',
+    width: '100%',
+    borderRadius: '5px',
+    margin: '0.5rem',
+    backgroundColor: '#fff',
+    transform: 'translate3d(0px, 0%, 0px)',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+});
 
 // TODO: ensure IDs are unique
 
 const Modal: FC<ModalProps> = ({ onDismiss, children, isOpen }) => {
-    const classNames = useStyles(modalStyles);
     const overlayRef = useRef<HTMLDivElement | null>(null);
     const handleKeyDown = useCallback(
         (event: KeyboardEvent) => {
@@ -73,7 +70,7 @@ const Modal: FC<ModalProps> = ({ onDismiss, children, isOpen }) => {
                           id="modal"
                           aria-describedby="modal-body"
                           aria-labelledby="modal-header"
-                          className={classNames}
+                          css={styles}
                       >
                           {children}
                       </section>

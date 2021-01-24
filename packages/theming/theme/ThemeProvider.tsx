@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { ThemeProvider as CoreThemeProvider } from '@trousers/theme';
+import { css } from '@trousers/macro';
 
 import defaultTheme, { Theme } from './theme';
 import Globals from './Globals';
@@ -10,10 +10,10 @@ export interface Props {
 }
 
 const ThemeProvider: FC<Props> = ({ theme = defaultTheme, children }) => (
-    <CoreThemeProvider theme={theme}>
+    <span css={css('Theme', {}).theme(theme)}>
         <Globals />
         {children}
-    </CoreThemeProvider>
+    </span>
 );
 
 export default ThemeProvider;

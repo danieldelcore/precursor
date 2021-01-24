@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { css, jsx } from '@trousers/core';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
 
 export interface ModalBodyProps {
     children: ReactNode;
@@ -9,10 +8,10 @@ export interface ModalBodyProps {
 const ModalBody: FC<ModalBodyProps> = ({ children }) => (
     <div
         id="modal-body"
-        css={css`
-            padding: 0 1rem;
-            flex: 1 1 0%;
-        `}
+        css={css('ModalBody', {
+            padding: '0 1rem',
+            flex: '1 1 0%',
+        })}
     >
         {children}
     </div>

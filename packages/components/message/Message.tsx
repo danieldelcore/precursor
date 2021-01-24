@@ -1,35 +1,42 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
 
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 
 export interface MessageProps {
     status?: 'error' | 'success' | 'warning';
     children: ReactNode;
 }
 
-const styles = (status: MessageProps['status']) =>
-    collector<Theme>('message').element`
-    display: block;
-    padding: ${({ spacePreset }) => spacePreset.inset};
-    border-radius: ${({ radius }) => radius.m};
-    background-color: ${({ color }) => color.info.light};
-    color: ${({ color }) => color.info.base};
-`.modifier(status === 'error')`
-    background-color: ${({ color }) => color.error.light}
-    color: ${({ color }) => color.error.base}
-`.modifier(status === 'warning')`
-    background-color: ${({ color }: Theme) => color.warning.light}
-    color: ${({ color }: Theme) => color.warning.base}
-`.modifier(status === 'success')`
-    background-color: ${({ color }: Theme) => color.success.light}
-    color: ${({ color }: Theme) => color.success.base}
-`;
+const styles = css('message', {
+    display: 'block',
+    padding: 'var(--spacePreset-inset)',
+    borderRadius: 'var(--radius-m)',
+    backgroundColor: 'var(--color-info-light)',
+    color: 'var(--color-info-base)',
+})
+    .modifier('error', {
+        backgroundColor: 'var(--color-error-light)',
+        color: 'var(--color-error-base)',
+    })
+    .modifier('warning', {
+        backgroundColor: 'var(--color-warning-light)',
+        color: 'var(--color-warning-base)',
+    })
+    .modifier('success', {
+        backgroundColor: 'var(--color-success-light)',
+        color: 'var(--color-success-base)',
+    });
 
-const Message: FC<MessageProps> = props => {
-    return <div css={styles(props.status)}>{props.children}</div>;
-};
+const Message: FC<MessageProps> = props => (
+    <div
+        css={styles}
+        $error={props.status === 'error'}
+        $warning={props.status === 'warning'}
+        $success={props.status === 'success'}
+    >
+        {props.children}
+    </div>
+);
 
 export default Message;

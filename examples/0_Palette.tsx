@@ -479,7 +479,7 @@ const BasicExample = () => {
                                     name="input-success"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="success"
+                                    appearance="success"
                                 />
                                 <Label htmlFor="input-warning">Warning</Label>
                                 <Input
@@ -487,7 +487,7 @@ const BasicExample = () => {
                                     name="input-warning"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="warning"
+                                    appearance="warning"
                                 />
                                 <Label htmlFor="input-error">Error</Label>
                                 <Input
@@ -495,7 +495,7 @@ const BasicExample = () => {
                                     name="input-error"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="error"
+                                    appearance="error"
                                 />
                                 <Label htmlFor="input-disabled">Disabled</Label>
                                 <Input
@@ -551,7 +551,7 @@ const BasicExample = () => {
                                     name="TextArea-success"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="success"
+                                    appearance="success"
                                 />
                                 <Label htmlFor="TextArea-warning">
                                     Warning
@@ -561,7 +561,7 @@ const BasicExample = () => {
                                     name="TextArea-warning"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="warning"
+                                    appearance="warning"
                                 />
                                 <Label htmlFor="TextArea-error">Error</Label>
                                 <TextArea
@@ -569,7 +569,7 @@ const BasicExample = () => {
                                     name="TextArea-error"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="error"
+                                    appearance="error"
                                 />
                                 <Label htmlFor="TextArea-disabled">
                                     Disabled
@@ -625,7 +625,7 @@ const BasicExample = () => {
                                     id="select-success"
                                     name="select-success"
                                     onChange={() => console.log('onChange')}
-                                    state="success"
+                                    appearance="success"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>
@@ -635,7 +635,7 @@ const BasicExample = () => {
                                     id="select-warning"
                                     name="select-warning"
                                     onChange={() => console.log('onChange')}
-                                    state="warning"
+                                    appearance="warning"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>
@@ -645,7 +645,7 @@ const BasicExample = () => {
                                     id="select-error"
                                     name="select-error"
                                     onChange={() => console.log('onChange')}
-                                    state="error"
+                                    appearance="error"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>

@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import { css, useStyles } from '@trousers/core';
 
 export interface ListItemProps {
     children: ReactNode;
@@ -14,19 +13,16 @@ export interface ListProps {
     type?: 'ol' | 'ul';
 }
 
-const List: FC<ListProps> = ({ type = 'ul', children }) => {
-    const classNames = useStyles(css`
-        margin: 0 0 1rem 0;
-        padding: 0 1rem;
-    `);
-
-    return React.createElement(
+const List: FC<ListProps> = ({ type = 'ul', children }) =>
+    React.createElement(
         type,
         {
-            className: classNames,
+            style: {
+                margin: '0 0 1rem 0',
+                padding: '0 1rem',
+            },
         },
         children,
     );
-};
 
 export default List;

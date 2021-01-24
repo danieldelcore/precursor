@@ -8,12 +8,11 @@
     "license": "MIT",
     "dependencies": {
         "@precursor/stack": "^0.1.5",
-        "@precursor/theme": "^0.1.7",
-        "@trousers/collector": "^3.0.2",
-        "@trousers/core": "^3.0.2"
+        "@precursor/theme": "^0.1.7"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^16.8.1",
+        "@trousers/macro": "4.0.0-alpha5"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

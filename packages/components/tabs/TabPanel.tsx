@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useContext, FC, ReactNode } from 'react';
-import { jsx } from '@trousers/core';
+import { jsx } from '@trousers/macro';
 import TabsContext from './TabsContext';
 
 export interface TabPanelProps {

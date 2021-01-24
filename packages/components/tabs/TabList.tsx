@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { useContext, FC, KeyboardEventHandler, ReactNode } from 'react';
-import { jsx, css } from '@trousers/core';
+import React, { useContext, FC, KeyboardEventHandler, ReactNode } from 'react';
+import { css } from '@trousers/macro';
 import TabsContext from './TabsContext';
 
 export interface TabListProps {
@@ -40,10 +39,9 @@ const TabList: FC<TabListProps> = ({ label, children }) => {
             tabIndex={0}
             aria-label={label}
             onKeyDown={onKeyDown}
-            css={css`
-                border-bottom: ${({ border }) =>
-                    `${border.size[0]} solid ${border.color.base}`};
-            `}
+            css={css({
+                borderBottom: `var(--border--size[0]) solid var(--border--color.base)`,
+            })}
         >
             {children}
         </div>

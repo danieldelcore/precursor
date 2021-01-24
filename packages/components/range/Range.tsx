@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/** @jsx jsx */
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
-import { FC, useRef, useState } from 'react';
+import React, { FC, useRef, useState } from 'react';
+import { css } from '@trousers/macro';
 
 import Slider from './Slider';
 import Track from './Track';
@@ -36,18 +34,19 @@ function getStepFromValue(value: number, valuePerStep: number) {
     return Math.round(value / valuePerStep) * valuePerStep;
 }
 
-const styles = (size: RangeProps['size']) =>
-    collector('Thumb').element`
-        --range-track-height: 2px;
-        --range-thumb-height: 18px;
-        height: var(--range-thumb-height);
-        cursor: pointer;
-        position: relative;
-    `.modifier('small', size === 's')`
-        --range-thumb-height: 16px;
-    `.modifier('large', size === 'l')`
-        --range-thumb-height: 22px;
-    `;
+const styles = css('Thumb', {
+    '--range-track-height': '2px',
+    '--range-thumb-height': '18px',
+    height: 'var(--range-thumb-height)',
+    cursor: 'pointer',
+    position: 'relative',
+})
+    .modifier('small', {
+        '--range-thumb-height': '16px',
+    })
+    .modifier('large', {
+        '--range-thumb-height': '22px',
+    });
 
 const Range: FC<RangeProps> = ({
     max = 100,
@@ -173,7 +172,9 @@ const Range: FC<RangeProps> = ({
 
     return (
         <div
-            css={styles(size)}
+            css={styles}
+            $small={size === 's'}
+            $large={size === 'l'}
             onKeyDown={handleKeyDown}
             onMouseDown={handleTrackMouseDown}
             onTouchStart={handleTrackMouseDown}

@@ -1,48 +1,39 @@
 import React, { FC, ReactNode } from 'react';
-import { useStyles } from '@trousers/core';
-import collector from '@trousers/collector';
+import { css } from '@trousers/macro';
 
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 
 export interface CodeProps {
     children: ReactNode;
     inline?: boolean;
 }
 
-const preStyles = collector<Theme>('Pre').element`
-    margin: 0;
+const preStyles = css('Pre', {
+    margin: 0,
+    '& > code': {
+        display: 'block',
+        padding: '1rem 1.5rem',
+        whiteSpace: 'pre',
+        maxWidth: '100%',
+        overflowY: 'auto',
+        color: 'var(--color-typography-base)',
+        fontFamily: 'var(--font-code)',
+    },
+});
 
-    & > code {
-        display: block;
-        padding: 1rem 1.5rem;
-        white-space: pre;
-        max-width: 100%;
-        overflow-y: auto;
-        color: ${({ color }) => color.typography.base};
-        font-family: ${({ font }) => font.code};
-    }
-`;
-
-const codeStyles = collector<Theme>('Code').element`
-    padding: .2rem .5rem;
-    font-size: 90%;
-    border-radius: ${({ radius }) => radius.s};
-    background-color: ${({ color }) => color.background.light};
-    color: ${({ color }) => color.typography.base};
-    font-family: ${({ font }) => font.code};
-`;
+const codeStyles = css('Code', {
+    padding: '.2rem .5rem',
+    fontSize: '90%',
+    borderRadius: 'var(--radius-s)',
+    backgroundColor: 'var(--color-background-light)',
+    color: 'var(--color-typography-base)',
+    fontFamily: 'var(--font-code)',
+});
 
 const Code: FC<CodeProps> = props => {
-    const preClassNames = useStyles(preStyles);
-    const codeClassNames = useStyles(codeStyles);
+    const codeBlock = <code css={codeStyles}>{props.children}</code>;
 
-    const codeBlock = <code className={codeClassNames}>{props.children}</code>;
-
-    return props.inline ? (
-        codeBlock
-    ) : (
-        <pre className={preClassNames}>{codeBlock}</pre>
-    );
+    return props.inline ? codeBlock : <pre css={preStyles}>{codeBlock}</pre>;
 };
 
 export default Code;

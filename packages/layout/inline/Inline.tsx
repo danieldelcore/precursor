@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { Children, FC, ReactNode } from 'react';
+import React, { Children, FC, ReactNode } from 'react';
 
-import { css, jsx } from '@trousers/core';
+import { css } from '@trousers/macro';
 import { Theme } from '@precursor/theme';
 
 export interface InlineProps {
@@ -16,21 +15,21 @@ const Inline: FC<InlineProps> = ({
     justify = 'flex-start',
 }) => (
     <span
-        css={css<Theme>`
-            --inline-gap: ${({ space }) => space[gap]};
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-top: calc(var(--inline-gap) * -1);
-            margin-left: calc(var(--inline-gap) * -1);
-            justify-content: ${justify};
-
-            > * {
-                margin-top: var(--inline-gap);
-                margin-left: var(--inline-gap);
-                margin-bottom: 0;
-            }
-        `}
+        css={css('Inline', {
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            marginTop: 'calc(var(--inline-gap) * -1)',
+            marginLeft: 'calc(var(--inline-gap) * -1)',
+            justifyContent: justify,
+            '> *': {
+                marginTop: 'var(--inline-gap)',
+                marginLeft: 'var(--inline-gap)',
+                marginBottom: 0,
+            },
+        }).theme({
+            inlineGap: `var(--space-${gap})`,
+        })}
     >
         {Children.map(children, child =>
             child !== null && child !== undefined ? <span>{child}</span> : null,

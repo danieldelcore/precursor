@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 
-import { css, jsx } from '@trousers/core';
+import { css } from '@trousers/macro';
 import { Theme } from '@precursor/theme';
 
 export interface GridProps {
@@ -28,12 +27,12 @@ const Grid: FC<GridProps> = ({
 
     return (
         <div
-            css={css<Theme>`
-                display: grid;
-                grid-template-columns: repeat(${columns}, 1fr);
-                gap: ${getGap};
-                width: 100%;
-            `}
+            css={css('Grid', {
+                display: 'grid',
+                gridTemplateColumns: `repeat(${columns}, 1fr)`,
+                gap: getGap,
+                width: '100%',
+            })}
         >
             {children}
         </div>

@@ -1,6 +1,6 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { css, jsx } from '@trousers/core';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
+
 import Heading from '@precursor/heading';
 
 export interface ModalHeaderProps {
@@ -10,11 +10,11 @@ export interface ModalHeaderProps {
 const ModalHeader: FC<ModalHeaderProps> = ({ children }) => (
     <header
         id="modal-header"
-        css={css`
-            padding-top: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        `}
+        css={css('ModalHeader', {
+            paddingTop: '1rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem',
+        })}
     >
         <Heading>{children}</Heading>
     </header>

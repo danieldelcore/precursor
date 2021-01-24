@@ -1,35 +1,27 @@
-import { FC } from 'react';
-import { css, useGlobals } from '@trousers/core';
+import React, { FC } from 'react';
+import { css } from '@trousers/macro';
 
-import { Theme } from './theme';
+// import { Theme } from './theme';
 
-const reset = css`
-    * {
-        box-sizing: border-box;
-    }
-`;
-
-const typography = css<Theme>`
-    html,
-    body {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    body {
-        font-family: ${({ font }) => font.base};
-        font-size: ${({ fontSize }) => fontSize.base};
-        line-height: ${({ lineHeight }) => lineHeight.base};
-        color: ${({ color }) => color.typography.base};
-        background-color: ${({ color }) => color.background.base};
-    }
-`;
+const reset = css({}).global({
+    '*': {
+        boxSizing: 'border-box',
+    },
+    'html, body': {
+        margin: '0px',
+        padding: '0px',
+    },
+    body: {
+        fontFamily: 'var(--font-base}',
+        fontSize: 'var(--fontSize-base}',
+        lineHeight: 'var(--lineHeight-base}',
+        color: 'var(--color-typography-base}',
+        backgroundColor: 'var(--color-background-base}',
+    },
+});
 
 const Globals: FC = () => {
-    useGlobals<Theme>(reset);
-    useGlobals<Theme>(typography);
-
-    return null;
+    return <span css={reset} />; // TODO: this isn't great
 };
 
 export default Globals;

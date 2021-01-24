@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { css, jsx } from '@trousers/core';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
 
 import { Theme } from '@precursor/theme';
 
@@ -11,12 +10,12 @@ export interface StackProps {
 
 const Stack: FC<StackProps> = ({ gap = 'm', children }) => (
     <div
-        css={css<Theme>`
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: ${({ space }) => space[gap]};
-            width: 100%;
-        `}
+        css={css('Stack', {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            gap: `var(--space-${gap})`,
+            width: '100%',
+        })}
     >
         {children}
     </div>

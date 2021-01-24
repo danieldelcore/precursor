@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { jsx, css } from '@trousers/core';
-import { Theme } from '@precursor/theme';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
+// import { Theme } from '@precursor/theme';
 
 export interface KeyboardProps {
     children?: ReactNode;
@@ -11,12 +10,12 @@ export interface KeyboardProps {
     ctrl?: boolean;
 }
 
-const styles = css<Theme>`
-    padding: 0 10px;
-    background-color: ${({ color }) => color.background.light};
-    border-radius: ${({ radius }) => radius.s};
-    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
-`;
+const styles = css({
+    padding: '0 10px',
+    backgroundColor: 'var(--color-background-light)',
+    borderRadius: 'var(--radius-s)',
+    border: `var(--border-size-0) solid var(--border-color-base)`,
+});
 
 const Keyboard: FC<KeyboardProps> = ({
     children,

@@ -10,13 +10,12 @@
         "@precursor/heading": "^0.1.7",
         "@precursor/overlay": "^0.1.4",
         "@precursor/theme": "^0.1.7",
-        "@trousers/collector": "^3.0.2",
-        "@trousers/core": "^3.0.2",
         "react-focus-lock": "^2.4.1"
     },
     "devDependencies": {
         "react": "^16.8.1",
-        "react-dom": "^16.8.4"
+        "react-dom": "^16.8.4",
+        "@trousers/macro": "4.0.0-alpha5"
     },
     "peerDependencies": {
         "react": ">=16.8.0",

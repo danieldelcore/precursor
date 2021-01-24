@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { jsx, css } from '@trousers/core';
-import { Theme } from '@precursor/theme';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
+// import { Theme } from '@precursor/theme';
 
 export interface LabelProps {
     children: ReactNode;
@@ -11,14 +10,14 @@ export interface LabelProps {
 
 const Label: FC<LabelProps> = ({ htmlFor, children }) => (
     <label
-        css={css<Theme>`
-            display: inline-flex;
-            align-items: center;
-            margin-bottom: 0;
-            font-weight: ${({ fontWeight }) => fontWeight.label};
-            font-size: ${({ fontSize }) => fontSize.label};
-            cursor: pointer;
-        `}
+        css={css({
+            display: 'inline-flex',
+            alignItems: 'center',
+            marginBottom: '0',
+            fontWeight: 'var(--fontWeight-label)',
+            fontSize: 'var(--fontSize-label)',
+            cursor: 'pointer',
+        })}
         htmlFor={htmlFor}
     >
         {children}

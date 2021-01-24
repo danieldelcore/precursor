@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import { useContext, FC, ReactNode } from 'react';
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
-import { Theme } from '@precursor/theme';
+import React, { useContext, FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
 import Text from '@precursor/text';
+// import { Theme } from '@precursor/theme';
 
 import TabsContext from './TabsContext';
 
@@ -11,6 +9,15 @@ export interface TabProps {
     id: string;
     children: ReactNode;
 }
+
+const styles = css('Tab', {
+    cursor: 'pointer',
+    backgroundColor: 'transparent',
+    border: 'none',
+    padding: '1rem',
+}).modifier('selected', {
+    color: 'var(--color-focus)',
+});
 
 const Tab: FC<TabProps> = ({ id, children }) => {
     const { active, setActive } = useContext(TabsContext);
@@ -24,14 +31,8 @@ const Tab: FC<TabProps> = ({ id, children }) => {
             id={`tab-${id}`}
             tabIndex={isSelected ? 0 : -1}
             onClick={() => setActive && setActive(id)}
-            css={collector<Theme>('tab').element`
-                cursor: pointer;
-                background-color: transparent;
-                border: none;
-                padding: 1rem;
-            `.modifier(isSelected)`
-                color: ${({ color }) => color.focus};
-            `}
+            css={styles}
+            $selected={isSelected}
         >
             <Text as="span">{children}</Text>
         </button>

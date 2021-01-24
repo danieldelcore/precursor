@@ -1,45 +1,47 @@
-/** @jsx jsx */
-import { FC } from 'react';
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
-import { Theme } from '@precursor/theme';
+import React, { FC } from 'react';
+import { css } from '@trousers/macro';
+// import { Theme } from '@precursor/theme';
 
 export interface SkeletonProps {
     as?: 'image' | 'text' | 'avatar';
     height?: string;
 }
 
-const getStyles = (props: SkeletonProps) =>
-    collector<Theme>('skeleton').element`
-    background-color: ${({ color }) => color.background.light};
-    height: 1rem;
-    animation: precursor-pulse 1.5s ease-in-out 0.5s infinite;
-
-    @keyframes precursor-pulse {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-`.modifier(props.as === 'text')`
-    width: 100%;
-    border-radius: ${({ radius }) => radius.s}
-`.modifier(props.as === 'image')`
-    width: 100%;
-    padding-top: ${props.height || '56.25%'};
-`.modifier(props.as === 'avatar')`
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-`;
-
 const Skeleton: FC<SkeletonProps> = ({ as = 'text', height }) => (
-    <div css={getStyles({ as, height })} />
+    <div
+        css={css('skeleton', {
+            backgroundColor: 'var(--color-background-light)',
+            height: '1rem',
+            animation: 'precursor-pulse 1.5s ease-in-out 0.5s infinite',
+            '@keyframes precursor-pulse': {
+                '0%': {
+                    opacity: 1,
+                },
+                '50%': {
+                    opacity: 0.4,
+                },
+                '100%': {
+                    opacity: 1,
+                },
+            },
+        })
+            .modifier('isText', {
+                width: '100%',
+                borderRadius: 'var(--radius-s)',
+            })
+            .modifier('isImage', {
+                width: '100%',
+                paddingTop: `${height || '56.25%'}`,
+            })
+            .modifier('isAvatar', {
+                width: '64px',
+                height: '64px',
+                borderRadius: '100%',
+            })}
+        $isText={as === 'text'}
+        $isImage={as === 'image'}
+        $isAvatar={as === 'avatar'}
+    />
 );
 
 export default Skeleton;

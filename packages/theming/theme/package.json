@@ -7,12 +7,11 @@
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/tokens": "^0.1.1",
-        "@trousers/core": "^3.0.2",
-        "@trousers/theme": "^3.0.0"
+        "@precursor/tokens": "^0.1.1"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^16.8.1",
+        "@trousers/macro": "4.0.0-alpha5"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

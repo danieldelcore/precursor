@@ -1,7 +1,7 @@
-/** @jsx jsx */
-import { FC, ReactNode } from 'react';
-import { css, jsx } from '@trousers/core';
-import { Theme } from '@precursor/theme';
+import React, { FC, ReactNode } from 'react';
+import { css } from '@trousers/macro';
+
+// import { Theme } from '@precursor/theme';
 import Inline from '@precursor/inline';
 
 export interface ModalFooterProps {
@@ -10,11 +10,10 @@ export interface ModalFooterProps {
 
 const ModalFooter: FC<ModalFooterProps> = ({ children }) => (
     <footer
-        css={css<Theme>`
-            padding: 1rem;
-            border-top: ${({ border }) =>
-                `${border.size[0]} solid ${border.color.base}`};
-        `}
+        css={css('ModalFooter', {
+            padding: '1rem',
+            borderTop: `var(--border-size-0) solid var(--border-color-base)`,
+        })}
     >
         <Inline justify="flex-end">{children}</Inline>
     </footer>

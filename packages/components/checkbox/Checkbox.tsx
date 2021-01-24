@@ -1,24 +1,22 @@
-/** @jsx jsx */
-import { FC } from 'react';
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
+import React, { FC } from 'react';
+import { css } from '@trousers/macro';
 
 import Label from '@precursor/label';
 import Input, { InputProps } from '@precursor/input';
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 
 export interface CheckboxProps extends InputProps {
     label: string;
 }
 
-const styles = collector<Theme>('Checkbox').element`
-    height: auto;
-    width: auto;
-    appearance: checkbox;
-    display: inline;
-    cursor: pointer;
-    margin-right: ${({ spacePreset }) => spacePreset.inline};
-`;
+const styles = css('Checkbox', {
+    height: 'auto',
+    width: 'auto',
+    appearance: 'checkbox',
+    display: 'inline',
+    cursor: 'pointer',
+    marginRight: 'var(--spacePreset-inline)',
+});
 
 const Checkbox: FC<CheckboxProps> = props => {
     return (

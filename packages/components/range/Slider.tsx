@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import { jsx } from '@trousers/core';
-import collector from '@trousers/collector';
-import { FC, useRef } from 'react';
+import { css } from '@trousers/macro';
+import React, { FC, useRef } from 'react';
 
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 
 export interface SliderProps {
     disabled?: boolean;
@@ -14,36 +12,31 @@ export interface SliderProps {
     onDrag: (event: MouseEvent | TouchEvent) => void;
 }
 
-const styles = (disabled: SliderProps['disabled']) =>
-    collector<Theme>('Thumb').element`
-    width: var(--range-thumb-height);
-    height: var(--range-thumb-height);
-    border-radius: 50%;
-    position: absolute;
-    top: calc(var(--range-track-height) / 2 * -1);
-    background-color: ${({ color }) => color.primary.base};
-    transition: background-color 200ms;
-
-    &:hover {
-        background-color: ${({ color }) => color.primary.dark};
-    }
-
-    &:active {
-        background-color: ${({ color }) => color.primary.darker};
-    }
-
-    &:focus {
-        box-shadow: ${({ color }) => color.primary.base} 0px 0px 2px 1px;
-        outline: 0;
-    }
-`.modifier('disabled', disabled)`
-    background-color: ${({ color }) => color.neutral.light};
-    cursor: not-allowed;
-
-    &:hover {
-        background-color: ${({ color }: Theme) => color.neutral.lighter};
-    }
-`;
+const styles = css('Thumb', {
+    width: 'var(--range-thumb-height)',
+    height: 'var(--range-thumb-height)',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: 'calc(var(--range-track-height) / 2 * -1)',
+    backgroundColor: 'var(--color-primary-base)',
+    transition: 'background-color 200ms',
+    '&:hover': {
+        backgroundColor: 'var(--color-primary-dark)',
+    },
+    '&:active': {
+        backgroundColor: 'var(--color-primary-darker)',
+    },
+    '&:focus': {
+        boxShadow: 'var(--color-primary-base} 0px 0px 2px 1px',
+        outline: 0,
+    },
+}).modifier('disabled', {
+    backgroundColor: 'var(--color-neutral-light)',
+    cursor: 'not-allowed',
+    '&:hover': {
+        backgroundColor: 'var(--color-neutral-lighter)',
+    },
+});
 
 const Slider: FC<SliderProps> = ({
     disabled,
@@ -117,15 +110,16 @@ const Slider: FC<SliderProps> = ({
     return (
         <div
             ref={sliderRef}
+            css={styles}
+            $disabled={disabled}
+            style={{
+                left: `calc(${progress} - var(--range-thumb-height) / 2)`,
+            }}
             role={!disabled ? 'slider' : undefined}
             tabIndex={disabled ? -1 : 0}
             aria-valuemin={min}
             aria-valuemax={max}
             aria-valuenow={value}
-            css={styles(disabled)}
-            style={{
-                left: `calc(${progress} - var(--range-thumb-height) / 2)`,
-            }}
             draggable="false"
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}

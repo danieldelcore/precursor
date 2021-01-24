@@ -1,23 +1,18 @@
 import React, { FC, ReactNode } from 'react';
-import { useStyles } from '@trousers/core';
-import collector from '@trousers/collector';
+import { css } from '@trousers/macro';
 
-import { Theme } from '@precursor/theme';
+// import { Theme } from '@precursor/theme';
 
 export interface PanelProps {
     children: ReactNode;
 }
 
-const styles = collector<Theme>('Panel').element`
-    border-radius: ${({ radius }) => radius.m};
-    border: ${({ border }) => `${border.size[0]} solid ${border.color.base}`};
-    padding: ${({ space }) => space.m};
-`;
+const styles = css('Panel', {
+    borderRadius: 'var(--radius-m)',
+    border: 'var(--border-size-0) solid var(--border-color-base)',
+    padding: 'var(--space-m)',
+});
 
-const Panel: FC<PanelProps> = props => {
-    const classNames = useStyles(styles);
-
-    return <div className={classNames}>{props.children}</div>;
-};
+const Panel: FC<PanelProps> = props => <div css={styles}>{props.children}</div>;
 
 export default Panel;
