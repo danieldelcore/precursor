@@ -2,20 +2,21 @@
     "name": "@precursor/modal",
     "version": "0.1.6",
     "description": "modal component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/precursor-modal.cjs.js",
+    "module": "dist/precursor-modal.esm.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/heading": "^0.1.7",
+        "@precursor/inline": "^0.1.1",
         "@precursor/overlay": "^0.1.4",
         "@precursor/theme": "^0.1.7",
+        "@trousers/macro": "4.0.0-alpha7",
         "react-focus-lock": "^2.4.1"
     },
     "devDependencies": {
-        "react": "^16.8.1",
-        "react-dom": "^16.8.4",
-        "@trousers/macro": "4.0.0-alpha5"
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0",

@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@trousers/core';
-import { ReactNode, FC } from 'react';
+import React, { ReactNode, FC } from 'react';
 
 const Container: FC<{ children?: ReactNode }> = ({ children }) => (
     <div
-        css={{
+        style={{
             maxWidth: '1000px',
             margin: '0 auto',
             display: 'block',

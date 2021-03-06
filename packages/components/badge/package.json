@@ -2,14 +2,15 @@
     "name": "@precursor/badge",
     "version": "0.1.6",
     "description": "Badge component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/precursor-badge.cjs.js",
+    "module": "dist/precursor-badge.esm.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "@trousers/macro": "4.0.0-alpha7"
+    },
     "devDependencies": {
-        "react": "^16.8.1",
-        "@trousers/macro": "4.0.0-alpha5"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

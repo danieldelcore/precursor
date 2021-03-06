@@ -2,16 +2,16 @@
     "name": "@precursor/text",
     "version": "0.1.5",
     "description": "text component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/precursor-text.cjs.js",
+    "module": "dist/precursor-text.esm.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@precursor/theme": "^0.1.7"
+        "@precursor/theme": "^0.1.7",
+        "@trousers/macro": "4.0.0-alpha7"
     },
     "devDependencies": {
-        "react": "^16.8.1",
-        "@trousers/macro": "4.0.0-alpha5"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

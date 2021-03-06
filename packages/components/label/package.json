@@ -2,14 +2,15 @@
     "name": "@precursor/label",
     "version": "0.1.7",
     "description": "label component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
+    "main": "dist/precursor-label.cjs.js",
+    "module": "dist/precursor-label.esm.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "@trousers/macro": "4.0.0-alpha7"
+    },
     "devDependencies": {
-        "react": "^16.8.1",
-        "@trousers/macro": "4.0.0-alpha5"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"
