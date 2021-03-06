@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -31,7 +30,6 @@ const styles = css('message', {
 
 const Message: FC<MessageProps> = props => (
     <div
-        // @ts-ignore
         css={styles}
         $error={props.status === 'error'}
         $warning={props.status === 'warning'}

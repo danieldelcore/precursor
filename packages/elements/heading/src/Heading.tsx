@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-// // @ts-ignoreE
+//
 // import { css } from '@trousers/macro';
 
 // import copyToClipboard from '@precursor/copy-to-clipboard';
@@ -73,7 +73,6 @@ const Heading: FC<HeadingProps> = ({
     //         {children}
     //         {id && (
     //             <a
-    //                 // @ts-ignore
     //                 css={css({
     //                     textDecoration: 'none',
     //                     padding: '0 0.5rem',

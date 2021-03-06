@@ -4,7 +4,7 @@
     "description": "Emoji component",
     "main": "dist/precursor-emoji.cjs.js",
     "module": "dist/precursor-emoji.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-emoji.cjs.d.ts",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {

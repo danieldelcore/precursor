@@ -1,6 +1,5 @@
 import React, { Children, FC, ReactNode } from 'react';
 
-// @ts-ignore
 import { css } from '@trousers/macro';
 import { Theme } from '@precursor/theme';
 
@@ -16,7 +15,6 @@ const Inline: FC<InlineProps> = ({
     justify = 'flex-start',
 }) => (
     <span
-        // @ts-ignore
         css={css('Inline', {
             display: 'flex',
             flexDirection: 'row',

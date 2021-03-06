@@ -1,5 +1,4 @@
 import React, { useContext, FC, KeyboardEventHandler, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 import TabsContext from './TabsContext';
 
@@ -40,9 +39,8 @@ const TabList: FC<TabListProps> = ({ label, children }) => {
             tabIndex={0}
             aria-label={label}
             onKeyDown={onKeyDown}
-            // @ts-ignore
             css={css({
-                borderBottom: `var(--border--size[0]) solid var(--border--color.base)`,
+                borderBottom: `var(--border--size[0]) solid var(--border--color--base)`,
             })}
         >
             {children}

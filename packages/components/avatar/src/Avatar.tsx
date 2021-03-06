@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 
-// @ts-ignore
 import { css } from '@trousers/macro';
 
 import Image, { ImageProps } from '@precursor/image';
@@ -19,7 +18,6 @@ const styles = css('Avatar', {
 });
 
 const Avatar: FC<AvatarProps> = ({ src, alt }) => (
-    // @ts-ignore
     <span css={styles}>
         <Image src={src} alt={alt} />
     </span>

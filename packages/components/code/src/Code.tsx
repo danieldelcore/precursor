@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -32,10 +31,8 @@ const codeStyles = css('Code', {
 });
 
 const Code: FC<CodeProps> = props => {
-    // @ts-ignore
     const codeBlock = <code css={codeStyles}>{props.children}</code>;
 
-    // @ts-ignore
     return props.inline ? codeBlock : <pre css={preStyles}>{codeBlock}</pre>;
 };
 

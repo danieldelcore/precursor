@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { FC, useRef, useState } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 import Slider from './Slider';
@@ -173,7 +172,6 @@ const Range: FC<RangeProps> = ({
 
     return (
         <div
-            // @ts-ignore
             css={styles}
             $small={size === 's'}
             $large={size === 'l'}

@@ -1,5 +1,4 @@
 import React, { ChangeEventHandler, ReactNode, FC } from 'react';
-// @ts-ignore
 import { css } from '@trousers/macro';
 // @ts-ignore
 import ChevronDown from 'react-feather/dist/icons/chevron-down';
@@ -65,11 +64,8 @@ const styles = css('Select', {
 
 const Select: FC<SelectProps> = props => {
     return (
-        // @ts-ignore
         <div css={css({ position: 'relative' })}>
             <select
-                // className={classNames}
-                // @ts-ignore
                 css={styles}
                 $success={props.appearance === 'success'}
                 $warning={props.appearance === 'warning'}
@@ -79,6 +75,7 @@ const Select: FC<SelectProps> = props => {
                 $large={props.size === 'l'}
                 id={props.id}
                 name={props.name}
+                className={props.className}
                 onChange={props.onChange}
                 onBlur={props.onChange}
                 value={props.value || props.defaultValue}
@@ -87,7 +84,6 @@ const Select: FC<SelectProps> = props => {
                 {props.children}
             </select>
             <span
-                // @ts-ignore
                 css={css({
                     alignItems: 'center',
                     display: 'flex',

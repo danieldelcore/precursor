@@ -4,10 +4,10 @@
     "description": "Overlay component",
     "main": "dist/precursor-overlay.cjs.js",
     "module": "dist/precursor-overlay.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-overlay.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

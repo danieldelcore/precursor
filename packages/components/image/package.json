@@ -4,7 +4,7 @@
     "description": "image component",
     "main": "dist/precursor-image.cjs.js",
     "module": "dist/precursor-image.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-image.cjs.d.ts",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {

@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 import Input, { InputProps } from '@precursor/input';
@@ -64,7 +63,6 @@ const styles = css('ToggleIndicator', {
 const Radio: FC<RadioProps> = ({ size = 'm', ...props }) => (
     <Label htmlFor={props.id}>
         <Input
-            // @ts-ignore
             css={css({
                 clip: 'rect(0px, 0px, 0px, 0px)',
                 height: '1px',
@@ -89,19 +87,13 @@ const Radio: FC<RadioProps> = ({ size = 'm', ...props }) => (
         />
         <div
             aria-hidden="true"
-            // @ts-ignore
             css={styles}
             $large={size === 'l'}
             $small={size === 's'}
             $disabled={props.disabled}
         />
 
-        <span
-            // @ts-ignore
-            css={css({ userSelect: 'none' })}
-        >
-            {props.label}
-        </span>
+        <span css={css({ userSelect: 'none' })}>{props.label}</span>
     </Label>
 );
 

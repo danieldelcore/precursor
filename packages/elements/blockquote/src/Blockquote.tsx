@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
+
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -17,7 +17,6 @@ const styles = css('Blockquote', {
 });
 
 const Blockquote: FC<BlockquoteProps> = ({ cite, children }) => (
-    // @ts-ignore
     <blockquote css={styles} cite={cite}>
         {children}
     </blockquote>

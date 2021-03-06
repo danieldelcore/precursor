@@ -1,6 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 export interface RowProps {
@@ -9,7 +7,6 @@ export interface RowProps {
 
 const Row: FC<RowProps> = ({ children }) => (
     <div
-        // @ts-ignore
         css={css({
             display: 'grid',
             gridTemplateColumns: 'repeat(12, 1fr)',

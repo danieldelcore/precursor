@@ -2595,43 +2595,43 @@
     "@babel/runtime" "^7.10.2"
     "@testing-library/dom" "^7.9.0"
 
-"@trousers/core@4.0.0-alpha7":
-  version "4.0.0-alpha7"
-  resolved "https://registry.yarnpkg.com/@trousers/core/-/core-4.0.0-alpha7.tgz#996b32298010b1bd7392c487204165e4c5d09802"
-  integrity sha512-2l9VkJOJ3qlVBzRt+9jk52HPKF2X46zcEkzExEKaWBvygVV/nWJG4CsazqSCM+dmfTt/xbXSZlKXNaNX8Ofinw==
+"@trousers/core@4.0.0-alpha9":
+  version "4.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@trousers/core/-/core-4.0.0-alpha9.tgz#e28915ba8110916246761efb04ed0999e0d750bc"
+  integrity sha512-w9U6afAijy3kcSJTAoB1HtMHrdcqRsXplTmwdYYAk6rOhyxQL36aJlAHeJ5aXvFRFdRXZCEJLtgf5JKL7KwtIg==
   dependencies:
-    "@trousers/hash" "4.0.0-alpha7"
+    "@trousers/hash" "4.0.0-alpha9"
     csstype "^2.5.7"
     tiny-css-prefixer "^1.1.4"
 
-"@trousers/hash@4.0.0-alpha7":
-  version "4.0.0-alpha7"
-  resolved "https://registry.yarnpkg.com/@trousers/hash/-/hash-4.0.0-alpha7.tgz#b3037372c16e3dfcfadeea8a7e81b413e88126b6"
-  integrity sha512-UsIdHTT6XQxnRCzkxo1UJoHTBmS3CSNomLJUI7qGR3cfMtV8Ks5tJc46rTsMDBdCSnAEgOgyBx97QXAiy4fC8w==
+"@trousers/hash@4.0.0-alpha9":
+  version "4.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@trousers/hash/-/hash-4.0.0-alpha9.tgz#4248530bad07e6937bf691a3093328a9e3173ee8"
+  integrity sha512-NZ//gldu4f/lCARCXVlODOzBGuv8MJTf/kWlVIG+q4BWo13qL6sGrvx0keoMVt+Wsx3KcjgGjThr2ZPo8Du33A==
 
-"@trousers/macro@4.0.0-alpha7":
-  version "4.0.0-alpha7"
-  resolved "https://registry.yarnpkg.com/@trousers/macro/-/macro-4.0.0-alpha7.tgz#f074c762a1a2bda4f28af308ee82db64bd7ffa4c"
-  integrity sha512-TTngcbCw9mnF+9fFUONR7he6Gp91/y8XSEHcvV70a+91K4XhDvD7ijk2Tv3ebBjLXZ2aXNWzi4KDmxCTm7bUhA==
+"@trousers/macro@4.0.0-alpha9":
+  version "4.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@trousers/macro/-/macro-4.0.0-alpha9.tgz#df67e945caef31cde22a3f1d2ca13d42f871d7c8"
+  integrity sha512-16qjaOW4Z1d44nVNWDU5nvQmDJ8KGe4hHCm3g/irIbwzu1X8eQaYkjRY5JPAAAM+dSavAZ9JgQ2LQVsBb1Lm6Q==
   dependencies:
-    "@trousers/core" "4.0.0-alpha7"
-    "@trousers/hash" "4.0.0-alpha7"
-    "@trousers/react" "4.0.0-alpha7"
-    "@trousers/sheet" "4.0.0-alpha7"
+    "@trousers/core" "4.0.0-alpha9"
+    "@trousers/hash" "4.0.0-alpha9"
+    "@trousers/react" "4.0.0-alpha9"
+    "@trousers/sheet" "4.0.0-alpha9"
     babel-plugin-macros "^3.0.0"
 
-"@trousers/react@4.0.0-alpha7":
-  version "4.0.0-alpha7"
-  resolved "https://registry.yarnpkg.com/@trousers/react/-/react-4.0.0-alpha7.tgz#f01a90af635425f27cdbd30dc431cb7cf8bb3322"
-  integrity sha512-8P4EF80nrrZ2lqIIjl+QC3r+oq8fbcq69/+rR9zqTeRGPcuU8NE7gM2uT0JreVaBKNZfJRPIZLIcdt+qrmBZhw==
+"@trousers/react@4.0.0-alpha9":
+  version "4.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@trousers/react/-/react-4.0.0-alpha9.tgz#170be1417470ac963fd89437ccc8d279f4ae2050"
+  integrity sha512-I7O9iyb0doZTE3QO0AsWAZA8xozbzHkP+0rnjfKnXEMVAUxlrUKUNRSvqf2AOXxD/LAqPyw5z5szJSYVjDn5Ww==
   dependencies:
-    "@trousers/core" "4.0.0-alpha7"
-    "@trousers/sheet" "4.0.0-alpha7"
+    "@trousers/core" "4.0.0-alpha9"
+    "@trousers/sheet" "4.0.0-alpha9"
 
-"@trousers/sheet@4.0.0-alpha7":
-  version "4.0.0-alpha7"
-  resolved "https://registry.yarnpkg.com/@trousers/sheet/-/sheet-4.0.0-alpha7.tgz#fcd1c85e29f02525be453d177d7242d17f019f8e"
-  integrity sha512-xMGsHgRD5CeW9+Kc5g0h81MWE1bz6mzj2nCi0/Mo/gBsBZbUUvgoAaSzUWrGRWEyNOPcTTePT6G5GGg/DvJXjg==
+"@trousers/sheet@4.0.0-alpha9":
+  version "4.0.0-alpha9"
+  resolved "https://registry.yarnpkg.com/@trousers/sheet/-/sheet-4.0.0-alpha9.tgz#e5b0e6b9e71ef9d281e24eb615929db84f95af45"
+  integrity sha512-vexI0LsGLXQ9K5sxKotCs2DBtNoN1gBXGhka+6LdQTJ/A7iAI2hFfWNfLq+GsJ04pzKUKO8u1dDmk5s2KWaR2g==
 
 "@types/anymatch@*":
   version "1.3.1"

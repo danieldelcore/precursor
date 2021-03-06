@@ -1,7 +1,4 @@
 import React, { FC, ReactNode, Fragment } from 'react';
-// @ts-ignore
-// @ts-ignore
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -74,7 +71,6 @@ const styles = css('Button', {
 
 const Button: FC<ButtonProps> = props => (
     <button
-        // @ts-ignore
         css={styles}
         type={props.type}
         onClick={props.onClick}
@@ -85,7 +81,6 @@ const Button: FC<ButtonProps> = props => (
         {props.loading ? (
             <Fragment>
                 <div
-                    // @ts-ignore
                     css={css({
                         position: 'absolute',
                         display: 'flex',

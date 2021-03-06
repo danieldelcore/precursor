@@ -4,10 +4,10 @@
     "description": "Textarea component",
     "main": "dist/precursor-textarea.cjs.js",
     "module": "dist/precursor-textarea.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-textarea.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

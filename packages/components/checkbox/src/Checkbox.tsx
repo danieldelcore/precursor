@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 import Label from '@precursor/label';
@@ -23,7 +22,6 @@ const Checkbox: FC<CheckboxProps> = props => {
     return (
         <Label htmlFor={props.id}>
             <Input
-                // @ts-ignore
                 css={styles}
                 disabled={props.disabled}
                 id={props.id}

@@ -1,5 +1,4 @@
 import React, { FC, ChangeEventHandler } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -56,9 +55,7 @@ const styles = css('Input', {
     .modifier('large', { '--input-height': '52px' });
 
 const Input: FC<InputProps> = ({ type = 'text', ...props }) => (
-    // @ts-ignore
     <input
-        // @ts-ignore
         css={styles}
         className={props.className}
         disabled={props.disabled}

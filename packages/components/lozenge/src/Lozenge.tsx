@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignore
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -35,9 +34,7 @@ const styles = css('Lozenge', {
     });
 
 const Lozenge: FC<LozengeProps> = ({ status, children }) => (
-    // @ts-ignore
     <span
-        // @ts-ignore
         css={styles}
         $error={status === 'error'}
         $warning={status === 'warning'}

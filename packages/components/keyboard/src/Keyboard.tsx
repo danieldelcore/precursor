@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 // import { Theme } from '@precursor/theme';
 
@@ -25,10 +24,7 @@ const Keyboard: FC<KeyboardProps> = ({
     option,
     ctrl,
 }) => (
-    <kbd
-        // @ts-ignore
-        css={styles}
-    >
+    <kbd css={styles}>
         {command && '⌘'}
         {shift && '⇧'}
         {option && '⌥'}

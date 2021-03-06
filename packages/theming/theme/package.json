@@ -4,11 +4,11 @@
     "description": "Theme component",
     "main": "dist/precursor-theme.cjs.js",
     "module": "dist/precursor-theme.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-theme.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/tokens": "^0.1.1",
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

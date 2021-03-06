@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
+
 import { css } from '@trousers/macro';
 // import { Theme } from '@precursor/theme';
 
@@ -9,9 +9,7 @@ export interface SkeletonProps {
 }
 
 const Skeleton: FC<SkeletonProps> = ({ as = 'text', height }) => (
-    // @ts-ignore
     <div
-        // @ts-ignore
         css={css('skeleton', {
             backgroundColor: 'var(--color-background-light)',
             height: '1rem',

@@ -4,11 +4,11 @@
     "description": "grid component",
     "main": "dist/precursor-grid.cjs.js",
     "module": "dist/precursor-grid.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-grid.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/theme": "^0.1.7",
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

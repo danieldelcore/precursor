@@ -4,7 +4,7 @@
     "description": "tokens component",
     "main": "dist/precursor-tokens.cjs.js",
     "module": "dist/precursor-tokens.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-tokens.cjs.d.ts",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {},

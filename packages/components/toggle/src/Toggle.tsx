@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
+
 import { css } from '@trousers/macro';
 
 import Input, { InputProps } from '@precursor/input';
@@ -62,7 +62,6 @@ const toggleStyles = css('ToggleIndicator', {
 
 const Toggle: FC<ToggleProps> = ({ size = 'm', ...props }) => (
     <div
-        // @ts-ignore
         css={css({
             display: 'inline-flex',
             alignItems: 'center',
@@ -72,7 +71,6 @@ const Toggle: FC<ToggleProps> = ({ size = 'm', ...props }) => (
     >
         <Label htmlFor={props.id}>
             <Input
-                // @ts-ignore
                 css={css({
                     clip: 'rect(0px, 0px, 0px, 0px)',
                     height: '1px',
@@ -97,19 +95,13 @@ const Toggle: FC<ToggleProps> = ({ size = 'm', ...props }) => (
             />
             <div
                 aria-hidden="true"
-                // @ts-ignore
                 css={toggleStyles}
                 $large={size === 'l'}
                 $small={size === 's'}
                 $disabled={props.disabled}
             />
 
-            <span
-                // @ts-ignore
-                css={css({ userSelect: 'none' })}
-            >
-                {props.label}
-            </span>
+            <span css={css({ userSelect: 'none' })}>{props.label}</span>
         </Label>
     </div>
 );

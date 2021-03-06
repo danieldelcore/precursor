@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 export interface ModalBodyProps {
@@ -9,7 +8,6 @@ export interface ModalBodyProps {
 const ModalBody: FC<ModalBodyProps> = ({ children }) => (
     <div
         id="modal-body"
-        // @ts-ignore
         css={css('ModalBody', {
             padding: '0 1rem',
             flex: '1 1 0%',

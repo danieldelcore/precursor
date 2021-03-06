@@ -4,10 +4,10 @@
     "description": "select component",
     "main": "dist/precursor-select.cjs.js",
     "module": "dist/precursor-select.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-select.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/macro": "4.0.0-alpha7",
+        "@trousers/macro": "4.0.0-alpha9",
         "react-feather": "^2.0.8"
     },
     "devDependencies": {

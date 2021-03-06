@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from './theme';
@@ -21,9 +20,6 @@ const reset = css({}).global({
     },
 });
 
-const Globals: FC = () => {
-    // @ts-ignore
-    return <span css={reset} />; // TODO: this isn't great
-};
+const Globals: FC = () => <span css={reset} />;
 
 export default Globals;

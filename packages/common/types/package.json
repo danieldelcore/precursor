@@ -3,7 +3,7 @@
     "version": "0.1.2",
     "main": "dist/precursor-types.cjs.js",
     "module": "dist/precursor-types.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-types.cjs.d.ts",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {},

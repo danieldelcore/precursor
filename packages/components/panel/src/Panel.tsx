@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -14,7 +13,6 @@ const styles = css('Panel', {
     padding: 'var(--space-m)',
 });
 
-// @ts-ignore
 const Panel: FC<PanelProps> = props => <div css={styles}>{props.children}</div>;
 
 export default Panel;

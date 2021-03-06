@@ -1,7 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
-
 import { Theme } from '@precursor/theme';
 
 export interface StackProps {
@@ -11,7 +9,6 @@ export interface StackProps {
 
 const Stack: FC<StackProps> = ({ gap = 'm', children }) => (
     <div
-        // @ts-ignore
         css={css('Stack', {
             display: 'grid',
             gridTemplateColumns: 'repeat(1, 1fr)',

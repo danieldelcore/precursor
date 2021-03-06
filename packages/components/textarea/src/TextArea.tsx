@@ -1,5 +1,5 @@
 import React, { FC, ChangeEventHandler } from 'react';
-// @ts-ignoreE
+
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -64,9 +64,7 @@ const styles = css('TextArea', {
     });
 
 const TextArea: FC<TextAreaProps> = props => (
-    // @ts-ignore
     <textarea
-        // @ts-ignore
         css={styles}
         disabled={props.disabled}
         id={props.id}

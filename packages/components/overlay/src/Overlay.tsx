@@ -4,7 +4,6 @@ import React, {
     KeyboardEventHandler,
     MouseEventHandler,
 } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 export interface OverlayProps {
@@ -30,13 +29,7 @@ const styles = css('Overlay', {
 const Overlay = forwardRef<HTMLDivElement, OverlayProps>(
     ({ children, onKeyDown, onClick }, ref) => (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-        <div
-            ref={ref}
-            // @ts-ignore
-            css={styles}
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-        >
+        <div ref={ref} css={styles} onKeyDown={onKeyDown} onClick={onClick}>
             {children}
         </div>
     ),

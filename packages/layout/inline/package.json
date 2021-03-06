@@ -4,10 +4,10 @@
     "description": "inline component",
     "main": "dist/precursor-inline.cjs.js",
     "module": "dist/precursor-inline.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-inline.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

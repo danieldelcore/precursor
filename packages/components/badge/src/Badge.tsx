@@ -1,6 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-// @ts-ignore
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -35,7 +33,6 @@ const styles = css('Badge', {
 
 const Badge: FC<BadgeProps> = ({ status, children }) => (
     <span
-        // @ts-ignore
         css={styles}
         $error={status === 'error'}
         $warning={status === 'warning'}

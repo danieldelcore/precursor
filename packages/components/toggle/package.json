@@ -4,13 +4,13 @@
     "description": "toggle component",
     "main": "dist/precursor-toggle.cjs.js",
     "module": "dist/precursor-toggle.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-toggle.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/input": "^0.1.7",
         "@precursor/label": "^0.1.7",
         "@precursor/theme": "^0.1.7",
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

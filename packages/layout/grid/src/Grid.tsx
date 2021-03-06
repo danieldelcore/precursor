@@ -1,6 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 import { Theme } from '@precursor/theme';
 
@@ -28,11 +26,11 @@ const Grid: FC<GridProps> = ({
 
     return (
         <div
-            // @ts-ignore
             css={css('Grid', {
                 display: 'grid',
                 gridTemplateColumns: `repeat(${columns}, 1fr)`,
                 width: '100%',
+                // gap: getGap()
             })}
         >
             {children}

@@ -1,4 +1,3 @@
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 import React, { FC, useRef } from 'react';
 
@@ -111,7 +110,6 @@ const Slider: FC<SliderProps> = ({
     return (
         <div
             ref={sliderRef}
-            // @ts-ignore
             css={styles}
             $disabled={disabled}
             style={{

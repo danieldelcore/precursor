@@ -1,5 +1,5 @@
 import React, { useContext, FC, ReactNode } from 'react';
-// @ts-ignoreE
+
 import { css } from '@trousers/macro';
 import Text from '@precursor/text';
 // import { Theme } from '@precursor/theme';
@@ -32,7 +32,6 @@ const Tab: FC<TabProps> = ({ id, children }) => {
             id={`tab-${id}`}
             tabIndex={isSelected ? 0 : -1}
             onClick={() => setActive && setActive(id)}
-            // @ts-ignore
             css={styles}
             $selected={isSelected}
         >

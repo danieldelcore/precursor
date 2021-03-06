@@ -4,10 +4,10 @@
     "description": "list component",
     "main": "dist/precursor-list.cjs.js",
     "module": "dist/precursor-list.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-list.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

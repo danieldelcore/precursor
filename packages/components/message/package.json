@@ -4,12 +4,12 @@
     "description": "message component",
     "main": "dist/precursor-message.cjs.js",
     "module": "dist/precursor-message.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-message.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/text": "^0.1.5",
         "@precursor/theme": "^0.1.7",
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

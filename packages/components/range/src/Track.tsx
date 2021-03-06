@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -31,7 +30,6 @@ const styles = css('Track', {
 
 const Track = forwardRef<HTMLDivElement, TrackProps>(
     ({ disabled, progress }, ref) => (
-        // @ts-ignore
         <div ref={ref} css={styles} $disabled={disabled}>
             <div style={{ width: progress }} />
         </div>

@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 export interface SpinnerProps {
@@ -8,9 +7,7 @@ export interface SpinnerProps {
 
 const Spinner: FC<SpinnerProps> = ({ color = 'black' }) => {
     return (
-        // @ts-ignore
         <div
-            // @ts-ignore
             css={css({
                 color: color,
                 display: 'flex',

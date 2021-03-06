@@ -4,11 +4,11 @@
     "description": "keyboard combo component",
     "main": "dist/precursor-keyboard.cjs.js",
     "module": "dist/precursor-keyboard.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-keyboard.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/theme": "^0.1.5",
-        "@trousers/macro": "4.0.0-alpha7"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
         "react": "^17.0.1"

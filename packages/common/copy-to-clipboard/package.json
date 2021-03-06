@@ -4,7 +4,7 @@
     "description": "Copy to clipboard utility",
     "main": "dist/precursor-copy-to-clipboard.cjs.js",
     "module": "dist/precursor-copy-to-clipboard.esm.js",
-    "types": "dist/index.d.ts",
+    "types": "dist/precursor-copy-to-clipboard.cjs.d.ts",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {},

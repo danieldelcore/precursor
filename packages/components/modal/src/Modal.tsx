@@ -8,7 +8,6 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 import FocusLock from 'react-focus-lock';
-// @ts-ignoreE
 import { css } from '@trousers/macro';
 
 // import { Theme } from '@precursor/theme';
@@ -34,7 +33,6 @@ const styles = css('Modal', {
 });
 
 // TODO: ensure IDs are unique
-
 const Modal: FC<ModalProps> = ({ onDismiss, children, isOpen }) => {
     const overlayRef = useRef<HTMLDivElement | null>(null);
     const handleKeyDown = useCallback(
@@ -71,7 +69,6 @@ const Modal: FC<ModalProps> = ({ onDismiss, children, isOpen }) => {
                           id="modal"
                           aria-describedby="modal-body"
                           aria-labelledby="modal-header"
-                          // @ts-ignore
                           css={styles}
                       >
                           {children}
