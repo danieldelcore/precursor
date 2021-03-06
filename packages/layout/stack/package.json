@@ -2,15 +2,15 @@
     "name": "@precursor/stack",
     "version": "0.1.5",
     "description": "stack component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/precursor-stack.cjs.js",
+    "module": "dist/precursor-stack.esm.js",
+    "types": "dist/precursor-stack.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/core": "^3.0.2"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

@@ -2,18 +2,16 @@
     "name": "@precursor/select",
     "version": "0.1.6",
     "description": "select component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/precursor-select.cjs.js",
+    "module": "dist/precursor-select.esm.js",
+    "types": "dist/precursor-select.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/collector": "^3.0.2",
-        "@trousers/core": "^3.0.2",
-        "@trousers/theme": "^3.0.0",
+        "@trousers/macro": "4.0.0-alpha9",
         "react-feather": "^2.0.8"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

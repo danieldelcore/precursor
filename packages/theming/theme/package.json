@@ -2,17 +2,16 @@
     "name": "@precursor/theme",
     "version": "0.1.7",
     "description": "Theme component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/precursor-theme.cjs.js",
+    "module": "dist/precursor-theme.esm.js",
+    "types": "dist/precursor-theme.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
         "@precursor/tokens": "^0.1.1",
-        "@trousers/core": "^3.0.2",
-        "@trousers/theme": "^3.0.0"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

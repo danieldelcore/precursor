@@ -2,15 +2,15 @@
     "name": "@precursor/overlay",
     "version": "0.1.4",
     "description": "Overlay component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/precursor-overlay.cjs.js",
+    "module": "dist/precursor-overlay.esm.js",
+    "types": "dist/precursor-overlay.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/core": "^3.0.2"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"

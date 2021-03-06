@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-/** @jsx jsx */
 import { storiesOf } from '@storybook/react';
-import { useState } from 'react';
-import { jsx } from '@trousers/core';
+import React, { useState } from 'react';
 import Avatar from '@precursor/avatar';
 import Blockquote from '@precursor/blockquote';
 import Text from '@precursor/text';
@@ -29,23 +27,29 @@ import Spinner from '@precursor/spinner';
 import Skeleton from '@precursor/skeleton';
 import Grid, { Column, Row } from '@precursor/grid';
 import Inline from '@precursor/inline';
-import Toggle from '@precursor/Toggle';
+import Toggle from '@precursor/toggle';
 import { Tabs, Tab, TabList, TabPanel } from '@precursor/tabs';
 import List, { ListItem } from '@precursor/list';
-import { theme as baseTheme, Theme, ThemeProvider } from '@precursor/theme';
-import deepObject from 'object-deep-key';
-import { Box, Container, ThemeEditor, themeSchema } from '../fixtures';
+// import { theme as baseTheme, Theme, ThemeProvider } from '@precursor/theme';
+// import deepObject from 'object-deep-key';
+import {
+    Box,
+    Container,
+    // ThemeEditor,
+    //themeSchema
+} from '../fixtures';
 
 const BasicExample = () => {
-    const [theme, setTheme] = useState<Theme>(baseTheme);
+    // const [theme, setTheme] = useState<Theme>(baseTheme);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const closeModal = () => setIsModalOpen(false);
     const openModal = () => setIsModalOpen(true);
 
     return (
-        <ThemeProvider theme={theme}>
-            <aside
+        <React.Fragment>
+            {/* <ThemeProvider theme={theme}> */}
+            {/* <aside
                 style={{
                     width: '320px',
                     height: '100%',
@@ -70,7 +74,7 @@ const BasicExample = () => {
                         }}
                     />
                 </Stack>
-            </aside>
+            </aside> */}
             <div
                 style={{
                     display: 'block',
@@ -83,30 +87,12 @@ const BasicExample = () => {
                         <Heading id="typography">Typography</Heading>
                         <Panel>
                             <Stack>
-                                <Heading weight="h1">
-                                    Heading One ({theme.fontSize.h1}/
-                                    {theme.lineHeight.h1})
-                                </Heading>
-                                <Heading>
-                                    Heading Two ({theme.fontSize.h2}/
-                                    {theme.lineHeight.h2})
-                                </Heading>
-                                <Heading weight="h3">
-                                    Heading Three ({theme.fontSize.h3}/
-                                    {theme.lineHeight.h3})
-                                </Heading>
-                                <Heading weight="h4">
-                                    Heading Four ({theme.fontSize.h4}/
-                                    {theme.lineHeight.h4})
-                                </Heading>
-                                <Heading weight="h5">
-                                    Heading Five ({theme.fontSize.h5}/
-                                    {theme.lineHeight.h5})
-                                </Heading>
-                                <Heading weight="h6">
-                                    Heading Six ({theme.fontSize.h6}/
-                                    {theme.lineHeight.h6})
-                                </Heading>
+                                <Heading weight="h1">Heading One</Heading>
+                                <Heading>Heading Two</Heading>
+                                <Heading weight="h3">Heading Three</Heading>
+                                <Heading weight="h4">Heading Four</Heading>
+                                <Heading weight="h5">Heading Five</Heading>
+                                <Heading weight="h6">Heading Six</Heading>
                                 <Text>
                                     Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Mauris volutpat, odio vitae
@@ -176,7 +162,7 @@ const BasicExample = () => {
                             </Stack>
                         </Panel>
                         <Heading id="spacing">Spacing</Heading>
-                        <Panel>
+                        {/* <Panel>
                             <Stack>
                                 {Object.keys(theme.space).map(key => (
                                     <div key={key}>
@@ -192,7 +178,7 @@ const BasicExample = () => {
                                     </div>
                                 ))}
                             </Stack>
-                        </Panel>
+                        </Panel> */}
                         <Heading id="Stack">Stack</Heading>
                         <Panel>
                             <Stack>
@@ -479,7 +465,7 @@ const BasicExample = () => {
                                     name="input-success"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="success"
+                                    appearance="success"
                                 />
                                 <Label htmlFor="input-warning">Warning</Label>
                                 <Input
@@ -487,7 +473,7 @@ const BasicExample = () => {
                                     name="input-warning"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="warning"
+                                    appearance="warning"
                                 />
                                 <Label htmlFor="input-error">Error</Label>
                                 <Input
@@ -495,7 +481,7 @@ const BasicExample = () => {
                                     name="input-error"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="error"
+                                    appearance="error"
                                 />
                                 <Label htmlFor="input-disabled">Disabled</Label>
                                 <Input
@@ -551,7 +537,7 @@ const BasicExample = () => {
                                     name="TextArea-success"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="success"
+                                    appearance="success"
                                 />
                                 <Label htmlFor="TextArea-warning">
                                     Warning
@@ -561,7 +547,7 @@ const BasicExample = () => {
                                     name="TextArea-warning"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="warning"
+                                    appearance="warning"
                                 />
                                 <Label htmlFor="TextArea-error">Error</Label>
                                 <TextArea
@@ -569,7 +555,7 @@ const BasicExample = () => {
                                     name="TextArea-error"
                                     onChange={() => console.log('onChange')}
                                     value=""
-                                    state="error"
+                                    appearance="error"
                                 />
                                 <Label htmlFor="TextArea-disabled">
                                     Disabled
@@ -625,7 +611,7 @@ const BasicExample = () => {
                                     id="select-success"
                                     name="select-success"
                                     onChange={() => console.log('onChange')}
-                                    state="success"
+                                    appearance="success"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>
@@ -635,7 +621,7 @@ const BasicExample = () => {
                                     id="select-warning"
                                     name="select-warning"
                                     onChange={() => console.log('onChange')}
-                                    state="warning"
+                                    appearance="warning"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>
@@ -645,7 +631,7 @@ const BasicExample = () => {
                                     id="select-error"
                                     name="select-error"
                                     onChange={() => console.log('onChange')}
-                                    state="error"
+                                    appearance="error"
                                 >
                                     <option value="hello">Hello</option>
                                     <option value="world">world</option>
@@ -985,7 +971,8 @@ const BasicExample = () => {
                     </Stack>
                 </Container>
             </div>
-        </ThemeProvider>
+            {/* </ThemeProvider> */}
+        </React.Fragment>
     );
 };
 

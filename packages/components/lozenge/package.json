@@ -2,16 +2,15 @@
     "name": "@precursor/lozenge",
     "version": "0.1.1",
     "description": "lozenge component",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/precursor-lozenge.cjs.js",
+    "module": "dist/precursor-lozenge.esm.js",
+    "types": "dist/precursor-lozenge.cjs.d.ts",
     "license": "MIT",
     "dependencies": {
-        "@trousers/collector": "^3.0.2",
-        "@trousers/core": "^3.0.2"
+        "@trousers/macro": "4.0.0-alpha9"
     },
     "devDependencies": {
-        "react": "^16.8.1"
+        "react": "^17.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.0"
